@@ -1,0 +1,1 @@
+# soma_restaurant_content_generic
