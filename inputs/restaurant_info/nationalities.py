@@ -1,0 +1,5 @@
+nationalities = [
+     "American",
+     "Italian",
+     "French"
+]
