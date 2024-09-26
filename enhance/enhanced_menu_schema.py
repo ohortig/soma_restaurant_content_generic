@@ -14,10 +14,12 @@ enhanced_menu_schema = {
                          "name": {"type": "string"},
                          "ingredients": {"type": "string"},
                          "price": {"type": "integer"},
-                         "recommended_upsells": {
-                              "type": "array",
-                              "description": "An array of recommended menu items to pair with this item.",
-                              "items": {"$ref": "#/$defs/menu_item"}
+                         "recommended_upsells": { ## enhanced property
+                                   "type": "array",
+                                   "description": "An array of recommended menu items to pair with this item.",
+                                   "items": {
+                                        "type": "string",
+                                   }
                          },
                         "narrative": { ## enhanced property
                               "type": "object",

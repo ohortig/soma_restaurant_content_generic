@@ -11,12 +11,12 @@ from inputs.restaurant_info.cuisine import cuisine
 from inputs.restaurant_info.nationalities import nationalities
 
 # load given menu inputs
-from inputs.menus.dinner_menu import dinner_menu
+from inputs.menus.given_menu import given_menu
 
 # load schemas
-from given_menu_schema import given_menu_schema
-from intermediate_step_schema import intermediate_step_schema
-from enhanced_menu_schema import enhanced_menu_schema
+from enhance.given_menu_schema import given_menu_schema
+from enhance.intermediate_step_schema import intermediate_step_schema
+from enhance.enhanced_menu_schema import enhanced_menu_schema
 
 client = OpenAI()
 
@@ -34,7 +34,7 @@ Your response, an enhanced version of every single menu item in the given menu, 
 
 Generate an enhanced version of every single menu item in the given menu with the following information:
 - ** Name **: The name of the menu item you are enriching.
-- ** Recommended Upsells **: Enrich our restaurant's menu by creating an Array of Strings for Upselling Recommendations: for each menu item, provide practical strategies for waitstaff to upsell to the customer. This could include recommending additional items, portion increases, premium ingredients, or add-ons like sauces, sides, or drink pairings from the restaurant's own menu.
+- ** Recommended Upsells **: Enrich our restaurant's menu by creating an Array of Strings for Upselling Recommendations: each string must be only the name of another menu item to upsell and **must not contain any descriptions or sentences**.
 - ** Narrative **: Enrich our restaurant's menu by creating a narrative String: an intricate and engaging narrative that connects each menu item with the cultural backgrounds of the three most frequent nationalities among our guests.
 - ** Appeal **: Enrich our restaurant's menu by creating an appeal String: Highlight the textures and sensory experience of each menu item, emphasizing what makes them appealing on a tactile and sensory level to encourage customers to try them.
 """
@@ -44,12 +44,12 @@ user_message_content = f"""
 <location> {location} </location>
 <cuisine> {cuisine} </cuisine>
 <nationalities> {nationalities} </nationalities>
-<menu> {dinner_menu} </menu>
+<menu> {given_menu} </menu>
 """
 
 try:
-     validate(instance=dinner_menu, schema=given_menu_schema)
-     print("Inputted menu JSON data is valid. Running enhancements...")
+     validate(instance=given_menu, schema=given_menu_schema)
+     print("JSON Schema validated. Input JSON data fits requirements. Running enhancements...")
      completion = client.chat.completions.create(
           model="gpt-4o-2024-08-06",  # model supporting structured outputs
           messages=[{
@@ -65,8 +65,8 @@ try:
                "json_schema": intermediate_step_schema
           }
      )
-     answer = completion.choices[0].message
-     print(completion)
+     answer = completion.choices[0].message.content
+     print(answer)
     
 except ValidationError as e:  # if inputted JSON menu does not follow the schema correctly
     print("Inputted menu JSON data is invalid.")
