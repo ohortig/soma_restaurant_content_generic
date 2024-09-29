@@ -1,6 +1,8 @@
 # load packages
 from openai import OpenAI
+
 import json
+import os
 from jsonschema import validate
 from jsonschema.exceptions import ValidationError
 
@@ -14,9 +16,12 @@ from inputs.restaurant_info.nationalities import nationalities
 from inputs.menus.given_menu import given_menu
 
 # load schemas
-from enhance.given_menu_schema import given_menu_schema
-from enhance.intermediate_step_schema import intermediate_step_schema
-from enhance.enhanced_menu_schema import enhanced_menu_schema
+from enhance.schemas.given_menu_schema import given_menu_schema
+from enhance.schemas.intermediate_step_schema import intermediate_step_schema
+from enhance.schemas.enhanced_menu_schema import enhanced_menu_schema
+
+# load functions
+from enhance.validate import dish_exists
 
 client = OpenAI()
 
@@ -49,27 +54,64 @@ user_message_content = f"""
 
 try:
      validate(instance=given_menu, schema=given_menu_schema)
-     print("JSON Schema validated. Input JSON data fits requirements. Running enhancements...")
-     completion = client.chat.completions.create(
-          model="gpt-4o-2024-08-06",  # model supporting structured outputs
-          messages=[{
-               "role": "system", 
-               "content": system_message_content
-          },
-          {
-            "role": "user",
-            "content": user_message_content
-          }],
-          response_format={
-               "type": "json_schema",
-               "json_schema": intermediate_step_schema
-          }
-     )
-     answer = completion.choices[0].message.content
-     print(answer)
+     print("JSON Schema validated. Input JSON data fits requirements.")
+     while True:
+          print("Running enhancements...\n")
+          completion = client.chat.completions.create(
+               model="gpt-4o-2024-08-06",  # model supporting structured outputs
+               messages=[{
+                    "role": "system", 
+                    "content": system_message_content
+               },
+               {
+               "role": "user",
+               "content": user_message_content
+               }],
+               response_format={
+                    "type": "json_schema",
+                    "json_schema": intermediate_step_schema
+               }
+          )
+          intermediate_step = completion.choices[0].message.content
+          intermediate_step_data = json.loads(intermediate_step)  # turn the returned String into a JSON object
+          valid = True  # checker variable as we ensure generated content is valid
+          file_path = os.path.join('outputs', 'enhanced_menus', 'intermediate_step_output.json')
+          os.makedirs(os.path.dirname(file_path), exist_ok=True)  # ensure the file path exists
+          try:
+               with open(file_path, 'w') as json_file:
+                    json.dump(intermediate_step_data, json_file, indent=4)  # write the output to JSON file in the outputs/enhanced_menus folder
+                    print(f"Intermediate step generated. Recommended Upsells, Narratives, and Appeals created.\nGenerated content stored in {file_path}.\nEnsuring accuracy of information...\n")
+          except FileNotFoundError:
+               print(f"The directory for {file_path} does not exist.")
+               valid = False
+               break
+
+          for menu_item in intermediate_step_data['menu_items']:
+               if not dish_exists(given_menu, menu_item['name']):  # if generated dish does not exist, regenerate content
+                    valid = False
+                    print(f"Generated menu item {menu_item['name']} does not exist.")
+                    break
+               for upsell in menu_item['recommended_upsells']:
+                    if not dish_exists(given_menu, upsell):  # if generated upsell does not exist, regenerate content
+                         valid = False
+                         print(f"Recomended upsell {upsell} for generated menu item {menu_item['name']} does not exist.")
+                         break
+               print(f'Validating {menu_item['narrative']['nationality']} is in nationalities {nationalities} list...')
+               if menu_item['narrative']['nationality'] not in nationalities:
+                    valid = False
+                    print(f"Mentioned nationality {menu_item['narrative']['nationality']} is not mentioned in guest nationalities.")
+                    break
+               print(f"\t{menu_item['narrative']['nationality']} confirmed in nationalities list.")
+          if valid:
+               break
+          else:
+               print("Generated enhancements are invalid. Trying again...")
     
 except ValidationError as e:  # if inputted JSON menu does not follow the schema correctly
-    print("Inputted menu JSON data is invalid.")
-    print(f"Error message: {e.message}")
-    print(f"Invalid data path: {'/'.join(map(str, e.path))}")
-    print(f"Schema path: {'/'.join(map(str, e.schema_path))}")
+     print("Inputted menu JSON data is invalid.")
+     print(f"Error message: {e.message}")
+     print(f"Invalid data path: {'/'.join(map(str, e.path))}")
+     print(f"Schema path: {'/'.join(map(str, e.schema_path))}")
+
+if valid:
+     print("\nGenerated enhancements validated. Consolidating enhanced menu...")
