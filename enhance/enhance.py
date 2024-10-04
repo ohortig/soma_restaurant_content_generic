@@ -115,3 +115,34 @@ except ValidationError as e:  # if inputted JSON menu does not follow the schema
 
 if valid:
      print("\nGenerated enhancements validated. Consolidating enhanced menu...")
+     for item in intermediate_step_data['menu_items']:
+          item['category'] = next((given_item['category'] for given_item in given_menu if given_item['name'] == item['name']), None)
+          item['ingredients'] = next((given_item['ingredients'] for given_item in given_menu if given_item['name'] == item['name']), None)
+          item['price'] = next((given_item['price'] for given_item in given_menu if given_item['name'] == item['name']), None)
+     file_path = os.path.join('outputs', 'enhanced_menus', 'consolidated_menu.json')
+     try:
+          try:
+               validate(instance=intermediate_step_data['menu_items'], schema=enhanced_menu_schema)
+               print("JSON Schema validated. Consolidated enhanced menu object fits requirements.")
+               with open(file_path, 'w') as json_file:
+                    json.dump(intermediate_step_data['menu_items'], json_file, indent=4)  # write the consolidated enhanced menu to JSON file in the outputs/enhanced_menus folder
+                    print(f"Storing consolidated enhanced menu in {file_path}.")
+               print(f"\nDeleting intermediate files...")
+               file_path = os.path.join('outputs', 'enhanced_menus', 'intermediate_step_output.json')
+               try:
+                    os.remove(file_path)
+                    print(f"{file_path} has been deleted successfully.")
+               except FileNotFoundError:
+                    print(f"{file_path} does not exist.")
+               except PermissionError:
+                    print(f"Permission denied: unable to delete {file_path}.")
+               except Exception as e:
+                    print(f"Error: {e}")
+          except ValidationError as e:
+               print("The consolidated enhanced menu object does not fit the requirements and was not stored. Check input for errors and try again.")
+               print(f"Error message: {e.message}")
+               print(f"Invalid data path: {'/'.join(map(str, e.path))}")
+               print(f"Schema path: {'/'.join(map(str, e.schema_path))}")  
+     except FileNotFoundError:
+          print(f"The directory for {file_path} does not exist.")
+          valid = False
