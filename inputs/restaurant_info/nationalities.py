@@ -1,5 +1,14 @@
 nationalities = [
      "American",
+     "Americans",
+     "America",
+     "USA",
+     "United States",
+     "United States of America",
      "Italian",
-     "French"
+     "Italians",
+     "Italy",
+     "French",
+     "Frenchmen",
+     "France"
 ]

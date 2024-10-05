@@ -21,7 +21,8 @@ from enhance.schemas.intermediate_step_schema import intermediate_step_schema
 from enhance.schemas.enhanced_menu_schema import enhanced_menu_schema
 
 # load functions
-from enhance.validate import dish_exists
+from validate import item_exists
+from validate import nationality_exists
 
 client = OpenAI()
 
@@ -52,97 +53,102 @@ user_message_content = f"""
 <menu> {given_menu} </menu>
 """
 
-try:
-     validate(instance=given_menu, schema=given_menu_schema)
-     print("JSON Schema validated. Input JSON data fits requirements.")
-     while True:
-          print("Running enhancements...\n")
-          completion = client.chat.completions.create(
-               model="gpt-4o-2024-08-06",  # model supporting structured outputs
-               messages=[{
-                    "role": "system", 
-                    "content": system_message_content
-               },
-               {
-               "role": "user",
-               "content": user_message_content
-               }],
-               response_format={
-                    "type": "json_schema",
-                    "json_schema": intermediate_step_schema
-               }
-          )
-          intermediate_step = completion.choices[0].message.content
-          intermediate_step_data = json.loads(intermediate_step)  # turn the returned String into a JSON object
-          valid = True  # checker variable as we ensure generated content is valid
-          file_path = os.path.join('outputs', 'enhanced_menus', 'intermediate_step_output.json')
-          os.makedirs(os.path.dirname(file_path), exist_ok=True)  # ensure the file path exists
+def enhance():
+     try:
+          validate(instance=given_menu, schema=given_menu_schema)
+          print("JSON Schema validated. Input JSON data fits requirements.")
+          while True:
+               print("Running enhancements...\n")
+               completion = client.chat.completions.create(
+                    model="gpt-4o-2024-08-06",  # model supporting structured outputs
+                    messages=[{
+                         "role": "system", 
+                         "content": system_message_content
+                    },
+                    {
+                    "role": "user",
+                    "content": user_message_content
+                    }],
+                    response_format={
+                         "type": "json_schema",
+                         "json_schema": intermediate_step_schema
+                    }
+               )
+               intermediate_step = completion.choices[0].message.content
+               intermediate_step_data = json.loads(intermediate_step)  # turn the returned String into a JSON object
+               valid = True  # checker variable as we ensure generated content is valid
+               file_path = os.path.join('outputs', 'enhanced_menus', 'intermediate_step_output.json')
+               os.makedirs(os.path.dirname(file_path), exist_ok=True)  # ensure the file path exists
+               try:
+                    with open(file_path, 'w') as json_file:
+                         json.dump(intermediate_step_data, json_file, indent=4)  # write the output to JSON file in the outputs/enhanced_menus folder
+                         print(f"Intermediate step generated. Recommended Upsells, Narratives, and Appeals created.\nGenerated content stored in {file_path}.\nEnsuring accuracy of information...\n")
+               except FileNotFoundError:
+                    print(f"The directory for {file_path} does not exist.")
+                    valid = False
+                    break
+
+               for menu_item in intermediate_step_data['menu_items']:
+                    print(f'Validating {menu_item['name']} exists...')
+                    if not item_exists(menu_item['name']):  # if generated dish does not exist, regenerate content
+                         valid = False
+                         print(f"\tGenerated menu item {menu_item['name']} does not exist.")
+                         break
+                    print(f'\tGenerated item {menu_item['name']} confirmed to exist.')
+                    for upsell in menu_item['recommended_upsells']:
+                         print(f'Validating {upsell} exists...')
+                         if not item_exists(upsell):  # if generated upsell does not exist, regenerate content
+                              valid = False
+                              print(f"\tRecomended upsell {upsell} for generated menu item {menu_item['name']} does not exist.")
+                              break
+                         print(f'\tGenerated item {upsell} confirmed to exist.')
+                    print(f'Validating {menu_item['narrative']['nationality']} is in nationalities list...')
+                    if not nationality_exists(menu_item['narrative']['nationality']):
+                         valid = False
+                         print(f"\tGenerated nationality {menu_item['narrative']['nationality']} is not mentioned in guest nationalities.")
+                         break
+                    print(f"\t{menu_item['narrative']['nationality']} confirmed in nationalities list.")
+               if valid:
+                    break
+               else:
+                    print("Generated enhancements are invalid. Trying again...")
+     
+     except ValidationError as e:  # if inputted JSON menu does not follow the schema correctly
+          print("Inputted menu JSON data is invalid.")
+          print(f"Error message: {e.message}")
+          print(f"Invalid data path: {'/'.join(map(str, e.path))}")
+          print(f"Schema path: {'/'.join(map(str, e.schema_path))}")
+
+     if valid:
+          print("\nGenerated enhancements validated. Consolidating enhanced menu...")
+          for item in intermediate_step_data['menu_items']:
+               item['category'] = next((given_item['category'] for given_item in given_menu if given_item['name'] == item['name']), None)
+               item['ingredients'] = next((given_item['ingredients'] for given_item in given_menu if given_item['name'] == item['name']), None)
+               item['price'] = next((given_item['price'] for given_item in given_menu if given_item['name'] == item['name']), None)
+          file_path = os.path.join('outputs', 'enhanced_menus', 'consolidated_menu.json')
           try:
-               with open(file_path, 'w') as json_file:
-                    json.dump(intermediate_step_data, json_file, indent=4)  # write the output to JSON file in the outputs/enhanced_menus folder
-                    print(f"Intermediate step generated. Recommended Upsells, Narratives, and Appeals created.\nGenerated content stored in {file_path}.\nEnsuring accuracy of information...\n")
+               try:
+                    validate(instance=intermediate_step_data['menu_items'], schema=enhanced_menu_schema)
+                    print("JSON Schema validated. Consolidated enhanced menu object fits requirements.")
+                    with open(file_path, 'w') as json_file:
+                         json.dump(intermediate_step_data['menu_items'], json_file, indent=4)  # write the consolidated enhanced menu to JSON file in the outputs/enhanced_menus folder
+                         print(f"Storing consolidated enhanced menu in {file_path}.")
+                    print(f"\nDeleting intermediate files...")
+                    file_path = os.path.join('outputs', 'enhanced_menus', 'intermediate_step_output.json')
+                    try:
+                         os.remove(file_path)
+                         print(f"{file_path} has been deleted successfully.")
+                    except FileNotFoundError:
+                         print(f"{file_path} does not exist.")
+                    except PermissionError:
+                         print(f"Permission denied: unable to delete {file_path}.")
+                    except Exception as e:
+                         print(f"Error: {e}")
+               except ValidationError as e:
+                    print("The consolidated enhanced menu object does not fit the requirements and was not stored. Check input for errors and try again.")
+                    print(f"Error message: {e.message}")
+                    print(f"Invalid data path: {'/'.join(map(str, e.path))}")
+                    print(f"Schema path: {'/'.join(map(str, e.schema_path))}")  
           except FileNotFoundError:
                print(f"The directory for {file_path} does not exist.")
                valid = False
-               break
-
-          for menu_item in intermediate_step_data['menu_items']:
-               if not dish_exists(given_menu, menu_item['name']):  # if generated dish does not exist, regenerate content
-                    valid = False
-                    print(f"Generated menu item {menu_item['name']} does not exist.")
-                    break
-               for upsell in menu_item['recommended_upsells']:
-                    if not dish_exists(given_menu, upsell):  # if generated upsell does not exist, regenerate content
-                         valid = False
-                         print(f"Recomended upsell {upsell} for generated menu item {menu_item['name']} does not exist.")
-                         break
-               print(f'Validating {menu_item['narrative']['nationality']} is in nationalities {nationalities} list...')
-               if menu_item['narrative']['nationality'] not in nationalities:
-                    valid = False
-                    print(f"Mentioned nationality {menu_item['narrative']['nationality']} is not mentioned in guest nationalities.")
-                    break
-               print(f"\t{menu_item['narrative']['nationality']} confirmed in nationalities list.")
-          if valid:
-               break
-          else:
-               print("Generated enhancements are invalid. Trying again...")
-    
-except ValidationError as e:  # if inputted JSON menu does not follow the schema correctly
-     print("Inputted menu JSON data is invalid.")
-     print(f"Error message: {e.message}")
-     print(f"Invalid data path: {'/'.join(map(str, e.path))}")
-     print(f"Schema path: {'/'.join(map(str, e.schema_path))}")
-
-if valid:
-     print("\nGenerated enhancements validated. Consolidating enhanced menu...")
-     for item in intermediate_step_data['menu_items']:
-          item['category'] = next((given_item['category'] for given_item in given_menu if given_item['name'] == item['name']), None)
-          item['ingredients'] = next((given_item['ingredients'] for given_item in given_menu if given_item['name'] == item['name']), None)
-          item['price'] = next((given_item['price'] for given_item in given_menu if given_item['name'] == item['name']), None)
-     file_path = os.path.join('outputs', 'enhanced_menus', 'consolidated_menu.json')
-     try:
-          try:
-               validate(instance=intermediate_step_data['menu_items'], schema=enhanced_menu_schema)
-               print("JSON Schema validated. Consolidated enhanced menu object fits requirements.")
-               with open(file_path, 'w') as json_file:
-                    json.dump(intermediate_step_data['menu_items'], json_file, indent=4)  # write the consolidated enhanced menu to JSON file in the outputs/enhanced_menus folder
-                    print(f"Storing consolidated enhanced menu in {file_path}.")
-               print(f"\nDeleting intermediate files...")
-               file_path = os.path.join('outputs', 'enhanced_menus', 'intermediate_step_output.json')
-               try:
-                    os.remove(file_path)
-                    print(f"{file_path} has been deleted successfully.")
-               except FileNotFoundError:
-                    print(f"{file_path} does not exist.")
-               except PermissionError:
-                    print(f"Permission denied: unable to delete {file_path}.")
-               except Exception as e:
-                    print(f"Error: {e}")
-          except ValidationError as e:
-               print("The consolidated enhanced menu object does not fit the requirements and was not stored. Check input for errors and try again.")
-               print(f"Error message: {e.message}")
-               print(f"Invalid data path: {'/'.join(map(str, e.path))}")
-               print(f"Schema path: {'/'.join(map(str, e.schema_path))}")  
-     except FileNotFoundError:
-          print(f"The directory for {file_path} does not exist.")
-          valid = False

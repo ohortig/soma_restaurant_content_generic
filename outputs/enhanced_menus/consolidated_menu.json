@@ -3,14 +3,14 @@
         "name": "Bruschetta al Pomodoro",
         "recommended_upsells": [
             "Insalata Caprese",
-            "Spaghetti alla Carbonara",
-            "Cannoli Siciliani"
+            "Tagliatelle al Tartufo",
+            "Tiramisu Classico"
         ],
         "narrative": {
-            "nationality": "American",
-            "narrative": "Experience the classic Italian starter that has become a beloved staple in American households, bringing together the sun-kissed flavors of fresh tomatoes and basil atop crusty bread, much like the American admiration for Italian heritage in culinary traditions."
+            "nationality": "Italian",
+            "narrative": "Originating from the lush olive groves and vineyards of Italy, the Bruschetta al Pomodoro embodies the essence of Italian simplicity and tradition. The ripe tomatoes and fragrant basil transport you to an Italian summer day, reminiscent of nonna's cooking, celebrating the bounty of the tomato harvest."
         },
-        "appeal": "The interplay of the crusty, grilled bread with the juicy, bright tomatoes offers a delightful textural contrast, enhanced by the punchy aroma of fresh basil and garlic. This dish should be savored as a refreshing yet satisfying start to your meal.",
+        "appeal": "Experience the satisfying crunch of grilled bread combined with the juiciness of freshly diced tomatoes. The aromatic basil and garlic add layers of flavor, making every bite a harmonious balance of savory and fresh accents.",
         "category": "Appetizers",
         "ingredients": "Grilled bread, fresh tomatoes, basil, garlic, olive oil",
         "price": 15
@@ -19,14 +19,14 @@
         "name": "Insalata Caprese",
         "recommended_upsells": [
             "Bruschetta al Pomodoro",
-            "Tagliatelle al Tartufo",
+            "Filetto di Manzo",
             "Panna Cotta al Pistacchio"
         ],
         "narrative": {
-            "nationality": "Italian",
-            "narrative": "Embodying the colors of the Italian flag, this salad is a tribute to simplicity and quality. Italians appreciate the harmony of creamy mozzarella with ripe tomatoes and fragrant basil, creating a dish that is both visually appealing and deeply rooted in Italian culinary tradition."
+            "nationality": "French",
+            "narrative": "The Insalata Caprese presents a tableau worthy of a French Impressionist painting, with its vibrant hues of red and green set on the canvas of fresh mozzarella. Much like the French reverence for art and cuisine, this dish embodies the Italian pursuit of culinary perfection."
         },
-        "appeal": "Each bite provides the creamy richness of mozzarella that contrasts harmoniously with the tangy sweetness of heirloom tomatoes, all elevated by the aromatic basil and the sweet balsamic reduction. This vibrant combination entices the senses with its fresh, mouthwatering quality.",
+        "appeal": "Delight in the creaminess of soft mozzarella paired with the tangy sweetness of heirloom tomatoes, accentuated by a smooth balsamic reduction. The basil's freshness breathes life into this classic salad, offering an elegant dance of flavors and textures.",
         "category": "Salads",
         "ingredients": "Fresh mozzarella, heirloom tomatoes, basil, balsamic reduction",
         "price": 18
@@ -34,15 +34,15 @@
     {
         "name": "Spaghetti alla Carbonara",
         "recommended_upsells": [
-            "Tagliatelle al Tartufo",
-            "Filetto di Manzo",
-            "Tiramisu Classico"
+            "Branzino al Forno",
+            "Cannoli Siciliani",
+            "Insalata Caprese"
         ],
         "narrative": {
-            "nationality": "French",
-            "narrative": "For the French, known for their gourmet cooking, the indulgence of creamy pasta paired with the salty, rich pancetta reflects a shared love for lavish flavors and artistic culinary techniques, paralleling the French appreciation for comfort yet sophisticated dining experiences."
+            "nationality": "American",
+            "narrative": "For our American guests, the Spaghetti alla Carbonara provides a comforting nod to both tradition and indulgence. This rich dish, with its roots in Roman culinary history, appeals directly to the American appreciation for hearty and authentic Italian flavors."
         },
-        "appeal": "The al dente spaghetti binds decadently with the luxuriously creamy sauce, whereas the crisp pancetta offers an irresistible contrast. This symphony of flavors is tied together with the sharp, nutty pecorino romano, delivering a truly indulgent mouthfeel.",
+        "appeal": "Savor the creamy, silky texture of the carbonara sauce clinging to al dente spaghetti. The pancetta adds a satisfying crunch and savory depth, enhanced by the sharpness of pecorino romano, culminating in a soul-warming experience.",
         "category": "Pasta",
         "ingredients": "Spaghetti, pancetta, eggs, pecorino romano cheese, black pepper",
         "price": 28
@@ -50,15 +50,15 @@
     {
         "name": "Tagliatelle al Tartufo",
         "recommended_upsells": [
-            "Branzino al Forno",
-            "Filetto di Manzo",
-            "Cannoli Siciliani"
+            "Bruschetta al Pomodoro",
+            "Pollo alla Cacciatora",
+            "Tiramisu Classico"
         ],
         "narrative": {
             "nationality": "Italian",
-            "narrative": "A signature of Italian culinary luxury, the aromatic truffles envelop the fresh, silky tagliatelle, marking an ode to the Italian tradition of elevating pasta with exquisite local ingredients, creating a dish that is as much about texture as it is about flavor."
+            "narrative": "Transport yourself to the lush truffle forests of northern Italy with this luxurious dish. Tagliatelle al Tartufo celebrates the rare and enchanting taste of black truffles, revered by Italians for centuries and known as the 'diamond of the kitchen.'"
         },
-        "appeal": "The rich, buttery sauce beautifully coats each tagliatelle strand, while the earthy aroma of black truffle imparts a luxurious feel, transforming every bite into a sumptuous experience that is both smooth and rich in taste.",
+        "appeal": "Indulge in the velvety ribbons of homemade tagliatelle, enveloped in an earthy and fragrant black truffle sauce. The hint of parmesan adds a nutty richness that perfectly complements the elegance of the truffle.",
         "category": "Pasta",
         "ingredients": "Homemade tagliatelle, black truffle, parmesan, butter sauce",
         "price": 35
@@ -66,15 +66,15 @@
     {
         "name": "Filetto di Manzo",
         "recommended_upsells": [
-            "Tagliatelle al Tartufo",
             "Insalata Caprese",
-            "Panna Cotta al Pistacchio"
+            "Tagliatelle al Tartufo",
+            "Cannoli Siciliani"
         ],
         "narrative": {
-            "nationality": "American",
-            "narrative": "The tender beef filet reflects the American love for hearty, robust flavors, coupled with a sophisticated touch that pays homage to the European influence on classic steak dishes, creating a bridge between rustic heritage and refined dining."
+            "nationality": "French",
+            "narrative": "The Filetto di Manzo parallels a refined French dining experience with its exquisite presentation and robust flavors. A nod to the French appreciation for fine meats, this dish captures the essence of opulent Italian cuisine and culinary artistry."
         },
-        "appeal": "Succulent and richly marbled, the beef tenderloin is perfectly cooked to retain its juiciness, while the rosemary potatoes provide a complementary crispy, herb-infused accompaniment, enhanced by the depth of a red wine reduction.",
+        "appeal": "A tender and juicy beef tenderloin awaits, promising a succulent bite with each cut. The rosemary potatoes offer a crispy contrast, while the red wine reduction adds a depth of flavor that lingers tantalizingly on the palate.",
         "category": "Main Course",
         "ingredients": "Grilled beef tenderloin, rosemary potatoes, red wine reduction",
         "price": 45
@@ -82,15 +82,15 @@
     {
         "name": "Branzino al Forno",
         "recommended_upsells": [
-            "Insalata Caprese",
             "Spaghetti alla Carbonara",
-            "Tiramisu Classico"
+            "Panna Cotta al Pistacchio",
+            "Bruschetta al Pomodoro"
         ],
         "narrative": {
-            "nationality": "French",
-            "narrative": "For the French connoisseur of delicate fish dishes, this Mediterranean sea bass is an exemplar of how simplicity in seasoning can enhance the natural flavors, offering a delightful culinary experience reminiscent of French cuisine's elegance."
+            "nationality": "Italian",
+            "narrative": "Hailing from the Mediterranean coastlines, Branzino al Forno takes inspiration from Italy's maritime heritage. This dish embodies the Italian dedication to fresh and wholesome ingredients, capturing the sea breeze in every bite."
         },
-        "appeal": "Each bite of sea bass delights with its moist, flaky texture, beautifully highlighted by the briny notes of the olives and the fresh zest of lemon, achieving a masterful balance of delicate and bold flavors.",
+        "appeal": "Feel the delicate flakes of Mediterranean sea bass melt on your tongue, balanced by a zesty infusion of lemon. The capers and olives bring a delightful burst of savory that echoes the crisp serenity of the sea.",
         "category": "Main Course",
         "ingredients": "Baked Mediterranean sea bass, lemon, capers, olives",
         "price": 40
@@ -98,15 +98,15 @@
     {
         "name": "Pollo alla Cacciatora",
         "recommended_upsells": [
-            "Bruschetta al Pomodoro",
             "Tagliatelle al Tartufo",
-            "Cannoli Siciliani"
+            "Cannoli Siciliani",
+            "Insalata Caprese"
         ],
         "narrative": {
-            "nationality": "Italian",
-            "narrative": "Originating from the rustic kitchens of Italy, this hunter-style chicken dish imparts the hearty, comforting flavors of tomatoes and peppers, reflecting the tradition of slow-cooked, rich sauces that are the hallmark of vibrant Italian home cooking."
+            "nationality": "American",
+            "narrative": "Pollo alla Cacciatora resonates with an American affinity for rustic and hearty meals. Its roots in traditional Italian peasant cuisine make it a humble yet flavor-packed dish, with a soul-warming familiarity akin to a comforting family dinner."
         },
-        "appeal": "Tender chicken melds with the robust, savory flavors of tomatoes and herbs, while the burst of olives and peppers adds layers of taste that evoke memories of warm, homestyle preparation.",
+        "appeal": "Relish the tender, slow-cooked chicken richly absorbed in a medley of tomatoes, peppers, and olives. The harmonious blend of herbs infuses the dish with an inviting aroma, creating a rustic, homey experience in every mouthful.",
         "category": "Main Course",
         "ingredients": "Free-range chicken, tomatoes, peppers, olives, herbs",
         "price": 32
@@ -114,15 +114,15 @@
     {
         "name": "Tiramisu Classico",
         "recommended_upsells": [
-            "Panna Cotta al Pistacchio",
-            "Branzino al Forno",
-            "Spaghetti alla Carbonara"
+            "Bruschetta al Pomodoro",
+            "Filetto di Manzo",
+            "Insalata Caprese"
         ],
         "narrative": {
-            "nationality": "French",
-            "narrative": "The famous Italian dessert resonates with French dessert culture, where layers of flavor and texture are celebrated, capturing the art of combining creaminess, bitterness, and sweetness into an elegant finish that both French and Italian diners cherish."
+            "nationality": "Italian",
+            "narrative": "This beloved Italian dessert translates to 'pick me up,' borrowing its name from the stimulating espresso that stars in this creation. Italians have indulged in Tiramisu for generations, making it a culinary staple and a delightful finish to any meal."
         },
-        "appeal": "The layered composition of creamy mascarpone and espresso-soaked ladyfingers creates a perfect balance of velvety and set against a delicate bitterness from cocoa, offering an exquisite play of sweet and bitter.",
+        "appeal": "Immerse yourself in layers of soft, coffee-soaked ladyfingers interspersed with rich, creamy mascarpone, all dusted with bittersweet cocoa. Each bite offers a delicate balance of textures and the invigorating aroma of freshly brewed espresso.",
         "category": "Desserts",
         "ingredients": "Ladyfingers, mascarpone, espresso, cocoa powder",
         "price": 12
@@ -130,15 +130,15 @@
     {
         "name": "Panna Cotta al Pistacchio",
         "recommended_upsells": [
-            "Filetto di Manzo",
-            "Pollo alla Cacciatora",
-            "Tagliatelle al Tartufo"
+            "Branzino al Forno",
+            "Spaghetti alla Carbonara",
+            "Bruschetta al Pomodoro"
         ],
         "narrative": {
-            "nationality": "Italian",
-            "narrative": "Panna cotta, a classic Italian dessert, resonates through its simplicity and the nuanced flavor of pistachios, inviting diners into the delicate world of Italian confections where minimalism meets decadent taste."
+            "nationality": "French",
+            "narrative": "Panna Cotta al Pistacchio combines the silky elegance of Italian panna cotta with the French passion for refined desserts. It exemplifies cross-cultural indulgence and the universal appreciation for pistachio's subtle nutty sweetness."
         },
-        "appeal": "Its silky smooth texture is naturally captivating, paired adeptly with the crunchy pistachio and the vibrant sweet-tart berry coulis, creating a sensory delight with every spoonful.",
+        "appeal": "Experience a silky, smooth panna cotta that tempts with its gentle wobble, adorned with a vibrant berry coulis. The subtle sweetness of pistachios adds an irresistible nutty undertone, making it a perfectly light yet satisfying dessert.",
         "category": "Desserts",
         "ingredients": "Pistachio panna cotta, berry coulis",
         "price": 14
@@ -146,15 +146,15 @@
     {
         "name": "Cannoli Siciliani",
         "recommended_upsells": [
-            "Spaghetti alla Carbonara",
             "Filetto di Manzo",
-            "Insalata Caprese"
+            "Tagliatelle al Tartufo",
+            "Pollo alla Cacciatora"
         ],
         "narrative": {
-            "nationality": "American",
-            "narrative": "The Sicilian cannoli offers a nostalgic embrace to the American palate, celebrating the cultural blend of Italian-American traditions through its crispy shell and sweet ricotta filling, evoking a taste of homey delight."
+            "nationality": "Italian",
+            "narrative": "Cannoli Siciliani are a time-honored treat from Sicily, cherished throughout Italy and beyond. They stand as a delicious testament to Italy's rich confectionary history, inviting those who taste them to experience the island's flavorful legacy."
         },
-        "appeal": "With its crunchy exterior yielding to the rich, creamy ricotta filling and the occasional burst of sweetness from candied fruits, this dessert is both delightful to the bite and satisfyingly sweet.",
+        "appeal": "Delight in the contrast of crispy, golden pastry against the velvety smoothness of sweet ricotta. With each bite, discover the occasional zest of candied fruit, making this dessert both refreshing and indulgently satisfying.",
         "category": "Desserts",
         "ingredients": "Crispy pastry shells, sweet ricotta filling, candied fruit",
         "price": 13

@@ -1,4 +1,4 @@
-json_schema = {
+quiz_json_schema = {
     "name": "quiz_response",
     "schema": {
         "type": "object",

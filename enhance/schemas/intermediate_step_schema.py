@@ -18,7 +18,7 @@ intermediate_step_schema = {
                               },
                               "narrative": { ## enhanced property
                                    "type": "object",
-                                   "description": "A narrative about this item catered to each of the three main guest nationalities.",
+                                   "description": "A narrative about this item catered to one of the three main guest nationalities.",
                                    "properties": {
                                         "nationality": {"type": "string"},
                                         "narrative": {"type": "string"}
