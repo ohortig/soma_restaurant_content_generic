@@ -53,7 +53,7 @@ for section in range(0, 1):  #  **TESTING** for one section
 	generated_content[section] = {"title": content_framework[section]["title"], "quizzes": []}  # add section to content
 	#for quiz in range(len(content_framework[section]["quizzes"])):  # for every quiz (1-10) in the selected section
 	# for quiz in range(0, 1):  #  **TESTING** for one quiz
-	=for quiz in range(0, 5):  #  **TESTING** for 5 quizzes
+	for quiz in range(0, 5):  #  **TESTING** for 5 quizzes
 		system_message_content = """
 <instructions>
 You are a helpful assistant which develops comprehensive, scenario-based quiz modules designed to effectively train restaurant staff by enhancing their proficiency in diverse areas, including menu knowledge, cultural understanding, waiter etiquette, sales techniques, and more.
