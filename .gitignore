@@ -1,1 +1,3 @@
-**/__pycache__/
+__pycache__/
+outputs/enhanced_menus/consolidated_menu.json
+outputs/generated_content.json
