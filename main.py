@@ -97,7 +97,7 @@ Follow the response_format json schema completely, with zero deviations.
 		while True:
 			try:  #  handle API refusals
 				completion = client.chat.completions.create(
-					model="ft:gpt-4o-2024-08-06:personal:soma-finetuned:A6uJ6VVR",  # fined-tuned model
+					model="ft:gpt-4o-2024-08-06:personal:soma-question-generation:AFcbxTEf",  # fined-tuned question generation model
 					messages=[
 						{
 						"role": "system", 
