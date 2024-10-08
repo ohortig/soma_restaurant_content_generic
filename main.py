@@ -31,6 +31,7 @@ from inputs.restaurant_info.cuisine import cuisine
 from inputs.restaurant_info.location import location
 from inputs.restaurant_info.name import name
 from inputs.restaurant_info.nationalities import nationalities
+from inputs.restaurant_info.context import restaurant_context
 
 ## load response schemas
 from inputs.frameworks.json_schema_single_quiz import quiz_json_schema
@@ -48,12 +49,10 @@ print("**************************\n")
 valid = True
 
 # for section in range(len(content_framework)):  # for every section (1-5)
-for section in range(0, 1):  #  **TESTING** for one section
+for section in range(0, 2):  # two sections
 	print(f"Generating section {section + 1}:")
 	generated_content[section] = {"title": content_framework[section]["title"], "quizzes": []}  # add section to content
-	#for quiz in range(len(content_framework[section]["quizzes"])):  # for every quiz (1-10) in the selected section
-	# for quiz in range(0, 1):  #  **TESTING** for one quiz
-	for quiz in range(0, 5):  #  **TESTING** for 5 quizzes
+	for quiz in range(0, 5):  #  10 quizzes each
 		system_message_content = """
 <instructions>
 You are a helpful assistant which develops comprehensive, scenario-based quiz modules designed to effectively train restaurant staff by enhancing their proficiency in diverse areas, including menu knowledge, cultural understanding, waiter etiquette, sales techniques, and more.
@@ -69,7 +68,8 @@ Use the following inputs to generate the quiz:
 ### 5. **Restaurant Location**: The restaurant's location
 ### 6. **Nationalities**: The top  nationalities of the restaurant's clientele.
 ### 7. **Cuisine of the Restaurant**: The main cuisine featured at the restaurant.
-### 8. **Enhanced Menus**: Enhanced menus which detail the pricing, ingredients, pairing suggestions, cultural narratives, and menu category for each menu item. 
+### 8. **Enhanced Menus**: Enhanced menus which detail the pricing, ingredients, pairing suggestions, cultural narratives, and menu category for each menu item.
+### 9. **Restaurant Context**: The history, vibe, values, and aesthetic of the restaurant.
 </inputs>
 
 <output_requirements>
@@ -77,7 +77,7 @@ Use the following inputs to generate the quiz:
 Develop a diverse set of scenario-based questions tailored to the input data. 
 Ensure questions are engaging, diverse, framed in real-world scenarios, and not repetitive to maintain quiz freshness and intrigue. 
 ### 2. **Structure of the Quiz**:
-Each quiz should contain 10 questions with multiple-choice answers (A to D), with one correct answer.
+Each quiz should contain 10 questions with multiple-choice answers (A to D), with one correct answer. In answer_explanation, explain why the chosen answer is correct.
 Follow the response_format json schema completely, with zero deviations.
 </output_requirements>
 """
@@ -90,6 +90,7 @@ Follow the response_format json schema completely, with zero deviations.
 ### 6. **Nationalities**: {nationalities}
 ### 7. **Cuisine of the Restaurant**: {cuisine}
 ### 8. **Enhanced Menus**: {enhanced_menu}
+### 9. **Restaurant Context**: {restaurant_context}
     		"""
 		print("\t***")
 		print(f"\tGenerating quiz {quiz + 1} in section {section + 1}...")

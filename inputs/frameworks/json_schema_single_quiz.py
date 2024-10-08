@@ -14,9 +14,10 @@ quiz_json_schema = {
                             "B": {"type": "string"},
                             "C": {"type": "string"},
                             "D": {"type": "string"},
-                            "correct_answer": {"type": "string"}
+                            "correct_answer": {"type": "string"},
+                            "answer_explanation": {"type": "string"}
                         },
-                        "required": ["question", "A", "B", "C", "D", "correct_answer"],
+                        "required": ["question", "A", "B", "C", "D", "correct_answer", "answer_explanation"],
                         "additionalProperties": False
                     },
                     "question2": {
@@ -27,9 +28,10 @@ quiz_json_schema = {
                             "B": {"type": "string"},
                             "C": {"type": "string"},
                             "D": {"type": "string"},
-                            "correct_answer": {"type": "string"}
+                            "correct_answer": {"type": "string"},
+                            "answer_explanation": {"type": "string"}
                         },
-                        "required": ["question", "A", "B", "C", "D", "correct_answer"],
+                        "required": ["question", "A", "B", "C", "D", "correct_answer", "answer_explanation"],
                         "additionalProperties": False
                     },
                     "question3": {
@@ -40,9 +42,10 @@ quiz_json_schema = {
                             "B": {"type": "string"},
                             "C": {"type": "string"},
                             "D": {"type": "string"},
-                            "correct_answer": {"type": "string"}
+                            "correct_answer": {"type": "string"},
+                            "answer_explanation": {"type", "string"}
                         },
-                        "required": ["question", "A", "B", "C", "D", "correct_answer"],
+                        "required": ["question", "A", "B", "C", "D", "correct_answer", "answer_explanation"],
                         "additionalProperties": False
                     },
                     "question4": {
@@ -53,9 +56,10 @@ quiz_json_schema = {
                             "B": {"type": "string"},
                             "C": {"type": "string"},
                             "D": {"type": "string"},
-                            "correct_answer": {"type": "string"}
+                            "correct_answer": {"type": "string"},
+                            "answer_explanation": {"type": "string"}
                         },
-                        "required": ["question", "A", "B", "C", "D", "correct_answer"],
+                        "required": ["question", "A", "B", "C", "D", "correct_answer", "answer_explanation"],
                         "additionalProperties": False
                     },
                     "question5": {
@@ -66,9 +70,10 @@ quiz_json_schema = {
                             "B": {"type": "string"},
                             "C": {"type": "string"},
                             "D": {"type": "string"},
-                            "correct_answer": {"type": "string"}
+                            "correct_answer": {"type": "string"},
+                            "answer_explanation": {"type": "string"}
                         },
-                        "required": ["question", "A", "B", "C", "D", "correct_answer"],
+                        "required": ["question", "A", "B", "C", "D", "correct_answer", "answer_explanation"],
                         "additionalProperties": False
                     },
                     "question6": {
@@ -79,9 +84,10 @@ quiz_json_schema = {
                             "B": {"type": "string"},
                             "C": {"type": "string"},
                             "D": {"type": "string"},
-                            "correct_answer": {"type": "string"}
+                            "correct_answer": {"type": "string"},
+                            "answer_explanation": {"type": "string"}
                         },
-                        "required": ["question", "A", "B", "C", "D", "correct_answer"],
+                        "required": ["question", "A", "B", "C", "D", "correct_answer", "answer_explanation"],
                         "additionalProperties": False
                     },
                     "question7": {
@@ -92,9 +98,10 @@ quiz_json_schema = {
                             "B": {"type": "string"},
                             "C": {"type": "string"},
                             "D": {"type": "string"},
-                            "correct_answer": {"type": "string"}
+                            "correct_answer": {"type": "string"},
+                            "answer_explanation": {"type": "string"}
                         },
-                        "required": ["question", "A", "B", "C", "D", "correct_answer"],
+                        "required": ["question", "A", "B", "C", "D", "correct_answer", "answer_explanation"],
                         "additionalProperties": False
                     },
                     "question8": {
@@ -105,9 +112,10 @@ quiz_json_schema = {
                             "B": {"type": "string"},
                             "C": {"type": "string"},
                             "D": {"type": "string"},
-                            "correct_answer": {"type": "string"}
+                            "correct_answer": {"type": "string"},
+                            "answer_explanation": {"type", "string"}
                         },
-                        "required": ["question", "A", "B", "C", "D", "correct_answer"],
+                        "required": ["question", "A", "B", "C", "D", "correct_answer", "answer_explanation"],
                         "additionalProperties": False
                     },
                     "question9": {
@@ -118,9 +126,10 @@ quiz_json_schema = {
                             "B": {"type": "string"},
                             "C": {"type": "string"},
                             "D": {"type": "string"},
-                            "correct_answer": {"type": "string"}
+                            "correct_answer": {"type": "string"},
+                            "answer_explanation": {"type": "string"}
                         },
-                        "required": ["question", "A", "B", "C", "D", "correct_answer"],
+                        "required": ["question", "A", "B", "C", "D", "correct_answer", "answer_explanation"],
                         "additionalProperties": False
                     },
                     "question10": {
@@ -131,9 +140,10 @@ quiz_json_schema = {
                             "B": {"type": "string"},
                             "C": {"type": "string"},
                             "D": {"type": "string"},
-                            "correct_answer": {"type": "string"}
+                            "correct_answer": {"type": "string"},
+                            "answer_explanation": {"type": "string"}
                         },
-                        "required": ["question", "A", "B", "C", "D", "correct_answer"],
+                        "required": ["question", "A", "B", "C", "D", "correct_answer", "answer_explanation"],
                         "additionalProperties": False
                     }
                 },

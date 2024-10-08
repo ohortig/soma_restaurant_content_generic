@@ -89,6 +89,8 @@ def enhance():
                     break
 
                for menu_item in intermediate_step_data['menu_items']:
+                    if valid == False:
+                         break
                     print(f'Validating {menu_item['name']} exists...')
                     if not item_exists(menu_item['name']):  # if generated dish does not exist, regenerate content
                          valid = False

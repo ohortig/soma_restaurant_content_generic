@@ -1,1 +1,1 @@
-cuisine = "Italian"
+cuisine = "Mediterranean"
