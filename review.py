@@ -37,7 +37,7 @@ Using the provided tools, you will output function arguments to be used for eith
           #  check that it does not have hallucination and is high-quality & scenario-based using API function calling
           ## check for hallucination
           completion = client.chat.completions.create(
-               model="gpt-4o-2024-08-06",  # WIP: fined-tuned model for dish_exists, nationality_exists function calls
+               model="gpt-4o-mini",  # WIP: fined-tuned model for dish_exists, nationality_exists function calls
                messages=[
                     {
                     "role": "system", 

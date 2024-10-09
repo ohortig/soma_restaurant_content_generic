@@ -43,7 +43,7 @@ quiz_json_schema = {
                             "C": {"type": "string"},
                             "D": {"type": "string"},
                             "correct_answer": {"type": "string"},
-                            "answer_explanation": {"type", "string"}
+                            "answer_explanation": {"type": "string"}
                         },
                         "required": ["question", "A", "B", "C", "D", "correct_answer", "answer_explanation"],
                         "additionalProperties": False
@@ -113,7 +113,7 @@ quiz_json_schema = {
                             "C": {"type": "string"},
                             "D": {"type": "string"},
                             "correct_answer": {"type": "string"},
-                            "answer_explanation": {"type", "string"}
+                            "answer_explanation": {"type": "string"}
                         },
                         "required": ["question", "A", "B", "C", "D", "correct_answer", "answer_explanation"],
                         "additionalProperties": False

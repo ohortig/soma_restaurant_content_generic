@@ -52,7 +52,7 @@ valid = True
 for section in range(0, 2):  # two sections
 	print(f"Generating section {section + 1}:")
 	generated_content[section] = {"title": content_framework[section]["title"], "quizzes": []}  # add section to content
-	for quiz in range(0, 5):  #  10 quizzes each
+	for quiz in range(0, 10):  #  10 quizzes each
 		system_message_content = """
 <instructions>
 You are a helpful assistant which develops comprehensive, scenario-based quiz modules designed to effectively train restaurant staff by enhancing their proficiency in diverse areas, including menu knowledge, cultural understanding, waiter etiquette, sales techniques, and more.
@@ -117,7 +117,6 @@ Follow the response_format json schema completely, with zero deviations.
 			except Exception as e:  # handle errors like finish_reason, refusal, content_filter, etc.  ## in case Chat Completion API is unable to follow response_format schema
 				if completion.choices[0].message.refusal is not None:
 					print(f"** Error ** API refused to respond. Reason: {completion.choices[0].message.refusal}")
-					
 				else:
 					print(f"** Error ** {e}")
 				valid = False

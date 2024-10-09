@@ -9,5 +9,7 @@ nationalities = [
      "Britain",
      "British",
      "Briton",
+     "Britons",
      "Brit",
+     "Brits"
 ]
