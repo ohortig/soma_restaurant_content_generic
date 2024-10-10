@@ -1,20 +1,20 @@
-# load packages
+# imports
+## load packages
 from openai import OpenAI
 import json
 import os
-from enhance.enhance import enhance
+from enhance import enhance
 
-# load content framework
+## load content framework
 from inputs.frameworks.content_framework import content_framework
 ## load restaurant info
-from inputs.restaurant_info.restaurant_info import RESTAURANT_INFO
-
+from inputs.restaurant_info import RESTAURANT_INFO
 ## load response schemas
-from inputs.frameworks.json_schema_single_quiz import quiz_json_schema
+from inputs.frameworks.quiz_schema import quiz_json_schema
 
+## to check generated content for accuracy
 from review import review
 
-# load API inputs
 ## load enhanced menus
 print()
 print("Loading enhanced menu...")
@@ -33,9 +33,12 @@ except FileNotFoundError:
 		enhanced_menu = json.load(file)
 	print("\nEnhanced menu loaded.")
 
-client = OpenAI()
+# set up enhancement
 
+client = OpenAI()
 generated_content = [None] * len(content_framework)  # list to be filled with structured content adhering to the content framework
+
+# generate quiz content for every section in content_framework.py
 
 print("\n**************************")
 print("Generating content...")
@@ -44,12 +47,11 @@ print("**************************\n")
 valid = True
 
 # for section in range(len(content_framework)):  # for every section (1-5)
-for section in range(2, 3):  #  **TESTING** for one section
+for section in range(2, 3):  #  **TESTING** for one section (2)
 	print(f"Generating section {section + 1}:")
 	generated_content[section] = {"title": content_framework[section]["title"], "quizzes": []}  # add section to content
 	#for quiz in range(len(content_framework[section]["quizzes"])):  # for every quiz (1-10) in the selected section
-	# for quiz in range(0, 1):  #  **TESTING** for one quiz
-	for quiz in range(0, 1):  #  **TESTING** for 5 quizzes
+	for quiz in range(0, 1):  #  **TESTING** for one quizzes
 		system_message_content = """
 <instructions>
 You are a helpful assistant which develops comprehensive, scenario-based quiz modules designed to effectively train restaurant staff by enhancing their proficiency in diverse areas, including menu knowledge, cultural understanding, waiter etiquette, sales techniques, and more.
@@ -73,7 +75,7 @@ Use the following inputs to generate the quiz:
 Develop a diverse set of scenario-based questions tailored to the input data. 
 Ensure questions are engaging, diverse, framed in real-world scenarios, and not repetitive to maintain quiz freshness and intrigue. 
 ### 2. **Structure of the Quiz**:
-Each quiz should contain 10 questions with multiple-choice answers (A to D), with one correct answer.
+Each quiz should contain 10 questions with multiple-choice answers (A to D), with one correct answer. In answer_explanation, explain why the chosen answer is correct.
 Follow the response_format json schema completely, with zero deviations.
 </output_requirements>
 """
@@ -86,6 +88,7 @@ Follow the response_format json schema completely, with zero deviations.
 ### 6. **Nationalities**: {RESTAURANT_INFO.nationalities}
 ### 7. **Cuisine of the Restaurant**: {RESTAURANT_INFO.cuisine}
 ### 8. **Enhanced Menus**: {enhanced_menu}
+### 9. **Restaurant Context** {RESTAURANT_INFO.restaurant_context}
     		"""
 		print("\t***")
 		print(f"\tGenerating quiz {quiz + 1} in section {section + 1}...")
@@ -112,7 +115,6 @@ Follow the response_format json schema completely, with zero deviations.
 			except Exception as e:  # handle errors like finish_reason, refusal, content_filter, etc.  ## in case Chat Completion API is unable to follow response_format schema
 				if completion.choices[0].message.refusal is not None:
 					print(f"** Error ** API refused to respond. Reason: {completion.choices[0].message.refusal}")
-					
 				else:
 					print(f"** Error ** {e}")
 				valid = False
