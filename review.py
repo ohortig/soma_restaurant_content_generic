@@ -3,8 +3,8 @@ from openai import OpenAI
 import json
 
 # load functions
-from validate import item_exists
-from validate import nationality_exists
+from utils import item_exists
+from utils import nationality_exists
 
 # load schema
 from inputs.frameworks.tools_schema_validate_call import validate_call_tools

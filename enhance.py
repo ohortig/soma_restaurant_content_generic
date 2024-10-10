@@ -15,8 +15,8 @@ from inputs.frameworks.intermediate_step_schema import intermediate_step_schema
 from inputs.frameworks.enhanced_menu_schema import enhanced_menu_schema
 
 # load functions
-from validate import item_exists
-from validate import nationality_exists
+from utils import item_exists
+from utils import nationality_exists
 
 client = OpenAI()
 
