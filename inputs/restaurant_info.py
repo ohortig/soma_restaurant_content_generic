@@ -9,7 +9,7 @@ class RESTAURANT_INFO:
     "country": "Spain"
     }
 
-    nationalities = [
+    nationalities = [  # top three guest nationailties in different forms
      "Sweden",
      "Swedish",
      "Swede",
