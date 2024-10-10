@@ -40,7 +40,8 @@ class RESTAURANT_INFO:
         For a more immersive experience, visitors can enjoy the scenic promenade connecting Portixol with Palma or venture to nearby attractions like the Palma Cathedral.
         The laid-back, yet upscale environment of Portixol continues to attract those looking for a balance of relaxation and luxury
         """
-    given_menu = [ ## based on given Portixol Menu
+    
+    dinner_menu = [ ## based on given Portixol Menu
     {
         "category": "Starters",
         "name": "Caviar Oscietra 50gr",
