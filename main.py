@@ -6,6 +6,13 @@ from enhance.enhance import enhance
 
 # load content framework
 from inputs.frameworks.content_framework import content_framework
+## load restaurant info
+from inputs.restaurant_info.restaurant_info import RESTAURANT_INFO
+
+## load response schemas
+from inputs.frameworks.json_schema_single_quiz import quiz_json_schema
+
+from review import review
 
 # load API inputs
 ## load enhanced menus
@@ -25,17 +32,6 @@ except FileNotFoundError:
 	with open(file_path, 'r') as file:
 		enhanced_menu = json.load(file)
 	print("\nEnhanced menu loaded.")
-
-## load restaurant info
-from inputs.restaurant_info.cuisine import cuisine
-from inputs.restaurant_info.location import location
-from inputs.restaurant_info.name import name
-from inputs.restaurant_info.nationalities import nationalities
-
-## load response schemas
-from inputs.frameworks.json_schema_single_quiz import quiz_json_schema
-
-from review import review
 
 client = OpenAI()
 
@@ -85,10 +81,10 @@ Follow the response_format json schema completely, with zero deviations.
 ### 1. **Title of Section**: {content_framework[section]["title"]}
 ### 2. **Title of Quiz**: {content_framework[section]["quizzes"][quiz]["title"]}
 ### 3. **Description of Quiz**: {content_framework[section]["quizzes"][quiz]["description"]}
-### 4. **Restaurant Name**: {name}
-### 5. **Restaurant Location**: {location}
-### 6. **Nationalities**: {nationalities}
-### 7. **Cuisine of the Restaurant**: {cuisine}
+### 4. **Restaurant Name**: {RESTAURANT_INFO.name}
+### 5. **Restaurant Location**: {RESTAURANT_INFO.location}
+### 6. **Nationalities**: {RESTAURANT_INFO.nationalities}
+### 7. **Cuisine of the Restaurant**: {RESTAURANT_INFO.cuisine}
 ### 8. **Enhanced Menus**: {enhanced_menu}
     		"""
 		print("\t***")
@@ -130,7 +126,7 @@ Follow the response_format json schema completely, with zero deviations.
 			print(f"\t<< Quiz {quiz + 1} generated >>")
 			print("\tReviewing generated content for quality and hallucination...")
 			print("\t***")
-			if(review(new_content, enhanced_menu, nationalities)):
+			if(review(new_content, enhanced_menu, RESTAURANT_INFO.nationalities)):
 				break
 			else:
 				print("\n\t***")

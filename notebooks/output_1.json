@@ -1,0 +1,786 @@
+{
+    "section": "Dish Appeal",
+    "examples": "<Examples>\n------\nExample 1:\n**Question:** A guest tells you they’re trying to avoid dairy and wants to know if the \"[Insert Coconut Chicken Curry]\" fits their diet. How do you respond?\n**Answers**\nA: \"You’re in luck! This curry is dairy-free, using coconut milk for creaminess. The spices and coconut blend make it flavorful, so you won’t even miss the dairy.\"\nB: \"It’s mainly made with coconut milk, but there might be some dairy in the spices.\"\nC: \"It should be fine—it’s coconut-based, but I’d double-check to be sure.\"\n\n**Correct Answer:** A\n**Tip:** Provide clear, confident answers and highlight the alternatives used, without sounding uncertain.\n------\nExample 2:\n**Question:** A guest wants to know what makes the \"[Insert Signature Chocolate Lava Cake]\" a must-try. How would you describe it?\n**Answers**\nA: \"Our lava cake has a crispy outer layer that contrasts with the molten chocolate inside. When you cut into it, the chocolate oozes out and pairs perfectly with the cold vanilla ice cream—it’s a rich but balanced dessert.\"\nB: \"It’s a pretty standard chocolate cake with a gooey center.\"\nC: \"If you like chocolate, you’ll probably enjoy it—it’s nice and warm with a soft center.\"\n\n**Correct Answer:** A\n**Tip:** Use sensory language to emphasize textures and contrasts to make the dessert sound irresistible without oversimplifying.\n------\nExample 3:\n**Question:** A guest is unsure about trying the \"[Insert Chef’s Vegan Special]\" and asks how it compares to other vegan dishes. How do you respond?\n**Answers**\nA: \"What sets this one apart is the jackfruit, which we slow-cook to create a pulled pork-like texture. The dish is hearty and paired with a crunchy slaw that gives it a great balance of flavors and textures. Even non-vegans love it!\"\nB: \"It’s just like any other vegan dish with vegetables, but it’s worth trying.\"\nC: \"It’s good if you’re into vegan food, but it’s similar to other plant-based dishes.\"\n\n**Correct Answer:** A\n**Tip:** Highlight what makes the dish unique and satisfying, focusing on textures and flavors that appeal to a wide range of palates.\n</Examples>",
+    "base_menu": [
+        {
+            "name": "Caviar Oscietra 50gr",
+            "recommended_upsells": [
+                "Amelie No2 Oysters",
+                "Grilled Sea Bass",
+                "OREMUS ASZU 3"
+            ],
+            "narrative": {
+                "nationality": "Swedish",
+                "narrative": "Known for their refined palates and appreciation of the finest delicacies, our Swedish guests will find a taste of the sea like no other with the Caviar Oscietra. Just as Sweden is renowned for its seafood culture, this exquisite caviar captures the essence of the ocean with its buttery texture and rich, nutty flavor, crafted sustainably and ethically, aligning with the nation's passion for environmental consciousness."
+            },
+            "appeal": "The Caviar Oscietra offers an indulgent yet delicate textual experience, bursting into fine pearls that melt on the tongue, providing a luxurious and creamy taste experience rivaling the finest dreams of sea-loving epicureans.",
+            "category": "Starters",
+            "ingredients": "Pure | Natural | Sustainable | Ethical",
+            "price": 155.0
+        },
+        {
+            "name": "Amelie No2 Oysters",
+            "recommended_upsells": [
+                "Caviar Oscietra 50gr",
+                "Fried sweet potato",
+                "VALVERAN 20"
+            ],
+            "narrative": {
+                "nationality": "British",
+                "narrative": "Our British guests, who delight in coastal fare reminiscent of their seaside holidays, will appreciate the freshness of the Amelie No2 Oysters. How these oysters evoke the salty spray of the sea and pair beautifully with a chilled glass of crisp white wine, a true nod to Britain's traditional coastal delights."
+            },
+            "appeal": "Each oyster is a mouthful of ocean splendor, with a fresh, briny essence that delivers a crisp and clean finish, complementing the tactile experience with a silky smooth texture and refreshing burst in every bite.",
+            "category": "Starters",
+            "ingredients": "",
+            "price": 5.5
+        },
+        {
+            "name": "Sashimi PORTIXOL",
+            "recommended_upsells": [
+                "Japanese mushrooms sautéed",
+                "Red tuna",
+                "APASIANADO DE JOSE PARIENTE"
+            ],
+            "narrative": {
+                "nationality": "German",
+                "narrative": "Our German patrons appreciate a fusion of classic and contemporary, just as Sashimi PORTIXOL blends traditional Japanese precision with Mediterranean freshness. It's an offering that harmonizes raw elegance with a light and zesty tone, perfect for those who seek a nuanced taste of two worlds."
+            },
+            "appeal": "Sashimi PORTIXOL provides a silky, smooth sensation with each slice, the freshness of the fish uplifting taste buds with its purity, enhanced by delicate garnishes that add a symphony of subtle, refreshing notes.",
+            "category": "Starters",
+            "ingredients": "",
+            "price": 27.0
+        },
+        {
+            "name": "Iberian cured ham",
+            "recommended_upsells": [
+                "PORTIXOL Toast",
+                "Truffled wedge potatoes with rocket",
+                "MORTITX"
+            ],
+            "narrative": {
+                "nationality": "Swedish",
+                "narrative": "For the Swedish guests, who cherish quality and elegance, the Iberian cured ham offers a taste journey to sunny Spain, bringing the richness of dry-cured meats, celebrated in Swedish charcuterie traditions, into an Iberian context of deep, matured flavors."
+            },
+            "appeal": "Experience the fine marbling of Iberian ham that gives way to a velvety, melt-in-the-mouth sensation. Its deeply savory, nutty flavors envelop the senses, leaving a rich and luxurious mouthfeel that lingers.",
+            "category": "Starters",
+            "ingredients": "",
+            "price": 27.0
+        },
+        {
+            "name": "Tiger prawns tempura",
+            "recommended_upsells": [
+                "Fried edamame",
+                "Panang curry",
+                "OREMUS ASZU 3"
+            ],
+            "narrative": {
+                "nationality": "German",
+                "narrative": "German guests, known for their penchant for combining crisp flavors with succulent seafood, will delight in the Tiger prawns tempura. This dish resonates with the German knack for perfected textures and robust taste profiles that lift the spirit with every bite."
+            },
+            "appeal": "This dish features a satisfying crunch from its light, airy tempura coating, holding within a burst of tender and juicy prawn, providing a playful balance of textures and a satisfying savory finish.",
+            "category": "Starters",
+            "ingredients": "",
+            "price": 19.0
+        },
+        {
+            "name": "White sea bass ceviche",
+            "recommended_upsells": [
+                "Gazpacho",
+                "Japanese mushrooms sautéed",
+                "VALVERAN 20"
+            ],
+            "narrative": {
+                "nationality": "British",
+                "narrative": "British diners often cherish the invigorating zest of ceviche, akin to their fondness for garden-fresh produce and vibrant spices. The White sea bass ceviche brings a bright, citrus-forward flavor that is as refreshing as a spring stroll along the English countryside."
+            },
+            "appeal": "Indulge in the refreshing texture of the ceviche where firm yet tender fish meets the zest of citrus, accompanied by ripe tropical notes and the satisfying crunch of fresh vegetables - an orchestra for the senses.",
+            "category": "Starters",
+            "ingredients": "King prawns, green papaya, mango",
+            "price": 25.0
+        },
+        {
+            "name": "PORTIXOL Toast",
+            "recommended_upsells": [
+                "Fried edamame",
+                "Seasonal tomato tarter",
+                "MALLORCAN cheesecake"
+            ],
+            "narrative": {
+                "nationality": "Sweden",
+                "narrative": "Our Swedish guests will recognize the quality found in simple, elegant dishes like the PORTIXOL Toast. This dish celebrates the sophisticated pairing of fresh seafood atop crispy, well-crafted bread, akin to the open sandwiches cherished throughout Scandinavian cuisine."
+            },
+            "appeal": "Crisp artisan toast carries the delicate flavors of ocean delights, delivering a satisfying crunch followed by a soft, savory warmth that fills the senses with each bite— a playful harmony of textures.",
+            "category": "Starters",
+            "ingredients": "Toast, shrimps, crab",
+            "price": 18.0
+        },
+        {
+            "name": "Seasonal tomato tarter",
+            "recommended_upsells": [
+                "Grilled Squid",
+                "Homemade ravioli",
+                "APASIANADO DE JOSE PARIENTE"
+            ],
+            "narrative": {
+                "nationality": "German",
+                "narrative": "Our German visitors, who appreciate the fusion of classic tastes and contemporary cuisine, will find the seasonal tomato tarter as a delightful interplay of flavors - fresh local produce maximized by elegant modern culinary techniques."
+            },
+            "appeal": "Delight in the smoothness of burrata foam that drapes over the tart, sweet notes of seasonal tomatoes. The texture offers a sophisticated surprise with every soft bite, heightened further by truffle's earthy richness.",
+            "category": "Starters",
+            "ingredients": "Burrata foam, truffle",
+            "price": 18.0
+        },
+        {
+            "name": "Gazpacho",
+            "recommended_upsells": [
+                "Grilled artichoke",
+                "Homemade ravioli",
+                "APASIANADO DE JOSE PARIENTE"
+            ],
+            "narrative": {
+                "nationality": "British",
+                "narrative": "For our British guests, who enjoy refreshing summer soups as a staple, the Gazpacho here brings together vibrant vegetables in a chilled, invigorating blend that captures the sun-drenched gardens of Spain, much like the lush English gardens after which it takes inspiration."
+            },
+            "appeal": "Our Gazpacho is a cool, smooth blend of vibrant summer tomatoes and fresh vegetables. It wraps the palate in a refreshing embrace, the silkiness giving way to the garden's freshness with each sip.",
+            "category": "Starters",
+            "ingredients": "",
+            "price": 12.0
+        },
+        {
+            "name": "Grilled artichoke",
+            "recommended_upsells": [
+                "Sashimi PORTIXOL",
+                "Truffled wedge potatoes with rocket",
+                "MORTITX"
+            ],
+            "narrative": {
+                "nationality": "Swedish",
+                "narrative": "Swedish guests will relish in the delicate flavors of the Grilled artichoke, a dish that matches their appreciation for simple, honest flavors matched with sophisticated culinary preparation. This perennially cherished dish speaks to a lifestyle where quality prevails over quantity."
+            },
+            "appeal": "Char-grilled to perfection, the exterior gives a tender yet slightly smoky essence, while the interior remains soft and juicy. This sophisticated juxtaposition delivers earthy depth with each bite.",
+            "category": "Starters",
+            "ingredients": "",
+            "price": 18.0
+        },
+        {
+            "name": "Fried edamame",
+            "recommended_upsells": [
+                "PORTIXOL Toast",
+                "Japanese mushrooms sautéed",
+                "VALVERAN 20"
+            ],
+            "narrative": {
+                "nationality": "German",
+                "narrative": "Iconic in its simplicity, Fried edamame appeals to German guests who appreciate both health-conscious options and robust culinary craftsmanship. It combines lightly fried appeal with healthy nutrition, which matches the wholesome food traditions found in Germany."
+            },
+            "appeal": "Experience the delightful crunch that gives way to the perfectly tender beans within, infused with the earthy tones of red wine salt, offering an addictive mix of savory crisps and wholesome satisfaction.",
+            "category": "Starters",
+            "ingredients": "Red wine salt",
+            "price": 8.5
+        },
+        {
+            "name": "Fried sweet potato",
+            "recommended_upsells": [
+                "Iberian cured ham",
+                "Beef tenderloin steak",
+                "MORTITX"
+            ],
+            "narrative": {
+                "nationality": "British",
+                "narrative": "For the British guests whose affinity for chips is undeniable, our Fried sweet potato goes a step further. Enhanced with truffle mayonnaise, it offers a flavorful embarkment into the hearty and seasoned snacks typical of British pub cuisine."
+            },
+            "appeal": "Each bite presents a warm, soft interior encased in a light yet crispy shell, heightened by the rich aroma and creamy taste of truffle mayonnaise, transforming a simple joy into an indulgent experience.",
+            "category": "Starters",
+            "ingredients": "Truffle mayonnaise",
+            "price": 8.5
+        },
+        {
+            "name": "Grilled Sea Bass",
+            "recommended_upsells": [
+                "White sea bass ceviche",
+                "Ceasar salad or green",
+                "OREMUS ASZU 3"
+            ],
+            "narrative": {
+                "nationality": "Swedish",
+                "narrative": "Swedish diners, who treasure the pure taste of well-cooked fish, will embrace the Grilled Sea Bass. Honoring the sea's natural flavors, it captures the lightness and delicacy appreciated in Swedish culinary traditions while employing Mediterranean flair."
+            },
+            "appeal": "Savor the flake-perfect texture of Sea Bass, grilled to achieve tender, moist flesh that unfolds with the fragrance and spice of Tom Yum broth, while marinated vegetables add a complementary crunch.",
+            "category": "Main Courses",
+            "ingredients": "marinated mini-vegetables, Tom Yum broth",
+            "price": 36.0
+        },
+        {
+            "name": "Red tuna",
+            "recommended_upsells": [
+                "Japanese mushrooms sautéed",
+                "Grilled Squid",
+                "APASIANADO DE JOSE PARIENTE"
+            ],
+            "narrative": {
+                "nationality": "German",
+                "narrative": "Our German guests will find Red Tuna's elegant preparation aligns with their admiration for diligently crafted, quality dishes. It's a harmonious balance of the fresh, rich taste of tuna, complemented by subtle Asian flavors favored in global German cuisine."
+            },
+            "appeal": "Offers a luxurious texture as each slice melts in the mouth. Complemented by the smooth, creamy wasabi mayonnaise, each bite delivers a wave of flavor layered over the tender tuna.",
+            "category": "Main Courses",
+            "ingredients": "Edamame, wasabi mayonaise",
+            "price": 36.0
+        },
+        {
+            "name": "Cod Kokotxas 'pil-pil'",
+            "recommended_upsells": [
+                "Homemade chocolate truffle",
+                "White sea bass ceviche",
+                "MALLORCAN cheesecake"
+            ],
+            "narrative": {
+                "nationality": "British",
+                "narrative": "In England, the love for comforting fish dishes is profound, and our Cod Kokotxas 'pil-pil' is akin to enjoying a piece of traditional fish nestled under the spicy richness of pil-pil sauce—a comfort and a nod to flavorful meals found in British homes."
+            },
+            "appeal": "Feel the expression of culinary heritage with every forkful as the silky cod pairs beautifully with the smooth intensity of the 'pil-pil' sauce, carrying a depth of flavor that abounds with each mouthful.",
+            "category": "Main Courses",
+            "ingredients": "Belly pork, seasonal mushrooms",
+            "price": 29.0
+        },
+        {
+            "name": "Grilled Squid",
+            "recommended_upsells": [
+                "Seasonal tomato tarter",
+                "Catch of the day",
+                "OREMUS ASZU 3"
+            ],
+            "narrative": {
+                "nationality": "Swedish",
+                "narrative": "Embodying both simplicity and depth, this Grilled Squid resonates with Swedish traditions that combine healthy, fresh ingredients with hearty flavors, mirroring the Swedish ethos of uncomplicated yet richly rewarding culinary experiences."
+            },
+            "appeal": "A perfectly grilled exterior encapsulates the tender umami heart within. Enhanced by saffron 'alioli' and delicate black rice, it enlivens the senses with its complementary textures and smoky notes.",
+            "category": "Main Courses",
+            "ingredients": "Black rice, saffron 'alioli'",
+            "price": 32.0
+        },
+        {
+            "name": "Catch of the day",
+            "recommended_upsells": [
+                "Grilled Sea Bass",
+                "Homemade ravioli",
+                "MALLORCAN cheesecake"
+            ],
+            "narrative": {
+                "nationality": "German",
+                "narrative": "German guests will appreciate the chef's skill and ingredient integrity with the Catch of the day, mirroring Germany's own respect for seasonality and freshness in seafood, revealing new symphonies of flavor each day."
+            },
+            "appeal": "Catch of the day is a journey of texture and taste all on its own. From flaky to firm, each bite brings a unique experience, complemented by seasonal ingredients chosen to highlight the delicate flavors of the sea.",
+            "category": "Main Courses",
+            "ingredients": "",
+            "price": "Market price"
+        },
+        {
+            "name": "Panang curry",
+            "recommended_upsells": [
+                "Fried sweet potato",
+                "Red tuna",
+                "APASIANADO DE JOSE PARIENTE"
+            ],
+            "narrative": {
+                "nationality": "British",
+                "narrative": "Both exotic and comforting, the Panang curry aligns with British guests' embrace of bold, aromatic spices from the global palate while simulating the comforting warmth found in traditional British stews."
+            },
+            "appeal": "Savor its creamy, silky texture as it wraps around the palate, delivering rich and warm spices. The perfectly cooked vegetables and nutty red rice create pleasing contrasts against the luscious curry base.",
+            "category": "Main Courses",
+            "ingredients": "Red rice, vegetables, naan bread",
+            "price": 19.0
+        },
+        {
+            "name": "Homemade ravioli",
+            "recommended_upsells": [
+                "Ceasar salad or green",
+                "Fried edamame",
+                "MALLORCAN cheesecake"
+            ],
+            "narrative": {
+                "nationality": "German",
+                "narrative": "German culinary tradition often brings together the delights of rich, hearty dishes. Our Homemade ravioli, filled with creamy ricotta and lush spinach, is a reflection of the equally comforting and passionate fondness for Italian-inspired cuisine in Germany."
+            },
+            "appeal": "Delicate pasta parcels enveloping creamy ricotta and fresh spinach create a soft explosion of flavor. Highlighted by the crunch of walnuts, the luxurious mouthfeel provides a delightful texture contrast.",
+            "category": "Main Courses",
+            "ingredients": "Ricotta, spinach, walnuts",
+            "price": 26.0
+        },
+        {
+            "name": "Beef tenderloin steak",
+            "recommended_upsells": [
+                "Truffled wedge potatoes with rocket",
+                "Seasonal tomato tarter",
+                "MORTITX"
+            ],
+            "narrative": {
+                "nationality": "British",
+                "narrative": "Our British guests, who harbor a reverence for quality cuts of meat, will find the Beef tenderloin steak to mirror beloved traditions of their country's fine dining. It's a testament to mastery, where every bite is tender and rich, a mindful celebration of each element plated."
+            },
+            "appeal": "The steak is seared to perfection, revealing a tender and juicy center with each slice. Its rich seasoning and the layered texture of the port reduction and potato mille-feuille engage the palate with a sophisticated taste.",
+            "category": "Main Courses",
+            "ingredients": "Potato mille-feuille, port reduction",
+            "price": 34.0
+        },
+        {
+            "name": "Suckling Pig",
+            "recommended_upsells": [
+                "Grilled artichoke",
+                "Iberian cured ham",
+                "OREMUS ASZU 3"
+            ],
+            "narrative": {
+                "nationality": "Swedish",
+                "narrative": "Our Swedish guests, with their fondness for farm-to-table delicacies, will relish the Suckling Pig. Blending the idyllic flavors of fruit and pork, it's a taste of rural comfort that speaks across cultures, warm and fulfilling as a Nordic embrace."
+            },
+            "appeal": "Crispy skin with tender, succulent meat inside, the Suckling Pig dances over the palate. Enhanced by the subtle sweetness of plum and tomato, it offers complexity and comfort in every bite.",
+            "category": "Main Courses",
+            "ingredients": "Plum, tomato",
+            "price": 31.0
+        },
+        {
+            "name": "'Angus' Sirloin Steak Tataki'",
+            "recommended_upsells": [
+                "Tiger prawns tempura",
+                "Fried sweet potato",
+                "MORTITX"
+            ],
+            "narrative": {
+                "nationality": "German",
+                "narrative": "In Germany, where steak ust be treated with reverence, this 'Angus' Sirloin Steak Tataki' offers a rich and sophisticated flavor profile. Lightly seared and elegant, it appeals to those who appreciate finesse as much as fortitude in their meals."
+            },
+            "appeal": "Every slice of Tataki reveals a tenderness and aromatic allure, the seared exterior providing a hint of smokiness, paired with the subtle heat of tempura 'piquillo peppers' creating an engaging contrast for the senses.",
+            "category": "Main Courses",
+            "ingredients": "Tempura 'piquillo peppers'",
+            "price": 35.0
+        },
+        {
+            "name": "Truffled wedge potatoes with rocket",
+            "recommended_upsells": [
+                "Panang curry",
+                "Grilled Squid",
+                "APASIANADO DE JOSE PARIENTE"
+            ],
+            "narrative": {
+                "nationality": "British",
+                "narrative": "For our British guests who cherish their famous roasts and side accompaniments, these Truffled wedge potatoes offer a luxurious twist with a Mediterranean essence, paying homage to high-end takes on beloved comfort foods."
+            },
+            "appeal": "Crispy outside with a fluffy, hot interior, the wedges are elevated by a decadent aroma and taste of truffle, giving a simple yet sophisticated tactile experience that pairs beautifully with the peppery rocket.",
+            "category": "Side Orders",
+            "ingredients": "",
+            "price": 6.5
+        },
+        {
+            "name": "Ceasar salad or green",
+            "recommended_upsells": [
+                "Catch of the day",
+                "Fried edamame",
+                "VALVERAN 20"
+            ],
+            "narrative": {
+                "nationality": "German",
+                "narrative": "The German appreciation for both hearty and fresh flavors is echoed in our Caesar or green salads. They bring crisp lettuce and robust cheeses together in a way that satisfies a desire for familiar, yet elevated flavors."
+            },
+            "appeal": "Crisp greens meet creamy, savory dressing in a blend of crunchy textures and rich umami tones, offering a combination that's both refreshing and indulgently gratifying, bite after delicious bite.",
+            "category": "Side Orders",
+            "ingredients": "",
+            "price": 6.5
+        },
+        {
+            "name": "Japanese mushrooms sautéed",
+            "recommended_upsells": [
+                "Red tuna",
+                "Fried edamame",
+                "OREMUS ASZU 3"
+            ],
+            "narrative": {
+                "nationality": "Swedish",
+                "narrative": "Our Swedish visitors, who enjoy a lifelong admiration for mushrooms gracing their meals, will find the Japanese mushrooms sautéed to sit perfectly within their culinary palate, offering up an earthy, umami flavor profile."
+            },
+            "appeal": "Tender mushrooms lay soft yet resilient to the bite, their umami notes intensified by light sautéing. This simple yet complex side dish brings an array of flavor notes to the forefront in comforting richness.",
+            "category": "Side Orders",
+            "ingredients": "",
+            "price": 6.5
+        },
+        {
+            "name": "Sautéed seasonal vegetables",
+            "recommended_upsells": [
+                "Grilled Sea Bass",
+                "Red tuna",
+                "MORTITX"
+            ],
+            "narrative": {
+                "nationality": "British",
+                "narrative": "British guests often enjoy the farm-fresh bounty of sautéed seasonal vegetables, akin to what you’d find in rustic countryside meals. This dish brings the richness of earthy flavors, shining brightly alongside a multitude of mains."
+            },
+            "appeal": "With each crisp and tender bite, these vegetables deliver a symphony of soft and firm textures while the natural sweet and earthy flavors come to life through expert sautéing.",
+            "category": "Side Orders",
+            "ingredients": "",
+            "price": 6.5
+        },
+        {
+            "name": "Padrón peppers",
+            "recommended_upsells": [
+                "Iberian cured ham",
+                "Panang curry",
+                "VALVERAN 20"
+            ],
+            "narrative": {
+                "nationality": "German",
+                "narrative": "For German diners who possess a fine appreciation for subtle, excitingly versatile snacks, Padrón peppers are a delightful introduction to Spain's traditional table, resonating in a playful mix of mild and surprising spicy notes."
+            },
+            "appeal": "These small, slightly blistered peppers offer a juicy, skin-on texture. Their intriguing taste progression—subtle and savory—offers an enticing surprise with hints of heat barely peeking through.",
+            "category": "Side Orders",
+            "ingredients": "",
+            "price": 6.5
+        },
+        {
+            "name": "Homemade chocolate truffle",
+            "recommended_upsells": [
+                "Beef tenderloin steak",
+                "OREMUS ASZU 3",
+                "Home made ice cream"
+            ],
+            "narrative": {
+                "nationality": "Swedish",
+                "narrative": "Swedish guests treasure the comforting decadence of chocolate. The Homemade chocolate truffle brings satisfaction comparable to fine Swedish confections, whispering of simplicity and richness over a dense, velvety center."
+            },
+            "appeal": "Luxuriously smooth, with each bite gently dissolving to reveal a rich, deep chocolate taste, these truffles promise an indulgent escape, whispered sweetly in each compact, succulent orb.",
+            "category": "Dessert",
+            "ingredients": "",
+            "price": 3.5
+        },
+        {
+            "name": "Mallorcan cheesecake",
+            "recommended_upsells": [
+                "Grilled artichoke",
+                "Catch of the day",
+                "APASIANADO DE JOSE PARIENTE"
+            ],
+            "narrative": {
+                "nationality": "British",
+                "narrative": "British fans of creamy, baked delights will find a wonderful story in the Mallorcan cheesecake, marrying Spanish traditions with the delicate elegance of dessert craftsmanship akin to a carefully made British tea cake."
+            },
+            "appeal": "Smooth, creamy textures mingle with soft, buttery undertones, all cradled by crunchy, sweetened crust elements full of light, vanilla, and nut aromas presenting a perfect finish.",
+            "category": "Dessert",
+            "ingredients": "Toasted butter ice cream",
+            "price": 11.0
+        },
+        {
+            "name": "Chocolate coulant",
+            "recommended_upsells": [
+                "Suckling Pig",
+                "Japanese mushrooms sautéed",
+                "OREMUS ASZU 3"
+            ],
+            "narrative": {
+                "nationality": "German",
+                "narrative": "German diners who value deep, enriching desserts can revel in the Chocolate coulant, a finely crafted molten delicacy that promises an eruption of traditional chocolate richness echoing back to Germany's own passion for cocoa."
+            },
+            "appeal": "Warm chocolate flows from its molten core, drowning the senses in a river of velvety richness while a crisp outer shell adds contrast, inviting every texture-loving sweet tooth into bliss.",
+            "category": "Dessert",
+            "ingredients": "Hazelnut & tonka bean ice cream",
+            "price": 10.0
+        },
+        {
+            "name": "Tarte tatin (for 2)",
+            "recommended_upsells": [
+                "Grilled fish",
+                "Fried sweet potato",
+                "MORTITX"
+            ],
+            "narrative": {
+                "nationality": "British",
+                "narrative": "British guests hold apple desserts quite dear. The Tarte tatin provides an experience reminiscent of the cherished apple pies and tarts of their homeland, with caramelized fruits speaking of warmth and familiarity."
+            },
+            "appeal": "Golden flaky puff pastry cradles tenderly caramelized apples in a sweet embrace, with each forkful offering a delightful play of warm, sticky-sweet, and earthy crispness.",
+            "category": "Dessert",
+            "ingredients": "",
+            "price": 15.0
+        },
+        {
+            "name": "French toast 'coca de patata'",
+            "recommended_upsells": [
+                "Iberian cured ham",
+                "Fried edamame",
+                "VALVERAN 20"
+            ],
+            "narrative": {
+                "nationality": "Sweden",
+                "narrative": "Our Swedish guests, who cherish a warm, hearty breakfast or dessert, will feel the warmth of home in the French toast 'coca de patata'. Each bite connects deeply with a shared love of tradition and sweetness, so similar to Swedish fika."
+            },
+            "appeal": "Enjoy the soft, buttery warmth that meets the palate, draped in silky smooth ice cream made from sheep's milk, achieving a warm inner bliss of textures that deeply satisfies.",
+            "category": "Dessert",
+            "ingredients": "Sheep's milk ice cream",
+            "price": 10.0
+        },
+        {
+            "name": "Passion Fruit Pavlova",
+            "recommended_upsells": [
+                "Japanese mushrooms sautéed",
+                "Gazpacho",
+                "OREMUS ASZU 3"
+            ],
+            "narrative": {
+                "nationality": "British",
+                "narrative": "The beloved British influences of meringue desserts shine in our Passion Fruit Pavlova, offering a mix of textures and a sweet, fruit-tinged journey reminiscent of teatime delights often adored in Britain."
+            },
+            "appeal": "A crisp, delicate shell crumbles to reveal a soft, marshmallow-like interior, accompanied by creamy sweet-whipped peaks and tart passion fruit that sing together in a symphony of light and airy indulgence.",
+            "category": "Dessert",
+            "ingredients": "",
+            "price": 9.0
+        },
+        {
+            "name": "Spanish and local cheese selection",
+            "recommended_upsells": [
+                "Padrón peppers",
+                "Grilled artichoke",
+                "OREMUS ASZU 3"
+            ],
+            "narrative": {
+                "nationality": "German",
+                "narrative": "Our German guests have a fine appreciation for cheese, and this varied platter offers a taste of region-specific delights that align with Germany's own valued cheese-making traditions—rich, bold, and memorable."
+            },
+            "appeal": "Experience a palette of varied textures from soft to crumbly, each cheese offering a unique, robust flavor profile that provides rich, creamy nuances enveloped by the smoky, nutty, or tangy undertones.",
+            "category": "Dessert",
+            "ingredients": "",
+            "price": 19.0
+        },
+        {
+            "name": "Home made ice cream",
+            "recommended_upsells": [
+                "Fried edamame",
+                "Beef tenderloin steak",
+                "APASIANADO DE JOSE PARIENTE"
+            ],
+            "narrative": {
+                "nationality": "Sweden",
+                "narrative": "For Swedish guests fond of quality, homemade flavors, this ice cream resonates with their love of elegantly simple yet intensely flavorful desserts, drawing upon natural sweetness akin to Scandinavian dessert traditions."
+            },
+            "appeal": "Each spoonful offers a smooth, rich creaminess that coats the tongue in chilled sweetness. Fresh, bright flavors come through, delivering simplicity and refinement in texture and taste.",
+            "category": "Dessert",
+            "ingredients": "Sorbet",
+            "price": 4.5
+        },
+        {
+            "name": "MORTITX",
+            "recommended_upsells": [
+                "PORTIXOL Toast",
+                "MALLORCAN cheesecake",
+                "Caviar Oscietra 50gr"
+            ],
+            "narrative": {
+                "nationality": "British",
+                "narrative": "British diners who often enjoy dessert wines will find this sweet wine by the glass to be a treat, echoing the love of indulgent adult occasions such as afternoon teas or evening cocktails with a hint of rich flavor."
+            },
+            "appeal": "A sweet, silky elegance pulls each sip through with notes of bright fruit and smooth honeyed accents, leaving a pleasing, lingering warmth that seductively coats the palate.",
+            "category": "Sweet Wine by the Glass",
+            "ingredients": "Dolc de gel. Moscatel, Riesling",
+            "price": 8.0
+        },
+        {
+            "name": "APASIANADO DE JOSE PARIENTE",
+            "recommended_upsells": [
+                "Grilled artichoke",
+                "Suckling Pig",
+                "Japanese mushrooms sautéed"
+            ],
+            "narrative": {
+                "nationality": "German",
+                "narrative": "Our German visitors, who frequently elevate meals with a unique wine selection, will find in this glass a sweet, balanced expression that pairs seamlessly with the robust notes in their dish selection much like classic German pairings."
+            },
+            "appeal": "A dance of vibrant citrus aromas wrapped in succulent, velvety textures, this wine tips delicately between sweet and dry, leaving pleasing notes of ripe fruit and a smooth, lingering aftertaste.",
+            "category": "Sweet Wine by the Glass",
+            "ingredients": "Sauvignon Blanc E",
+            "price": 7.0
+        },
+        {
+            "name": "VALVERAN 20",
+            "recommended_upsells": [
+                "Grilled Squid",
+                "Homemade ravioli",
+                "Fried sweet potato"
+            ],
+            "narrative": {
+                "nationality": "German",
+                "narrative": "With a penchant for cider, our German guests will enjoy this sweet wine, a harmonious fruit-driven journey that stands among the grand German cider tradition, offering an echo of familiar comforts."
+            },
+            "appeal": "A refined blend of juicy apples enhances the palate with a burst of sweetness and acidic balance, each sip resonating with fine frothy effervescence that refreshes as it delights.",
+            "category": "Sweet Wine by the Glass",
+            "ingredients": "Manzanas Sidra de Hielo Raxao y Durona de Tresali",
+            "price": 7.0
+        },
+        {
+            "name": "OREMUS ASZU 3",
+            "recommended_upsells": [
+                "Red tuna",
+                "White sea bass ceviche",
+                "Iberian cured ham"
+            ],
+            "narrative": {
+                "nationality": "Swedish",
+                "narrative": "Swedish connoisseurs of dessert wines will find much to admire in the OREMUS ASZU 3, its aged complexity embodying a tradition of savoring sweet wines alongside the joys of well-paired sweets and cheeses."
+            },
+            "appeal": "A rich, honeyed texture effortlessly complements the palate with a subtle balance of sweetness. Its multi-layered notes of stone fruit and subtle spice echo lightly, offering a uniquely complex, engaging sensory journey.",
+            "category": "Sweet Wine by the Glass",
+            "ingredients": "Puttonyos Furmint, Harslevelu, Mascat de Lunel",
+            "price": 18.0
+        },
+        {
+            "name": "Hamburger",
+            "recommended_upsells": [
+                "Ceasar salad or green",
+                "Ice Cream",
+                "Home Made Meatballs"
+            ],
+            "narrative": {
+                "nationality": "British",
+                "narrative": "Children visiting from Britain will find comfort in the Hamburger, a beloved classic akin to their well-known British beef patties, fitting perfectly into the adventuresome spirit of seeking familiar joys while traveling."
+            },
+            "appeal": "Juicy, savory beef nestled in a fluffy bun provides an all-time favorite tactile melange, combined with the satisfying crispy crunch of golden fries.",
+            "category": "Kids",
+            "ingredients": "French fries",
+            "price": 15.0
+        },
+        {
+            "name": "Grilled beef",
+            "recommended_upsells": [
+                "Padrón peppers",
+                "Sautéed seasonal vegetables",
+                "Fruit Salad"
+            ],
+            "narrative": {
+                "nationality": "German",
+                "narrative": "This Grilled beef option serves German children who appreciate the comforting flavors of well-prepared meats, much like the delicious bites found in family-friendly roasts back home."
+            },
+            "appeal": "Tender, grilled beef offers a simple yet cozy experience while the choice of crispy fries or fresh salad adds appealing dimensions of taste and texture.",
+            "category": "Kids",
+            "ingredients": "French fries or salad",
+            "price": 15.0
+        },
+        {
+            "name": "Home Made Meatballs",
+            "recommended_upsells": [
+                "Grilled Squid",
+                "Ceasar salad or green",
+                "Milkshake"
+            ],
+            "narrative": {
+                "nationality": "Swedish",
+                "narrative": "Swedish families will feel at home as these home made meatballs recreate the beloved tastes and comforting shapes of their traditional meals, crafted with nostalgia and flavor."
+            },
+            "appeal": "Soft and juicy, each bite of these meatballs reveals familiar comforting flavors, paired seamlessly with creamy mashed potatoes, providing a satisfying and heartwarming meal.",
+            "category": "Kids",
+            "ingredients": "Mashed potatoes",
+            "price": 15.0
+        },
+        {
+            "name": "Grilled Fish",
+            "recommended_upsells": [
+                "Sautéed seasonal vegetables",
+                "Padrón peppers",
+                "Ice Cream"
+            ],
+            "narrative": {
+                "nationality": "Swedish",
+                "narrative": "For Swedish youngsters, accustomed to enjoying fresh seafood, this Grilled Fish echoes the pure, straightforward joys of home dishes, feeding both curiosity and nostalgia."
+            },
+            "appeal": "Delicate yet firm, the grilled fish offers a mild, fresh flavor that's easy on the palate—perfect for youthful tastes, accompanied by nourishing grains or golden seasoned potatoes.",
+            "category": "Kids",
+            "ingredients": "Rice or potatoes",
+            "price": 15.0
+        },
+        {
+            "name": "Chicken Breast",
+            "recommended_upsells": [
+                "Japanese mushrooms sautéed",
+                "French toast 'coca de patata'",
+                "Fruit Salad"
+            ],
+            "narrative": {
+                "nationality": "British",
+                "narrative": "British children who adore juicy, well-prepared chicken will enjoy this trusted favorite, reminiscent of simple yet fulfilling meals adored in family-friendly settings."
+            },
+            "appeal": "A tender, juicy chicken breast with a delightful, lightly charred exterior tailored to young palates, paired with the versatile option of crispy fries or crisp salad for added crunch.",
+            "category": "Kids",
+            "ingredients": "French fries or salad",
+            "price": 15.0
+        },
+        {
+            "name": "Pasta Bolognesa or Tomato Sauce",
+            "recommended_upsells": [
+                "Home Made Ice Cream",
+                "Ceasar salad or green",
+                "Sautéed seasonal vegetables"
+            ],
+            "narrative": {
+                "nationality": "German",
+                "narrative": "German children will relish in the classic flavors of Pasta Bolognese similar to the beloved Italian culinary influences found within German homes—a comfortingly familiar dish with every bite."
+            },
+            "appeal": "Enticing layers of flavorful sauce envelop al dente pasta, with a choice of hearty Bolognese or bright Tomato sauce, offering satisfying warmth and savory appeal perfect for littler appetites.",
+            "category": "Kids",
+            "ingredients": "",
+            "price": 15.0
+        },
+        {
+            "name": "Ice Cream",
+            "recommended_upsells": [
+                "Fruit Salad",
+                "Milkshake",
+                "Pasta Bolognesa or Tomato Sauce"
+            ],
+            "narrative": {
+                "nationality": "Swedish",
+                "narrative": "Swedish children who revel in simple pleasures will find a joyful moment in each scoop of Ice Cream, just like cherished summer outings and sweet holiday treats shared with family."
+            },
+            "appeal": "Pure, creamy sweetness twirls over the tongue in a chilled, luscious landscape, each flavor fresh and inviting, promising delight even in its simplicities.",
+            "category": "Kids Dessert",
+            "ingredients": "",
+            "price": 4.5
+        },
+        {
+            "name": "Fruit Salad",
+            "recommended_upsells": [
+                "Ice Cream",
+                "Milkshake",
+                "Chicken Breast"
+            ],
+            "narrative": {
+                "nationality": "British",
+                "narrative": "British children who enjoy refreshing and healthy snacks will find joy in Fruit Salad, offering a colorful mix reminiscent of picnic days in sunlit gardens back home."
+            },
+            "appeal": "A vibrant medley of fresh fruits creates a symphony of sweet and tangy flavors. Each piece bursts with natural juices, uplifting taste buds with refreshing, juicy textures.",
+            "category": "Kids Dessert",
+            "ingredients": "",
+            "price": 4.0
+        },
+        {
+            "name": "Milkshake",
+            "recommended_upsells": [
+                "Grilled beef",
+                "Hamburger",
+                "Pasta Bolognesa or Tomato Sauce"
+            ],
+            "narrative": {
+                "nationality": "German",
+                "narrative": "German children will be at home with the playful concoction of a Milkshake, reminiscent of family outings where such sweet treats are customary, promising delight with each sip."
+            },
+            "appeal": "Velvety smooth and creamy, each thick, luscious sip offers a whimsical delight, combined with flavors both rich and nostalgic, comforting in their sweet, frosty embrace.",
+            "category": "Kids Dessert",
+            "ingredients": "",
+            "price": 5.0
+        }
+    ],
+    "menu_enhacement": null,
+    "inputs": [
+        {
+            "role": "system",
+            "content": "\n<instructions>\nYou are a helpful assistant which develops comprehensive, scenario-based quiz modules designed to effectively train restaurant staff by enhancing their proficiency in diverse areas, including menu knowledge, cultural understanding, waiter etiquette, sales techniques, and more.\nThe quizzes should be engaging, contextually relevant, and varied to ensure high levels of interest without redundancy.\n</instructions>\n\n<inputs>\nUse the following inputs to generate the quiz:\n### 1. **Section_Title**: The title of the section the quiz is part of.\n### 2. **Title of Quiz**: The name of the quiz that you are generating.\n### 3. **Description of Quiz**: A high level description of the quiz that you are generating.\n### 4. **Restaurant Name**: The name of the restaurant.\n### 5. **Restaurant Location**: The restaurant's location\n### 6. **Nationalities**: The top  nationalities of the restaurant's clientele.\n### 7. **Cuisine of the Restaurant**: The main cuisine featured at the restaurant.\n### 8. **Enhanced Menus**: Enhanced menus which detail the pricing, ingredients, pairing suggestions, cultural narratives, and menu category for each menu item. \n</inputs>\n\n<output_requirements>\n### 1. **Generate Questions**:\nDevelop a diverse set of scenario-based questions tailored to the input data. \nEnsure questions are engaging, diverse, framed in real-world scenarios, and not repetitive to maintain quiz freshness and intrigue. \n### 2. **Structure of the Quiz**:\nEach quiz should contain 10 questions with multiple-choice answers (A to D), with one correct answer.\n</output_requirements>\n\nUse the following examples format, writing style and coherence. Must use each of these styles at least once in your 10 questions.\n<Examples>\n------\nExample 1:\n**Question:** A guest tells you they’re trying to avoid dairy and wants to know if the \"[Insert Coconut Chicken Curry]\" fits their diet. How do you respond?\n**Answers**\nA: \"You’re in luck! This curry is dairy-free, using coconut milk for creaminess. The spices and coconut blend make it flavorful, so you won’t even miss the dairy.\"\nB: \"It’s mainly made with coconut milk, but there might be some dairy in the spices.\"\nC: \"It should be fine—it’s coconut-based, but I’d double-check to be sure.\"\n\n**Correct Answer:** A\n**Tip:** Provide clear, confident answers and highlight the alternatives used, without sounding uncertain.\n------\nExample 2:\n**Question:** A guest wants to know what makes the \"[Insert Signature Chocolate Lava Cake]\" a must-try. How would you describe it?\n**Answers**\nA: \"Our lava cake has a crispy outer layer that contrasts with the molten chocolate inside. When you cut into it, the chocolate oozes out and pairs perfectly with the cold vanilla ice cream—it’s a rich but balanced dessert.\"\nB: \"It’s a pretty standard chocolate cake with a gooey center.\"\nC: \"If you like chocolate, you’ll probably enjoy it—it’s nice and warm with a soft center.\"\n\n**Correct Answer:** A\n**Tip:** Use sensory language to emphasize textures and contrasts to make the dessert sound irresistible without oversimplifying.\n------\nExample 3:\n**Question:** A guest is unsure about trying the \"[Insert Chef’s Vegan Special]\" and asks how it compares to other vegan dishes. How do you respond?\n**Answers**\nA: \"What sets this one apart is the jackfruit, which we slow-cook to create a pulled pork-like texture. The dish is hearty and paired with a crunchy slaw that gives it a great balance of flavors and textures. Even non-vegans love it!\"\nB: \"It’s just like any other vegan dish with vegetables, but it’s worth trying.\"\nC: \"It’s good if you’re into vegan food, but it’s similar to other plant-based dishes.\"\n\n**Correct Answer:** A\n**Tip:** Highlight what makes the dish unique and satisfying, focusing on textures and flavors that appeal to a wide range of palates.\n</Examples>\n"
+        },
+        {
+            "role": "user",
+            "content": "\n### 1. **Title of Section**: Dish Appeal\n### 2. **Title of Quiz**: Dish Appeal\n### 3. **Description of Quiz**: \n### 4. **Restaurant Name**: Carbone\n### 5. **Restaurant Location**: {'neighborhood': 'Greenwich Village', 'city': 'New York City', 'state': 'New York', 'country': 'United States of America'}\n### 6. **Nationalities**: ['American', 'Americans', 'America', 'USA', 'United States', 'United States of America', 'Italian', 'Italians', 'Italy', 'French', 'Frenchmen', 'France']\n### 7. **Cuisine of the Restaurant**: Italian\n### 8. **menu**: [{'name': 'Caviar Oscietra 50gr', 'recommended_upsells': ['Amelie No2 Oysters', 'Grilled Sea Bass', 'OREMUS ASZU 3'], 'narrative': {'nationality': 'Swedish', 'narrative': \"Known for their refined palates and appreciation of the finest delicacies, our Swedish guests will find a taste of the sea like no other with the Caviar Oscietra. Just as Sweden is renowned for its seafood culture, this exquisite caviar captures the essence of the ocean with its buttery texture and rich, nutty flavor, crafted sustainably and ethically, aligning with the nation's passion for environmental consciousness.\"}, 'appeal': 'The Caviar Oscietra offers an indulgent yet delicate textual experience, bursting into fine pearls that melt on the tongue, providing a luxurious and creamy taste experience rivaling the finest dreams of sea-loving epicureans.', 'category': 'Starters', 'ingredients': 'Pure | Natural | Sustainable | Ethical', 'price': 155.0}, {'name': 'Amelie No2 Oysters', 'recommended_upsells': ['Caviar Oscietra 50gr', 'Fried sweet potato', 'VALVERAN 20'], 'narrative': {'nationality': 'British', 'narrative': \"Our British guests, who delight in coastal fare reminiscent of their seaside holidays, will appreciate the freshness of the Amelie No2 Oysters. How these oysters evoke the salty spray of the sea and pair beautifully with a chilled glass of crisp white wine, a true nod to Britain's traditional coastal delights.\"}, 'appeal': 'Each oyster is a mouthful of ocean splendor, with a fresh, briny essence that delivers a crisp and clean finish, complementing the tactile experience with a silky smooth texture and refreshing burst in every bite.', 'category': 'Starters', 'ingredients': '', 'price': 5.5}, {'name': 'Sashimi PORTIXOL', 'recommended_upsells': ['Japanese mushrooms sautéed', 'Red tuna', 'APASIANADO DE JOSE PARIENTE'], 'narrative': {'nationality': 'German', 'narrative': \"Our German patrons appreciate a fusion of classic and contemporary, just as Sashimi PORTIXOL blends traditional Japanese precision with Mediterranean freshness. It's an offering that harmonizes raw elegance with a light and zesty tone, perfect for those who seek a nuanced taste of two worlds.\"}, 'appeal': 'Sashimi PORTIXOL provides a silky, smooth sensation with each slice, the freshness of the fish uplifting taste buds with its purity, enhanced by delicate garnishes that add a symphony of subtle, refreshing notes.', 'category': 'Starters', 'ingredients': '', 'price': 27.0}, {'name': 'Iberian cured ham', 'recommended_upsells': ['PORTIXOL Toast', 'Truffled wedge potatoes with rocket', 'MORTITX'], 'narrative': {'nationality': 'Swedish', 'narrative': 'For the Swedish guests, who cherish quality and elegance, the Iberian cured ham offers a taste journey to sunny Spain, bringing the richness of dry-cured meats, celebrated in Swedish charcuterie traditions, into an Iberian context of deep, matured flavors.'}, 'appeal': 'Experience the fine marbling of Iberian ham that gives way to a velvety, melt-in-the-mouth sensation. Its deeply savory, nutty flavors envelop the senses, leaving a rich and luxurious mouthfeel that lingers.', 'category': 'Starters', 'ingredients': '', 'price': 27.0}, {'name': 'Tiger prawns tempura', 'recommended_upsells': ['Fried edamame', 'Panang curry', 'OREMUS ASZU 3'], 'narrative': {'nationality': 'German', 'narrative': 'German guests, known for their penchant for combining crisp flavors with succulent seafood, will delight in the Tiger prawns tempura. This dish resonates with the German knack for perfected textures and robust taste profiles that lift the spirit with every bite.'}, 'appeal': 'This dish features a satisfying crunch from its light, airy tempura coating, holding within a burst of tender and juicy prawn, providing a playful balance of textures and a satisfying savory finish.', 'category': 'Starters', 'ingredients': '', 'price': 19.0}, {'name': 'White sea bass ceviche', 'recommended_upsells': ['Gazpacho', 'Japanese mushrooms sautéed', 'VALVERAN 20'], 'narrative': {'nationality': 'British', 'narrative': 'British diners often cherish the invigorating zest of ceviche, akin to their fondness for garden-fresh produce and vibrant spices. The White sea bass ceviche brings a bright, citrus-forward flavor that is as refreshing as a spring stroll along the English countryside.'}, 'appeal': 'Indulge in the refreshing texture of the ceviche where firm yet tender fish meets the zest of citrus, accompanied by ripe tropical notes and the satisfying crunch of fresh vegetables - an orchestra for the senses.', 'category': 'Starters', 'ingredients': 'King prawns, green papaya, mango', 'price': 25.0}, {'name': 'PORTIXOL Toast', 'recommended_upsells': ['Fried edamame', 'Seasonal tomato tarter', 'MALLORCAN cheesecake'], 'narrative': {'nationality': 'Sweden', 'narrative': 'Our Swedish guests will recognize the quality found in simple, elegant dishes like the PORTIXOL Toast. This dish celebrates the sophisticated pairing of fresh seafood atop crispy, well-crafted bread, akin to the open sandwiches cherished throughout Scandinavian cuisine.'}, 'appeal': 'Crisp artisan toast carries the delicate flavors of ocean delights, delivering a satisfying crunch followed by a soft, savory warmth that fills the senses with each bite— a playful harmony of textures.', 'category': 'Starters', 'ingredients': 'Toast, shrimps, crab', 'price': 18.0}, {'name': 'Seasonal tomato tarter', 'recommended_upsells': ['Grilled Squid', 'Homemade ravioli', 'APASIANADO DE JOSE PARIENTE'], 'narrative': {'nationality': 'German', 'narrative': 'Our German visitors, who appreciate the fusion of classic tastes and contemporary cuisine, will find the seasonal tomato tarter as a delightful interplay of flavors - fresh local produce maximized by elegant modern culinary techniques.'}, 'appeal': \"Delight in the smoothness of burrata foam that drapes over the tart, sweet notes of seasonal tomatoes. The texture offers a sophisticated surprise with every soft bite, heightened further by truffle's earthy richness.\", 'category': 'Starters', 'ingredients': 'Burrata foam, truffle', 'price': 18.0}, {'name': 'Gazpacho', 'recommended_upsells': ['Grilled artichoke', 'Homemade ravioli', 'APASIANADO DE JOSE PARIENTE'], 'narrative': {'nationality': 'British', 'narrative': 'For our British guests, who enjoy refreshing summer soups as a staple, the Gazpacho here brings together vibrant vegetables in a chilled, invigorating blend that captures the sun-drenched gardens of Spain, much like the lush English gardens after which it takes inspiration.'}, 'appeal': \"Our Gazpacho is a cool, smooth blend of vibrant summer tomatoes and fresh vegetables. It wraps the palate in a refreshing embrace, the silkiness giving way to the garden's freshness with each sip.\", 'category': 'Starters', 'ingredients': '', 'price': 12.0}, {'name': 'Grilled artichoke', 'recommended_upsells': ['Sashimi PORTIXOL', 'Truffled wedge potatoes with rocket', 'MORTITX'], 'narrative': {'nationality': 'Swedish', 'narrative': 'Swedish guests will relish in the delicate flavors of the Grilled artichoke, a dish that matches their appreciation for simple, honest flavors matched with sophisticated culinary preparation. This perennially cherished dish speaks to a lifestyle where quality prevails over quantity.'}, 'appeal': 'Char-grilled to perfection, the exterior gives a tender yet slightly smoky essence, while the interior remains soft and juicy. This sophisticated juxtaposition delivers earthy depth with each bite.', 'category': 'Starters', 'ingredients': '', 'price': 18.0}, {'name': 'Fried edamame', 'recommended_upsells': ['PORTIXOL Toast', 'Japanese mushrooms sautéed', 'VALVERAN 20'], 'narrative': {'nationality': 'German', 'narrative': 'Iconic in its simplicity, Fried edamame appeals to German guests who appreciate both health-conscious options and robust culinary craftsmanship. It combines lightly fried appeal with healthy nutrition, which matches the wholesome food traditions found in Germany.'}, 'appeal': 'Experience the delightful crunch that gives way to the perfectly tender beans within, infused with the earthy tones of red wine salt, offering an addictive mix of savory crisps and wholesome satisfaction.', 'category': 'Starters', 'ingredients': 'Red wine salt', 'price': 8.5}, {'name': 'Fried sweet potato', 'recommended_upsells': ['Iberian cured ham', 'Beef tenderloin steak', 'MORTITX'], 'narrative': {'nationality': 'British', 'narrative': 'For the British guests whose affinity for chips is undeniable, our Fried sweet potato goes a step further. Enhanced with truffle mayonnaise, it offers a flavorful embarkment into the hearty and seasoned snacks typical of British pub cuisine.'}, 'appeal': 'Each bite presents a warm, soft interior encased in a light yet crispy shell, heightened by the rich aroma and creamy taste of truffle mayonnaise, transforming a simple joy into an indulgent experience.', 'category': 'Starters', 'ingredients': 'Truffle mayonnaise', 'price': 8.5}, {'name': 'Grilled Sea Bass', 'recommended_upsells': ['White sea bass ceviche', 'Ceasar salad or green', 'OREMUS ASZU 3'], 'narrative': {'nationality': 'Swedish', 'narrative': \"Swedish diners, who treasure the pure taste of well-cooked fish, will embrace the Grilled Sea Bass. Honoring the sea's natural flavors, it captures the lightness and delicacy appreciated in Swedish culinary traditions while employing Mediterranean flair.\"}, 'appeal': 'Savor the flake-perfect texture of Sea Bass, grilled to achieve tender, moist flesh that unfolds with the fragrance and spice of Tom Yum broth, while marinated vegetables add a complementary crunch.', 'category': 'Main Courses', 'ingredients': 'marinated mini-vegetables, Tom Yum broth', 'price': 36.0}, {'name': 'Red tuna', 'recommended_upsells': ['Japanese mushrooms sautéed', 'Grilled Squid', 'APASIANADO DE JOSE PARIENTE'], 'narrative': {'nationality': 'German', 'narrative': \"Our German guests will find Red Tuna's elegant preparation aligns with their admiration for diligently crafted, quality dishes. It's a harmonious balance of the fresh, rich taste of tuna, complemented by subtle Asian flavors favored in global German cuisine.\"}, 'appeal': 'Offers a luxurious texture as each slice melts in the mouth. Complemented by the smooth, creamy wasabi mayonnaise, each bite delivers a wave of flavor layered over the tender tuna.', 'category': 'Main Courses', 'ingredients': 'Edamame, wasabi mayonaise', 'price': 36.0}, {'name': \"Cod Kokotxas 'pil-pil'\", 'recommended_upsells': ['Homemade chocolate truffle', 'White sea bass ceviche', 'MALLORCAN cheesecake'], 'narrative': {'nationality': 'British', 'narrative': \"In England, the love for comforting fish dishes is profound, and our Cod Kokotxas 'pil-pil' is akin to enjoying a piece of traditional fish nestled under the spicy richness of pil-pil sauce—a comfort and a nod to flavorful meals found in British homes.\"}, 'appeal': \"Feel the expression of culinary heritage with every forkful as the silky cod pairs beautifully with the smooth intensity of the 'pil-pil' sauce, carrying a depth of flavor that abounds with each mouthful.\", 'category': 'Main Courses', 'ingredients': 'Belly pork, seasonal mushrooms', 'price': 29.0}, {'name': 'Grilled Squid', 'recommended_upsells': ['Seasonal tomato tarter', 'Catch of the day', 'OREMUS ASZU 3'], 'narrative': {'nationality': 'Swedish', 'narrative': 'Embodying both simplicity and depth, this Grilled Squid resonates with Swedish traditions that combine healthy, fresh ingredients with hearty flavors, mirroring the Swedish ethos of uncomplicated yet richly rewarding culinary experiences.'}, 'appeal': \"A perfectly grilled exterior encapsulates the tender umami heart within. Enhanced by saffron 'alioli' and delicate black rice, it enlivens the senses with its complementary textures and smoky notes.\", 'category': 'Main Courses', 'ingredients': \"Black rice, saffron 'alioli'\", 'price': 32.0}, {'name': 'Catch of the day', 'recommended_upsells': ['Grilled Sea Bass', 'Homemade ravioli', 'MALLORCAN cheesecake'], 'narrative': {'nationality': 'German', 'narrative': \"German guests will appreciate the chef's skill and ingredient integrity with the Catch of the day, mirroring Germany's own respect for seasonality and freshness in seafood, revealing new symphonies of flavor each day.\"}, 'appeal': 'Catch of the day is a journey of texture and taste all on its own. From flaky to firm, each bite brings a unique experience, complemented by seasonal ingredients chosen to highlight the delicate flavors of the sea.', 'category': 'Main Courses', 'ingredients': '', 'price': 'Market price'}, {'name': 'Panang curry', 'recommended_upsells': ['Fried sweet potato', 'Red tuna', 'APASIANADO DE JOSE PARIENTE'], 'narrative': {'nationality': 'British', 'narrative': \"Both exotic and comforting, the Panang curry aligns with British guests' embrace of bold, aromatic spices from the global palate while simulating the comforting warmth found in traditional British stews.\"}, 'appeal': 'Savor its creamy, silky texture as it wraps around the palate, delivering rich and warm spices. The perfectly cooked vegetables and nutty red rice create pleasing contrasts against the luscious curry base.', 'category': 'Main Courses', 'ingredients': 'Red rice, vegetables, naan bread', 'price': 19.0}, {'name': 'Homemade ravioli', 'recommended_upsells': ['Ceasar salad or green', 'Fried edamame', 'MALLORCAN cheesecake'], 'narrative': {'nationality': 'German', 'narrative': 'German culinary tradition often brings together the delights of rich, hearty dishes. Our Homemade ravioli, filled with creamy ricotta and lush spinach, is a reflection of the equally comforting and passionate fondness for Italian-inspired cuisine in Germany.'}, 'appeal': 'Delicate pasta parcels enveloping creamy ricotta and fresh spinach create a soft explosion of flavor. Highlighted by the crunch of walnuts, the luxurious mouthfeel provides a delightful texture contrast.', 'category': 'Main Courses', 'ingredients': 'Ricotta, spinach, walnuts', 'price': 26.0}, {'name': 'Beef tenderloin steak', 'recommended_upsells': ['Truffled wedge potatoes with rocket', 'Seasonal tomato tarter', 'MORTITX'], 'narrative': {'nationality': 'British', 'narrative': \"Our British guests, who harbor a reverence for quality cuts of meat, will find the Beef tenderloin steak to mirror beloved traditions of their country's fine dining. It's a testament to mastery, where every bite is tender and rich, a mindful celebration of each element plated.\"}, 'appeal': 'The steak is seared to perfection, revealing a tender and juicy center with each slice. Its rich seasoning and the layered texture of the port reduction and potato mille-feuille engage the palate with a sophisticated taste.', 'category': 'Main Courses', 'ingredients': 'Potato mille-feuille, port reduction', 'price': 34.0}, {'name': 'Suckling Pig', 'recommended_upsells': ['Grilled artichoke', 'Iberian cured ham', 'OREMUS ASZU 3'], 'narrative': {'nationality': 'Swedish', 'narrative': \"Our Swedish guests, with their fondness for farm-to-table delicacies, will relish the Suckling Pig. Blending the idyllic flavors of fruit and pork, it's a taste of rural comfort that speaks across cultures, warm and fulfilling as a Nordic embrace.\"}, 'appeal': 'Crispy skin with tender, succulent meat inside, the Suckling Pig dances over the palate. Enhanced by the subtle sweetness of plum and tomato, it offers complexity and comfort in every bite.', 'category': 'Main Courses', 'ingredients': 'Plum, tomato', 'price': 31.0}, {'name': \"'Angus' Sirloin Steak Tataki'\", 'recommended_upsells': ['Tiger prawns tempura', 'Fried sweet potato', 'MORTITX'], 'narrative': {'nationality': 'German', 'narrative': \"In Germany, where steak ust be treated with reverence, this 'Angus' Sirloin Steak Tataki' offers a rich and sophisticated flavor profile. Lightly seared and elegant, it appeals to those who appreciate finesse as much as fortitude in their meals.\"}, 'appeal': \"Every slice of Tataki reveals a tenderness and aromatic allure, the seared exterior providing a hint of smokiness, paired with the subtle heat of tempura 'piquillo peppers' creating an engaging contrast for the senses.\", 'category': 'Main Courses', 'ingredients': \"Tempura 'piquillo peppers'\", 'price': 35.0}, {'name': 'Truffled wedge potatoes with rocket', 'recommended_upsells': ['Panang curry', 'Grilled Squid', 'APASIANADO DE JOSE PARIENTE'], 'narrative': {'nationality': 'British', 'narrative': 'For our British guests who cherish their famous roasts and side accompaniments, these Truffled wedge potatoes offer a luxurious twist with a Mediterranean essence, paying homage to high-end takes on beloved comfort foods.'}, 'appeal': 'Crispy outside with a fluffy, hot interior, the wedges are elevated by a decadent aroma and taste of truffle, giving a simple yet sophisticated tactile experience that pairs beautifully with the peppery rocket.', 'category': 'Side Orders', 'ingredients': '', 'price': 6.5}, {'name': 'Ceasar salad or green', 'recommended_upsells': ['Catch of the day', 'Fried edamame', 'VALVERAN 20'], 'narrative': {'nationality': 'German', 'narrative': 'The German appreciation for both hearty and fresh flavors is echoed in our Caesar or green salads. They bring crisp lettuce and robust cheeses together in a way that satisfies a desire for familiar, yet elevated flavors.'}, 'appeal': \"Crisp greens meet creamy, savory dressing in a blend of crunchy textures and rich umami tones, offering a combination that's both refreshing and indulgently gratifying, bite after delicious bite.\", 'category': 'Side Orders', 'ingredients': '', 'price': 6.5}, {'name': 'Japanese mushrooms sautéed', 'recommended_upsells': ['Red tuna', 'Fried edamame', 'OREMUS ASZU 3'], 'narrative': {'nationality': 'Swedish', 'narrative': 'Our Swedish visitors, who enjoy a lifelong admiration for mushrooms gracing their meals, will find the Japanese mushrooms sautéed to sit perfectly within their culinary palate, offering up an earthy, umami flavor profile.'}, 'appeal': 'Tender mushrooms lay soft yet resilient to the bite, their umami notes intensified by light sautéing. This simple yet complex side dish brings an array of flavor notes to the forefront in comforting richness.', 'category': 'Side Orders', 'ingredients': '', 'price': 6.5}, {'name': 'Sautéed seasonal vegetables', 'recommended_upsells': ['Grilled Sea Bass', 'Red tuna', 'MORTITX'], 'narrative': {'nationality': 'British', 'narrative': 'British guests often enjoy the farm-fresh bounty of sautéed seasonal vegetables, akin to what you’d find in rustic countryside meals. This dish brings the richness of earthy flavors, shining brightly alongside a multitude of mains.'}, 'appeal': 'With each crisp and tender bite, these vegetables deliver a symphony of soft and firm textures while the natural sweet and earthy flavors come to life through expert sautéing.', 'category': 'Side Orders', 'ingredients': '', 'price': 6.5}, {'name': 'Padrón peppers', 'recommended_upsells': ['Iberian cured ham', 'Panang curry', 'VALVERAN 20'], 'narrative': {'nationality': 'German', 'narrative': \"For German diners who possess a fine appreciation for subtle, excitingly versatile snacks, Padrón peppers are a delightful introduction to Spain's traditional table, resonating in a playful mix of mild and surprising spicy notes.\"}, 'appeal': 'These small, slightly blistered peppers offer a juicy, skin-on texture. Their intriguing taste progression—subtle and savory—offers an enticing surprise with hints of heat barely peeking through.', 'category': 'Side Orders', 'ingredients': '', 'price': 6.5}, {'name': 'Homemade chocolate truffle', 'recommended_upsells': ['Beef tenderloin steak', 'OREMUS ASZU 3', 'Home made ice cream'], 'narrative': {'nationality': 'Swedish', 'narrative': 'Swedish guests treasure the comforting decadence of chocolate. The Homemade chocolate truffle brings satisfaction comparable to fine Swedish confections, whispering of simplicity and richness over a dense, velvety center.'}, 'appeal': 'Luxuriously smooth, with each bite gently dissolving to reveal a rich, deep chocolate taste, these truffles promise an indulgent escape, whispered sweetly in each compact, succulent orb.', 'category': 'Dessert', 'ingredients': '', 'price': 3.5}, {'name': 'Mallorcan cheesecake', 'recommended_upsells': ['Grilled artichoke', 'Catch of the day', 'APASIANADO DE JOSE PARIENTE'], 'narrative': {'nationality': 'British', 'narrative': 'British fans of creamy, baked delights will find a wonderful story in the Mallorcan cheesecake, marrying Spanish traditions with the delicate elegance of dessert craftsmanship akin to a carefully made British tea cake.'}, 'appeal': 'Smooth, creamy textures mingle with soft, buttery undertones, all cradled by crunchy, sweetened crust elements full of light, vanilla, and nut aromas presenting a perfect finish.', 'category': 'Dessert', 'ingredients': 'Toasted butter ice cream', 'price': 11.0}, {'name': 'Chocolate coulant', 'recommended_upsells': ['Suckling Pig', 'Japanese mushrooms sautéed', 'OREMUS ASZU 3'], 'narrative': {'nationality': 'German', 'narrative': \"German diners who value deep, enriching desserts can revel in the Chocolate coulant, a finely crafted molten delicacy that promises an eruption of traditional chocolate richness echoing back to Germany's own passion for cocoa.\"}, 'appeal': 'Warm chocolate flows from its molten core, drowning the senses in a river of velvety richness while a crisp outer shell adds contrast, inviting every texture-loving sweet tooth into bliss.', 'category': 'Dessert', 'ingredients': 'Hazelnut & tonka bean ice cream', 'price': 10.0}, {'name': 'Tarte tatin (for 2)', 'recommended_upsells': ['Grilled fish', 'Fried sweet potato', 'MORTITX'], 'narrative': {'nationality': 'British', 'narrative': 'British guests hold apple desserts quite dear. The Tarte tatin provides an experience reminiscent of the cherished apple pies and tarts of their homeland, with caramelized fruits speaking of warmth and familiarity.'}, 'appeal': 'Golden flaky puff pastry cradles tenderly caramelized apples in a sweet embrace, with each forkful offering a delightful play of warm, sticky-sweet, and earthy crispness.', 'category': 'Dessert', 'ingredients': '', 'price': 15.0}, {'name': \"French toast 'coca de patata'\", 'recommended_upsells': ['Iberian cured ham', 'Fried edamame', 'VALVERAN 20'], 'narrative': {'nationality': 'Sweden', 'narrative': \"Our Swedish guests, who cherish a warm, hearty breakfast or dessert, will feel the warmth of home in the French toast 'coca de patata'. Each bite connects deeply with a shared love of tradition and sweetness, so similar to Swedish fika.\"}, 'appeal': \"Enjoy the soft, buttery warmth that meets the palate, draped in silky smooth ice cream made from sheep's milk, achieving a warm inner bliss of textures that deeply satisfies.\", 'category': 'Dessert', 'ingredients': \"Sheep's milk ice cream\", 'price': 10.0}, {'name': 'Passion Fruit Pavlova', 'recommended_upsells': ['Japanese mushrooms sautéed', 'Gazpacho', 'OREMUS ASZU 3'], 'narrative': {'nationality': 'British', 'narrative': 'The beloved British influences of meringue desserts shine in our Passion Fruit Pavlova, offering a mix of textures and a sweet, fruit-tinged journey reminiscent of teatime delights often adored in Britain.'}, 'appeal': 'A crisp, delicate shell crumbles to reveal a soft, marshmallow-like interior, accompanied by creamy sweet-whipped peaks and tart passion fruit that sing together in a symphony of light and airy indulgence.', 'category': 'Dessert', 'ingredients': '', 'price': 9.0}, {'name': 'Spanish and local cheese selection', 'recommended_upsells': ['Padrón peppers', 'Grilled artichoke', 'OREMUS ASZU 3'], 'narrative': {'nationality': 'German', 'narrative': \"Our German guests have a fine appreciation for cheese, and this varied platter offers a taste of region-specific delights that align with Germany's own valued cheese-making traditions—rich, bold, and memorable.\"}, 'appeal': 'Experience a palette of varied textures from soft to crumbly, each cheese offering a unique, robust flavor profile that provides rich, creamy nuances enveloped by the smoky, nutty, or tangy undertones.', 'category': 'Dessert', 'ingredients': '', 'price': 19.0}, {'name': 'Home made ice cream', 'recommended_upsells': ['Fried edamame', 'Beef tenderloin steak', 'APASIANADO DE JOSE PARIENTE'], 'narrative': {'nationality': 'Sweden', 'narrative': 'For Swedish guests fond of quality, homemade flavors, this ice cream resonates with their love of elegantly simple yet intensely flavorful desserts, drawing upon natural sweetness akin to Scandinavian dessert traditions.'}, 'appeal': 'Each spoonful offers a smooth, rich creaminess that coats the tongue in chilled sweetness. Fresh, bright flavors come through, delivering simplicity and refinement in texture and taste.', 'category': 'Dessert', 'ingredients': 'Sorbet', 'price': 4.5}, {'name': 'MORTITX', 'recommended_upsells': ['PORTIXOL Toast', 'MALLORCAN cheesecake', 'Caviar Oscietra 50gr'], 'narrative': {'nationality': 'British', 'narrative': 'British diners who often enjoy dessert wines will find this sweet wine by the glass to be a treat, echoing the love of indulgent adult occasions such as afternoon teas or evening cocktails with a hint of rich flavor.'}, 'appeal': 'A sweet, silky elegance pulls each sip through with notes of bright fruit and smooth honeyed accents, leaving a pleasing, lingering warmth that seductively coats the palate.', 'category': 'Sweet Wine by the Glass', 'ingredients': 'Dolc de gel. Moscatel, Riesling', 'price': 8.0}, {'name': 'APASIANADO DE JOSE PARIENTE', 'recommended_upsells': ['Grilled artichoke', 'Suckling Pig', 'Japanese mushrooms sautéed'], 'narrative': {'nationality': 'German', 'narrative': 'Our German visitors, who frequently elevate meals with a unique wine selection, will find in this glass a sweet, balanced expression that pairs seamlessly with the robust notes in their dish selection much like classic German pairings.'}, 'appeal': 'A dance of vibrant citrus aromas wrapped in succulent, velvety textures, this wine tips delicately between sweet and dry, leaving pleasing notes of ripe fruit and a smooth, lingering aftertaste.', 'category': 'Sweet Wine by the Glass', 'ingredients': 'Sauvignon Blanc E', 'price': 7.0}, {'name': 'VALVERAN 20', 'recommended_upsells': ['Grilled Squid', 'Homemade ravioli', 'Fried sweet potato'], 'narrative': {'nationality': 'German', 'narrative': 'With a penchant for cider, our German guests will enjoy this sweet wine, a harmonious fruit-driven journey that stands among the grand German cider tradition, offering an echo of familiar comforts.'}, 'appeal': 'A refined blend of juicy apples enhances the palate with a burst of sweetness and acidic balance, each sip resonating with fine frothy effervescence that refreshes as it delights.', 'category': 'Sweet Wine by the Glass', 'ingredients': 'Manzanas Sidra de Hielo Raxao y Durona de Tresali', 'price': 7.0}, {'name': 'OREMUS ASZU 3', 'recommended_upsells': ['Red tuna', 'White sea bass ceviche', 'Iberian cured ham'], 'narrative': {'nationality': 'Swedish', 'narrative': 'Swedish connoisseurs of dessert wines will find much to admire in the OREMUS ASZU 3, its aged complexity embodying a tradition of savoring sweet wines alongside the joys of well-paired sweets and cheeses.'}, 'appeal': 'A rich, honeyed texture effortlessly complements the palate with a subtle balance of sweetness. Its multi-layered notes of stone fruit and subtle spice echo lightly, offering a uniquely complex, engaging sensory journey.', 'category': 'Sweet Wine by the Glass', 'ingredients': 'Puttonyos Furmint, Harslevelu, Mascat de Lunel', 'price': 18.0}, {'name': 'Hamburger', 'recommended_upsells': ['Ceasar salad or green', 'Ice Cream', 'Home Made Meatballs'], 'narrative': {'nationality': 'British', 'narrative': 'Children visiting from Britain will find comfort in the Hamburger, a beloved classic akin to their well-known British beef patties, fitting perfectly into the adventuresome spirit of seeking familiar joys while traveling.'}, 'appeal': 'Juicy, savory beef nestled in a fluffy bun provides an all-time favorite tactile melange, combined with the satisfying crispy crunch of golden fries.', 'category': 'Kids', 'ingredients': 'French fries', 'price': 15.0}, {'name': 'Grilled beef', 'recommended_upsells': ['Padrón peppers', 'Sautéed seasonal vegetables', 'Fruit Salad'], 'narrative': {'nationality': 'German', 'narrative': 'This Grilled beef option serves German children who appreciate the comforting flavors of well-prepared meats, much like the delicious bites found in family-friendly roasts back home.'}, 'appeal': 'Tender, grilled beef offers a simple yet cozy experience while the choice of crispy fries or fresh salad adds appealing dimensions of taste and texture.', 'category': 'Kids', 'ingredients': 'French fries or salad', 'price': 15.0}, {'name': 'Home Made Meatballs', 'recommended_upsells': ['Grilled Squid', 'Ceasar salad or green', 'Milkshake'], 'narrative': {'nationality': 'Swedish', 'narrative': 'Swedish families will feel at home as these home made meatballs recreate the beloved tastes and comforting shapes of their traditional meals, crafted with nostalgia and flavor.'}, 'appeal': 'Soft and juicy, each bite of these meatballs reveals familiar comforting flavors, paired seamlessly with creamy mashed potatoes, providing a satisfying and heartwarming meal.', 'category': 'Kids', 'ingredients': 'Mashed potatoes', 'price': 15.0}, {'name': 'Grilled Fish', 'recommended_upsells': ['Sautéed seasonal vegetables', 'Padrón peppers', 'Ice Cream'], 'narrative': {'nationality': 'Swedish', 'narrative': 'For Swedish youngsters, accustomed to enjoying fresh seafood, this Grilled Fish echoes the pure, straightforward joys of home dishes, feeding both curiosity and nostalgia.'}, 'appeal': \"Delicate yet firm, the grilled fish offers a mild, fresh flavor that's easy on the palate—perfect for youthful tastes, accompanied by nourishing grains or golden seasoned potatoes.\", 'category': 'Kids', 'ingredients': 'Rice or potatoes', 'price': 15.0}, {'name': 'Chicken Breast', 'recommended_upsells': ['Japanese mushrooms sautéed', \"French toast 'coca de patata'\", 'Fruit Salad'], 'narrative': {'nationality': 'British', 'narrative': 'British children who adore juicy, well-prepared chicken will enjoy this trusted favorite, reminiscent of simple yet fulfilling meals adored in family-friendly settings.'}, 'appeal': 'A tender, juicy chicken breast with a delightful, lightly charred exterior tailored to young palates, paired with the versatile option of crispy fries or crisp salad for added crunch.', 'category': 'Kids', 'ingredients': 'French fries or salad', 'price': 15.0}, {'name': 'Pasta Bolognesa or Tomato Sauce', 'recommended_upsells': ['Home Made Ice Cream', 'Ceasar salad or green', 'Sautéed seasonal vegetables'], 'narrative': {'nationality': 'German', 'narrative': 'German children will relish in the classic flavors of Pasta Bolognese similar to the beloved Italian culinary influences found within German homes—a comfortingly familiar dish with every bite.'}, 'appeal': 'Enticing layers of flavorful sauce envelop al dente pasta, with a choice of hearty Bolognese or bright Tomato sauce, offering satisfying warmth and savory appeal perfect for littler appetites.', 'category': 'Kids', 'ingredients': '', 'price': 15.0}, {'name': 'Ice Cream', 'recommended_upsells': ['Fruit Salad', 'Milkshake', 'Pasta Bolognesa or Tomato Sauce'], 'narrative': {'nationality': 'Swedish', 'narrative': 'Swedish children who revel in simple pleasures will find a joyful moment in each scoop of Ice Cream, just like cherished summer outings and sweet holiday treats shared with family.'}, 'appeal': 'Pure, creamy sweetness twirls over the tongue in a chilled, luscious landscape, each flavor fresh and inviting, promising delight even in its simplicities.', 'category': 'Kids Dessert', 'ingredients': '', 'price': 4.5}, {'name': 'Fruit Salad', 'recommended_upsells': ['Ice Cream', 'Milkshake', 'Chicken Breast'], 'narrative': {'nationality': 'British', 'narrative': 'British children who enjoy refreshing and healthy snacks will find joy in Fruit Salad, offering a colorful mix reminiscent of picnic days in sunlit gardens back home.'}, 'appeal': 'A vibrant medley of fresh fruits creates a symphony of sweet and tangy flavors. Each piece bursts with natural juices, uplifting taste buds with refreshing, juicy textures.', 'category': 'Kids Dessert', 'ingredients': '', 'price': 4.0}, {'name': 'Milkshake', 'recommended_upsells': ['Grilled beef', 'Hamburger', 'Pasta Bolognesa or Tomato Sauce'], 'narrative': {'nationality': 'German', 'narrative': 'German children will be at home with the playful concoction of a Milkshake, reminiscent of family outings where such sweet treats are customary, promising delight with each sip.'}, 'appeal': 'Velvety smooth and creamy, each thick, luscious sip offers a whimsical delight, combined with flavors both rich and nostalgic, comforting in their sweet, frosty embrace.', 'category': 'Kids Dessert', 'ingredients': '', 'price': 5.0}]\n    \t\t"
+        }
+    ],
+    "output": "**Quiz Title: Dish Appeal**\n\n**Question 1:** A Swedish guest is interested in trying a starter that resonates with their national appreciation for elegant simplicity and quality. Which dish would you recommend and why?\n\n**Answers:**\nA: \"Sashimi PORTIXOL, for its harmonious blend of traditional Japanese precision and Mediterranean freshness.\"\nB: \"PORTIXOL Toast, combining the sophisticated pairing of fresh seafood atop crispy, well-crafted bread akin to Scandinavian cuisine's open sandwiches.\"\nC: \"Grilled Sea Bass for its delicate and pure flavors, cherished in Swedish traditions.\"\n\n**Correct Answer:** B  \n**Tip:** When matching a dish to cultural preferences, focus on elements that mirror known tastes and traditions from the guest's background.\n\n---\n\n**Question 2:** An Italian guest asks what makes the 'Panang Curry' a standout dish, despite not being traditionally Italian. How do you answer?\n\n**Answers:**\nA: \"It’s a creamy, silky dish with warm spices that provide an exotic twist, similar to the complexity of flavors found in rich Italian sauces.\"\nB: \"The curry is spicy and creamy, providing a different experience from Italian meals.\"\nC: \"It's like a stew, which many might appreciate for its warmth during winter.\"\n\n**Correct Answer:** A  \n**Tip:** Draw parallels between unfamiliar dishes and known culinary experiences to create relatable pitches.\n\n---\n\n**Question 3:** A guest with a fondness for British culinary traditions asked about desserts. What narrative would persuade them to choose 'Mallorcan Cheesecake'?\n\n**Answers:**\nA: \"The soft, buttery undertones and crunchy crust resemble the elegance of a British tea cake.\"\nB: \"It's a simple cheesecake with a plain flavor.\"\nC: \"It is very sweet, which many people like.\"\n\n**Correct Answer:** A  \n**Tip:** Use descriptive language to draw parallels between the dish and familiar beloved British desserts enhancing its appeal.\n\n---\n\n**Question 4:** A French guest is contemplating whether to try the 'Grilled Squid'. How would you enhance its appeal?\n\n**Answers:**\nA: \"The squid's perfectly grilled exterior and the tender umami heart are complemented by saffron ‘alioli’ and black rice for a rich, smoky experience.\"\nB: \"It’s squid, so it’s quite chewy, but it’s grilled nicely.\"\nC: \"Grilled Squid is a good option if you like seafood.\"\n\n**Correct Answer:** A  \n**Tip:** Focus on the textures and unique flavor pairings to effectively communicate a dish’s sophistication.\n\n---\n\n**Question 5:** An Italian diner is interested in our pasta offerings. Which narrative about 'Homemade Ravioli' would you share?\n\n**Answers:**\nA: \"Our Homemade Ravioli combines a creamy ricotta and fresh spinach filling enveloped by delicate pasta, with the contrast of crunchy walnuts.\"\nB: \"It's just pasta with cheese inside.\"\nC: \"You might like it if you enjoy light pasta dishes.\"\n\n**Correct Answer:** A  \n**Tip:** Describe intricate details that highlight authentic textures and complementary ingredients making up the dish.\n\n---\n\n**Question 6:** A guest requests a rich, indulgent dessert much like molten chocolate treats beloved in Germany. Which would you suggest?\n\n**Answers:**\nA: \"Chocolate coulant, with a warm molten core and a crisp outer shell, is perfect for those who enjoy deep, enriching desserts.\"\nB: \"Mallorcan Cheesecake, it’s sweet and creamy.\"\nC: \"Tarte Tatin, it’s a fruity delight.\"\n\n**Correct Answer:** A  \n**Tip:** Match dessert recommendations to the guest's palate by focusing on expected textures and familiar indulgence.\n\n---\n\n**Question 7:** When explaining the 'Grilled Sea Bass' offering to a Swedish guest, which attribute should you emphasize?\n\n**Answers:**\nA: \"It’s expertly grilled, preserving the delicate and pure flavors cherished in Swedish culinary traditions.\"\nB: \"It’s a big fish, grilled well.\"\nC: \"It’s very flavorful and spicy.\"\n\n**Correct Answer:** A  \n**Tip:** Highlight preservation and enhancement of natural flavors typical in Swedish cuisine, aligning with cultural preferences.\n\n---\n\n**Question 8:** A guest asks about dishes with a crunchy texture. Which narrative would persuade them to try the 'Tiger Prawns Tempura'?\n\n**Answers:**\nA: \"This dish offers a light, airy tempura coating and a juicy prawn inside, providing a play of textures with every bite.\"\nB: \"The prawns are kind of fried.\"\nC: \"If you like crispy dishes, you might enjoy it.\"\n\n**Correct Answer:** A  \n**Tip:** Use sensory language focusing on texture and the resulting contrast to create a compelling description.\n\n---\n\n**Question 9:** How would you introduce 'Fried Sweet Potato' to ensure a British diner considers it over traditional chips?\n\n**Answers:**\nA: \"These present a warm, soft interior with a light crispy shell, elevated by truffle mayonnaise for a luxurious twist on the classic.\"\nB: \"It’s like chips, but slightly sweeter.\"\nC: \"These might be a good alternative to your usual chips without much seasoning.\"\n\n**Correct Answer:** A  \n**Tip:** Appeal to familiar tastes with a sophisticated upgrade that retains their essence but elevates them.\n\n---\n\n**Question 10:** When aiming to upsell 'OREMUS ASZU 3' to a Swedish guest seeking dessert wines, which narrative works best?\n\n**Answers:**\nA: \"Its rich, honeyed texture offers multi-layered notes of stone fruit and subtle spice, enhancing the dessert experience for connoisseurs of sweet wines.\"\nB: \"It’s a very sweet dessert wine.\"\nC: \"This wine might be a nice addition if you enjoy sweet things.\"\n\n**Correct Answer:** A  \n**Tip:** Highlight complexities and depth to appeal to a palate accustomed to sophisticated tasting experiences."
+}

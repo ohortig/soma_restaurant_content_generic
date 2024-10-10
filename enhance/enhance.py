@@ -7,10 +7,7 @@ from jsonschema import validate
 from jsonschema.exceptions import ValidationError
 
 # load restaurant information inputs
-from inputs.restaurant_info.name import name
-from inputs.restaurant_info.location import location
-from inputs.restaurant_info.cuisine import cuisine
-from inputs.restaurant_info.nationalities import nationalities
+from inputs.restaurant_info.restaurant_info import RESTAURANT_INFO
 
 # load given menu inputs
 from inputs.menus.given_menu import given_menu
@@ -46,10 +43,10 @@ Generate an enhanced version of every single menu item in the given menu with th
 """
 
 user_message_content = f"""
-<name> {name} </name>
-<location> {location} </location>
-<cuisine> {cuisine} </cuisine>
-<nationalities> {nationalities} </nationalities>
+<name> {RESTAURANT_INFO.name} </name>
+<location> {RESTAURANT_INFO.location} </location>
+<cuisine> {RESTAURANT_INFO.cuisine} </cuisine>
+<nationalities> {RESTAURANT_INFO.nationalities} </nationalities>
 <menu> {given_menu} </menu>
 """
 
