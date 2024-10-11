@@ -17,6 +17,9 @@ from inputs.frameworks.enhanced_menu_schema import enhanced_menu_schema
 # load functions
 from utils import item_exists
 from utils import nationality_exists
+from load_dotenv import load_dotenv
+
+load_dotenv()
 
 client = OpenAI()
 
@@ -83,22 +86,22 @@ def enhance():
                     break
 
                for menu_item in intermediate_step_data['menu_items']:
-                    if valid == False:  # if this generated menu has already been deemed invalid, break the loop and regenerate
+                    if not valid:  # if this generated menu has already been deemed invalid, break the loop and regenerate
                          break
-                    print(f'Validating {menu_item['name']} exists...')
+                    print(f"Validating {menu_item['name']} exists...")
                     if not item_exists(menu_item['name']):  # if generated dish does not exist, regenerate content
                          valid = False
                          print(f"\tGenerated menu item {menu_item['name']} does not exist.")
                          break
-                    print(f'\tGenerated item {menu_item['name']} confirmed to exist.')
+                    print(f"\tGenerated item {menu_item['name']} confirmed to exist.")
                     for upsell in menu_item['recommended_upsells']:
-                         print(f'Validating {upsell} exists...')
+                         print(f"Validating {upsell} exists...")
                          if not item_exists(upsell):  # if generated upsell does not exist, regenerate content
                               valid = False
                               print(f"\tRecomended upsell {upsell} for generated menu item {menu_item['name']} does not exist.")
                               break
                          print(f'\tGenerated item {upsell} confirmed to exist.')
-                    print(f'Validating {menu_item['narrative']['nationality']} is in nationalities list...')
+                    print(f"Validating {menu_item['narrative']['nationality']} is in nationalities list...")
                     if not nationality_exists(menu_item['narrative']['nationality']):
                          valid = False
                          print(f"\tGenerated nationality {menu_item['narrative']['nationality']} is not mentioned in guest nationalities.")

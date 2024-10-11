@@ -58,15 +58,15 @@ Using the provided tools, you will output function arguments to be used for eith
                if function_name == "dish_exists":
                     print(f'\tValidating {arguments["item_name"]} exists...')
                     if not item_exists(arguments["item_name"]):
-                         print(f"\t\t Mentioned menu item {arguments["item_name"]} does not exist.")
+                         print(f"\t\t Mentioned menu item {arguments['item_name']} does not exist.")
                          return False  # regenerate the quiz
                     print(f'\t\tMentioned item {arguments["item_name"]} confirmed to exist.')
                if function_name == "nationality_exists":
                     print(f'\tValidating {arguments["nationality"]} is in nationalities list...')
                     if not nationality_exists(arguments["nationality"]):
-                         print(f"\t\tMentioned nationality {arguments["nationality"]} is not mentioned in guest nationalities.")
+                         print(f"\t\tMentioned nationality {arguments['nationality']} is not mentioned in guest nationalities.")
                          return False  # regenerate the quiz
-                    print(f"\t\t{arguments["nationality"]} confirmed in nationalities list.")
+                    print(f"\t\t{arguments['nationality']} confirmed in nationalities list.")
           print("\t***")
      
      return True
