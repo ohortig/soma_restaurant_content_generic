@@ -8,16 +8,16 @@ content_framework = [
         "description": "Learn how to describe dishes in a way that excites guests. This quiz focuses on using vivid, sensory-rich language to transform a simple dish into a must-try menu item. You’ll practice describing taste, texture, ingredients, and preparation in a way that makes dishes irresistible.",
         "example_questions": [
           {
-            "example_1": "When describing [Insert Menu Item], which description would make it sound the most enticing?"
+            "example": "When describing [Insert Menu Item], which description would make it sound the most enticing?"
           },
           {
-            "example_2": "You're crafting a menu description for the [Insert Menu Item]. Which option best uses vivid imagery to entice diners?"
+            "example": "You're crafting a menu description for the [Insert Menu Item]. Which option best uses vivid imagery to entice diners?"
           },
           {
-            "example_3": "How would you describe the [Insert Menu Item] to make it stand out as a light yet flavorful starter?"
+            "example": "How would you describe the [Insert Menu Item] to make it stand out as a light yet flavorful starter?"
           },
           {
-            "example_4": "A guest wants a rich and comforting dish. How would you describe the [Insert Menu Item] to meet their expectations?"
+            "example": "A guest wants a rich and comforting dish. How would you describe the [Insert Menu Item] to meet their expectations?"
           }
         ]
       },
@@ -26,16 +26,16 @@ content_framework = [
         "description": "Understand how to turn a list of ingredients into a story that highlights the uniqueness of each dish. This quiz helps servers explain the origin, flavor profile, and role of key ingredients, making the dishes more relatable and enticing for guests.",
         "example_questions": [
           {
-            "example_1": "When explaining [Insert Menu Item] to a guest, which description best captures its unique qualities to enhance the appeal of a dish?"
+            "example": "When explaining [Insert Menu Item] to a guest, which description best captures its unique qualities to enhance the appeal of a dish?"
           },
           {
-            "example_2": "Which of the following descriptions best highlights the appeal of [Insert Menu Item] in a menu item?"
+            "example": "Which of the following descriptions best highlights the appeal of [Insert Menu Item] in a menu item?"
           },
           {
-            "example_3": "How would you describe [Insert Ingredient Name] to emphasize its role and origin in enhancing a dish?"
+            "example": "How would you describe [Insert Ingredient Name] to emphasize its role and origin in enhancing a dish?"
           },
           {
-            "example_4": "A customer asks what makes [Insert Ingredient Name] special. Which response best highlights its uniqueness?"
+            "example": "A customer asks what makes [Insert Ingredient Name] special. Which response best highlights its uniqueness?"
           }
         ]
       },
@@ -44,16 +44,16 @@ content_framework = [
         "description": "This quiz will focus on confidently and accurately answering common guest questions about the menu. You’ll learn how to explain unfamiliar dishes, describe unusual ingredients, and recommend options based on guests' preferences.",
         "example_questions": [
           {
-            "example_1": "A guest mentions they prefer vegetarian options with bold flavors. Which dish would you recommend, and how would you describe it to appeal to their preferences?"
+            "example": "A guest mentions they prefer vegetarian options with bold flavors. Which dish would you recommend, and how would you describe it to appeal to their preferences?"
           },
           {
-            "example_2": "A customer points to [Unfamiliar Menu Item] on the menu and asks, 'What exactly is this dish?' Which response provides the most informative and engaging explanation?"
+            "example": "A customer points to [Unfamiliar Menu Item] on the menu and asks, 'What exactly is this dish?' Which response provides the most informative and engaging explanation?"
           },
           {
-            "example_3": "Curious about an unfamiliar term, a guest asks, 'I've never heard of [Unusual Ingredient]; can you tell me more about it?' How do you describe it to enhance their understanding and interest?"
+            "example": "Curious about an unfamiliar term, a guest asks, 'I've never heard of [Unusual Ingredient]; can you tell me more about it?' How do you describe it to enhance their understanding and interest?"
           },
           {
-            "example_4": "How should you inform a guest who asks about gluten-free options available on the menu?"
+            "example": "How should you inform a guest who asks about gluten-free options available on the menu?"
           }
         ]
       },
@@ -62,16 +62,16 @@ content_framework = [
         "description": "Gain the skills to describe limited-time or special dishes with enthusiasm and detail. This quiz covers how to make specials stand out from regular menu items by emphasizing what makes them unique, along with tips on how to seamlessly adapt your approach for daily or seasonal specials.",
         "example_questions": [
           {
-            "example_1": "You are presenting today's special, the [Insert Special Menu Item]. Which description best emphasizes its uniqueness to entice guests?"
+            "example": "You are presenting today's special, the [Insert Special Menu Item]. Which description best emphasizes its uniqueness to entice guests?"
           },
           {
-            "example_2": "A guest asks what's special on the menu this week. How do you make the [Insert Special Menu Item] sound appealing?"
+            "example": "A guest asks what's special on the menu this week. How do you make the [Insert Special Menu Item] sound appealing?"
           },
           {
-            "example_3": "How can you highlight the uniqueness of the [Insert Special Menu Item] when offering it to guests?"
+            "example": "How can you highlight the uniqueness of the [Insert Special Menu Item] when offering it to guests?"
           },
           {
-            "example_4": "In what way can you adapt your approach to promote the seasonal [Insert Special Menu Item]?"
+            "example": "In what way can you adapt your approach to promote the seasonal [Insert Special Menu Item]?"
           }
         ]
       },
@@ -80,7 +80,7 @@ content_framework = [
         "description": "Learn how to tailor your menu recommendations based on individual guest preferences. This quiz will help you understand how to adapt to different guest types—from those with dietary restrictions to guests seeking specific flavors or dining experiences.",
         "example_questions": [
           {
-            "example_1": "A guest expresses interest in dishes with bold, exotic flavors. How do you cater to their taste?"
+            "example": "A guest expresses interest in dishes with bold, exotic flavors. How do you cater to their taste?"
           }
         ]
       },
@@ -89,13 +89,13 @@ content_framework = [
         "description": "Test your knowledge of common dietary restrictions, such as gluten-free, vegetarian, and nut allergies, and learn how to confidently guide guests toward safe, satisfying choices. This quiz will also cover how to clearly communicate which dishes are suitable for specific diets and offer thoughtful alternatives.",
         "example_questions": [
           {
-            "example_1": "A guest tells you they are celiac and cannot consume any gluten. Which response demonstrates appropriate knowledge and assistance?"
+            "example": "A guest tells you they are celiac and cannot consume any gluten. Which response demonstrates appropriate knowledge and assistance?"
           },
           {
-            "example_2": "How should you guide a guest who is lactose intolerant when they inquire about dessert options?"
+            "example": "How should you guide a guest who is lactose intolerant when they inquire about dessert options?"
           },
           {
-            "example_3": "A vegetarian guest asks for recommendations. Which dish would be appropriate to suggest?"
+            "example": "A vegetarian guest asks for recommendations. Which dish would be appropriate to suggest?"
           }
         ]
       },
@@ -104,13 +104,13 @@ content_framework = [
         "description": "Master best practices for preventing cross-contamination both in the kitchen and on the dining floor. This quiz will cover how to identify high-risk ingredients and implement safety protocols to ensure guests with allergies are protected.",
         "example_questions": [
           {
-            "example_1": "What is the appropriate first step when a guest informs you of a severe dairy allergy?"
+            "example": "What is the appropriate first step when a guest informs you of a severe dairy allergy?"
           },
           {
-            "example_2": "How can you help prevent cross-contamination for a guest with a gluten allergy?"
+            "example": "How can you help prevent cross-contamination for a guest with a gluten allergy?"
           },
           {
-            "example_3": "A guest with a nut allergy orders a salad that typically includes walnuts. What should you do?"
+            "example": "A guest with a nut allergy orders a salad that typically includes walnuts. What should you do?"
           }
         ]
       },
@@ -119,16 +119,16 @@ content_framework = [
         "description": "Learn how to handle out-of-stock menu items with professionalism and ease. This quiz teaches how to communicate unavailable items without disappointing guests, and how to suggest appealing alternative dishes that maintain guest satisfaction.",
         "example_questions": [
           {
-            "example_1": "A guest orders the [Insert Menu Item], but it's currently unavailable. How do you handle the situation?"
+            "example": "A guest orders the [Insert Menu Item], but it's currently unavailable. How do you handle the situation?"
           },
           {
-            "example_2": "How should you inform a guest that the [Insert Menu Item] is sold out, ensuring they still have a positive experience?"
+            "example": "How should you inform a guest that the [Insert Menu Item] is sold out, ensuring they still have a positive experience?"
           },
           {
-            "example_3": "If a key ingredient for a dish is unavailable, resulting in a menu change, how do you communicate this to the guest?"
+            "example": "If a key ingredient for a dish is unavailable, resulting in a menu change, how do you communicate this to the guest?"
           },
           {
-            "example_4": "When multiple popular items are out of stock, what's the best approach to maintain guest satisfaction?"
+            "example": "When multiple popular items are out of stock, what's the best approach to maintain guest satisfaction?"
           }
         ]
       },
@@ -137,16 +137,16 @@ content_framework = [
         "description": "Be prepared to handle last-minute menu changes. This quiz focuses on how to communicate changes effectively to guests, provide suitable alternatives, and ensure the guest experience remains seamless and enjoyable.",
         "example_questions": [
           {
-            "example_1": "A regular item on the menu has been replaced with a new dish. How do you explain this change to a guest who tries to order the old item?"
+            "example": "A regular item on the menu has been replaced with a new dish. How do you explain this change to a guest who tries to order the old item?"
           },
           {
-            "example_2": "If a dish's ingredients have changed due to seasonal availability, how should you inform the guest?"
+            "example": "If a dish's ingredients have changed due to seasonal availability, how should you inform the guest?"
           },
           {
-            "example_3": "How do you handle a situation where a guest orders a dish that was removed from the menu but is still listed due to a printing error?"
+            "example": "How do you handle a situation where a guest orders a dish that was removed from the menu but is still listed due to a printing error?"
           },
           {
-            "example_4": "When prices have changed, and a guest questions the difference from their last visit, what's the best way to respond?"
+            "example": "When prices have changed, and a guest questions the difference from their last visit, what's the best way to respond?"
           }
         ]
       },
@@ -155,13 +155,13 @@ content_framework = [
         "description": "Discover the principles of recommending the perfect drink pairing—whether wine, beer, cocktails, or non-alcoholic beverages—to elevate the dining experience. This quiz will cover basic pairing strategies, including how to promote beverages that complement the flavors of key menu items.",
         "example_questions": [
           {
-            "example_1": "Which beverage would best complement the [Insert Menu Item], and how would you recommend it?"
+            "example": "Which beverage would best complement the [Insert Menu Item], and how would you recommend it?"
           },
           {
-            "example_2": "A guest orders the [Insert Menu Item]. What drink pairing would enhance their meal, and how would you present it?"
+            "example": "A guest orders the [Insert Menu Item]. What drink pairing would enhance their meal, and how would you present it?"
           },
           {
-            "example_3": "What non-alcoholic beverage would you recommend with the [Insert Menu Item], and why?"
+            "example": "What non-alcoholic beverage would you recommend with the [Insert Menu Item], and why?"
           }
         ]
       }

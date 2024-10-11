@@ -47,11 +47,15 @@ print("**************************\n")
 valid = True
 
 # for section in range(len(content_framework)):  # for every section (1-5)
-for section in range(2, 3):  #  **TESTING** for one section (2)
+for section in range(0, 1):  #  **TESTING** for one section (1)
 	print(f"Generating section {section + 1}:")
 	generated_content[section] = {"title": content_framework[section]["title"], "quizzes": []}  # add section to content
 	#for quiz in range(len(content_framework[section]["quizzes"])):  # for every quiz (1-10) in the selected section
 	for quiz in range(0, 1):  #  **TESTING** for one quizzes
+		example_questions = ""
+		for question in content_framework[section]["quizzes"][quiz]["example_questions"]:
+			example_questions += question["example"]
+			example_questions += "\n"
 		system_message_content = """
 <instructions>
 You are a helpful assistant which develops comprehensive, scenario-based quiz modules designed to effectively train restaurant staff by enhancing their proficiency in diverse areas, including menu knowledge, cultural understanding, waiter etiquette, sales techniques, and more.
@@ -61,13 +65,16 @@ The quizzes should be engaging, contextually relevant, and varied to ensure high
 <inputs>
 Use the following inputs to generate the quiz:
 ### 1. **Title of Section**: The title of the section the quiz is part of.
-### 2. **Title of Quiz**: The name of the quiz that you are generating.
-### 3. **Description of Quiz**: A high level description of the quiz that you are generating.
-### 4. **Restaurant Name**: The name of the restaurant.
-### 5. **Restaurant Location**: The restaurant's location
-### 6. **Nationalities**: The top  nationalities of the restaurant's clientele.
-### 7. **Cuisine of the Restaurant**: The main cuisine featured at the restaurant.
-### 8. **Enhanced Menus**: Enhanced menus which detail the pricing, ingredients, pairing suggestions, cultural narratives, and menu category for each menu item. 
+### 2. **Description of Section**: A high level description of the section the quiz is in.
+### 3. **Title of Quiz**: The name of the quiz that you are generating.
+### 4. **Description of Quiz**: A high level description of the quiz that you are generating.
+### 5. **Restaurant Name**: The name of the restaurant.
+### 6. **Restaurant Location**: The restaurant's location
+### 7. **Nationalities**: The top  nationalities of the restaurant's clientele.
+### 8. **Cuisine of the Restaurant**: The main cuisine featured at the restaurant.
+### 9. **Restaurant Context**: A summary of the history, aesthetic, and mission statemnent of the restaurant
+### 10. **Example Quiz Question(s)**: Examples of the sort of question you should be generating.
+### 11. **Enhanced Menus**: Enhanced menus which detail the pricing, ingredients, pairing suggestions, cultural narratives, and menu category for each menu item. 
 </inputs>
 
 <output_requirements>
@@ -81,14 +88,16 @@ Follow the response_format json schema completely, with zero deviations.
 """
 		user_message_content = f"""
 ### 1. **Title of Section**: {content_framework[section]["title"]}
-### 2. **Title of Quiz**: {content_framework[section]["quizzes"][quiz]["title"]}
-### 3. **Description of Quiz**: {content_framework[section]["quizzes"][quiz]["description"]}
-### 4. **Restaurant Name**: {RESTAURANT_INFO.name}
-### 5. **Restaurant Location**: {RESTAURANT_INFO.location}
-### 6. **Nationalities**: {RESTAURANT_INFO.nationalities}
-### 7. **Cuisine of the Restaurant**: {RESTAURANT_INFO.cuisine}
-### 8. **Enhanced Menus**: {enhanced_menu}
-### 9. **Restaurant Context** {RESTAURANT_INFO.restaurant_context}
+### 2. **Description of Section**: {content_framework[section]["description"]}
+### 3. **Title of Quiz**: {content_framework[section]["quizzes"][quiz]["title"]}
+### 4. **Description of Quiz**: {content_framework[section]["quizzes"][quiz]["description"]}
+### 5. **Restaurant Name**: {RESTAURANT_INFO.name}
+### 6. **Restaurant Location**: {RESTAURANT_INFO.location}
+### 7. **Nationalities**: {RESTAURANT_INFO.nationalities}
+### 8. **Cuisine of the Restaurant**: {RESTAURANT_INFO.cuisine}
+### 9. **Restaurant Context**: {RESTAURANT_INFO.restaurant_context}
+### 10. **Example Quiz Questions**: {example_questions}
+### 11. **Enhanced Menus**: {enhanced_menu}
     		"""
 		print("\t***")
 		print(f"\tGenerating quiz {quiz + 1} in section {section + 1}...")
@@ -96,7 +105,7 @@ Follow the response_format json schema completely, with zero deviations.
 		while True:
 			try:  #  handle API refusals
 				completion = client.chat.completions.create(
-					model="ft:gpt-4o-2024-08-06:personal:soma-question-generation:AFcbxTEf",  # fined-tuned question generation model
+					model="gpt-4o-2024-08-06",  # fined-tuned question generation model
 					messages=[
 						{
 						"role": "system", 
