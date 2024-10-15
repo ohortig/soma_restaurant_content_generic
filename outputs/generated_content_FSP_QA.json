@@ -1,0 +1,102 @@
+{
+    "Menu Knowledge Mastery": {
+        "quizzes": [
+            {
+                "title": "Dish Descriptions",
+                "description": "Learn how to describe dishes in a way that excites guests. This quiz focuses on using vivid, sensory-rich language to transform a simple dish into a must-try menu item. You\u2019ll practice describing taste, texture, ingredients, and preparation in a way that makes dishes irresistible.",
+                "questions": {
+                    "question1": {
+                        "question": "What makes the \"Caviar Oscietra 50gr\" stand out as an exquisite starter offering at Portixol Restaurant?",
+                        "A": "It's known for its salty taste and environmental friendliness.",
+                        "B": "It's valued for its unique pure taste and ethical sourcing.",
+                        "C": "It boasts a smoky flavor with hints of vanilla and plum.",
+                        "D": "It's prized for its firmness and marinated spices.",
+                        "correct_answer": "B",
+                        "answer_explanation": "The Caviar Oscietra is noted for being pure, natural, sustainable, and ethically sourced, making it unique and special."
+                    },
+                    "question2": {
+                        "question": "How would you best describe the \"Amelie No2 Oysters\" to a guest?",
+                        "A": "Rich and creamy with hints of sweet raspberry.",
+                        "B": "Delicately briny with a clean, oceanic finish.",
+                        "C": "Robust and spicy with aromatic herbs.",
+                        "D": "Earthy and umami with notes of truffle.",
+                        "correct_answer": "B",
+                        "answer_explanation": "Amelie No2 Oysters are known for their delicate brininess and clean oceanic taste, appealing to seafood lovers."
+                    },
+                    "question3": {
+                        "question": "A guest asks about the preparation of \"Tiger prawns tempura.\" How should you respond?",
+                        "A": "It's marinated and roasted with exotic spices.",
+                        "B": "It's lightly battered and fried to a golden crisp.",
+                        "C": "It's grilled over charcoal for a smoked finish.",
+                        "D": "It's pan-seared with a honey glaze for sweetness.",
+                        "correct_answer": "B",
+                        "answer_explanation": "Tiger prawns tempura involves lightly battering and frying to achieve a crisp, golden texture that enhances the prawn's flavor."
+                    },
+                    "question4": {
+                        "question": "When describing the \"White sea bass ceviche,\" what key ingredients should you highlight?",
+                        "A": "King prawns, green papaya, mango.",
+                        "B": "Tuna, avocado, jalape\u00f1o.",
+                        "C": "Salmon, cucumber, corn.",
+                        "D": "Red mullet, edamame, peach.",
+                        "correct_answer": "A",
+                        "answer_explanation": "The White sea bass ceviche features king prawns, green papaya, and mango, offering a refreshing and tropical flavor profile."
+                    },
+                    "question5": {
+                        "question": "Which description best captures the essence of \"Suckling Pig\" on the menu?",
+                        "A": "Slow-roasted and paired with olive tapenade.",
+                        "B": "Crispy skin with tender meat, accented by plum and tomato.",
+                        "C": "Smoked with rosemary hints, served with potatoes.",
+                        "D": "Savory and spicy, with a side of grilled vegetables.",
+                        "correct_answer": "B",
+                        "answer_explanation": "Suckling Pig is known for its crispy skin and tender meat, complemented by plum and tomato accents that enrich its flavor."
+                    },
+                    "question6": {
+                        "question": "What sets the \"Homemade ravioli\" apart as a main course selection?",
+                        "A": "Stuffed with lobster and crab in a saffron sauce.",
+                        "B": "Filled with ricotta, spinach, and walnuts, served in a light cream sauce.",
+                        "C": "Baked with eggplant and tomatoes, topped with mozzarella.",
+                        "D": "Wrapped in seaweed and filled with edamame and wasabi.",
+                        "correct_answer": "B",
+                        "answer_explanation": "The Homemade ravioli is unique with its ricotta, spinach, and walnut filling, served in a light cream sauce for a rich yet delicate taste."
+                    },
+                    "question7": {
+                        "question": "How would you describe the taste and texture of the \"Grilled Squid\"?",
+                        "A": "Tangy and sweet with a sticky glaze.",
+                        "B": "Tender and smoky with black rice infused with saffron 'alioli.'",
+                        "C": "Spicy and crisp with chili-infused oil.",
+                        "D": "Earthy and robust with herb-infused butter.",
+                        "correct_answer": "B",
+                        "answer_explanation": "Grilled Squid is tender and smoky, paired with black rice and saffron 'alioli' which enhances its Mediterranean flavors."
+                    },
+                    "question8": {
+                        "question": "What makes the \"Chocolate coulant\" a must-try dessert at Portixol Restaurant?",
+                        "A": "Its blend of chocolate and raspberry ganache.",
+                        "B": "The molten chocolate center paired with hazelnut & tonka bean ice cream.",
+                        "C": "The creamy chocolate mousse topped with edible gold.",
+                        "D": "The dense chocolate layer cake with caramel drizzle.",
+                        "correct_answer": "B",
+                        "answer_explanation": "The Chocolate coulant is special for its molten chocolate center, accompanied by hazelnut & tonka bean ice cream, providing a luscious taste experience."
+                    },
+                    "question9": {
+                        "question": "Which key ingredient gives the \"Fried sweet potato\" an elevated flavor profile?",
+                        "A": "Garlic butter.",
+                        "B": "Truffle mayonnaise.",
+                        "C": "Chili flakes.",
+                        "D": "Tarragon cream.",
+                        "correct_answer": "B",
+                        "answer_explanation": "The Fried sweet potato is distinguished by the truffle mayonnaise, which adds a rich and earthy depth to its flavor."
+                    },
+                    "question10": {
+                        "question": "What unique quality can you highlight about the \"Mallorcan cheesecake\" for interested diners?",
+                        "A": "It's light and airy with a citrus glaze.",
+                        "B": "It includes toasted butter ice cream enhancing its classic richness.",
+                        "C": "It's made with almond crust and caramel topping.",
+                        "D": "It offers a mousse-like texture with berry compote.",
+                        "correct_answer": "B",
+                        "answer_explanation": "The Mallorcan cheesecake comes with toasted butter ice cream which complements its rich, creamy texture, making it uniquely indulgent."
+                    }
+                }
+            }
+        ]
+    }
+}

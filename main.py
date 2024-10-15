@@ -2,7 +2,7 @@
 from enhance import enhance
 
 ## load content framework
-from inputs.frameworks.content_framework import content_framework
+from inputs.frameworks.content_framework_Q_A import content_framework 
 ## load restaurant info
 from inputs.restaurant_info import RESTAURANT_INFO
 ## load response schemas
@@ -45,8 +45,8 @@ except FileNotFoundError:
 # set up enhancement
 
 client = OpenAI()
-generated_content = [None] * len(content_framework)  # list to be filled with structured content adhering to the content framework
-
+# generated_content = [None] * len(content_framework)  # list to be filled with structured content adhering to the content framework
+generated_content = {}
 valid = True
 # setup before running
 
@@ -59,11 +59,12 @@ print("**************************\n")
 system_message_content = prompts.system_message_content
 # for section in range(len(content_framework)):  # for every section (1-5)
 # changed section calling with names ("to specify it better")
-testing_section = "Dish Appeal"
+testing_section = "Menu Knowledge Mastery"
 testing_quiz = "Dish Descriptions"
 
 for section in content_framework.keys():  #  **TESTING** for one section (1)
     if section == testing_section:
+        generated_content[section] = {"quizzes": []}
         print(f"Generating section {section}:")
         #generated_content[section] = {"title": content_framework[section]["title"], "quizzes": []}  # add section to content
         # for every quiz (1-10) in the selected section
@@ -78,13 +79,19 @@ for section in content_framework.keys():  #  **TESTING** for one section (1)
                 # Adding questions, if exist, for format
                 preloaded_questions = content_framework[section]["quizzes"][quiz]["example_questions"]
                 questions = [example["example"] for example in preloaded_questions]
+                print(preloaded_questions)
+                answers = [example["answers"] for example in preloaded_questions]
 
                 example_questions = """<Examples>"""
-                for question in questions:
-                    example_questions += "**Question:**" + question + "\n" + "----------------"
+                for question, answer in zip(questions, answers):
+                    example_questions += "**Question:**" + question + "\n" + str(answer) + "----------------"
                 example_questions += "</Examples>"
-
+                
+                # Add questions in isntruction prompt
+                system_message_content += example_questions
                 print(example_questions)
+
+                # User prompt + context information
                 user_message_content = f"""
                 ### 1. **Title of Section**: {content_framework[section]["title"]}
                 ### 2. **Description of Section**: {content_framework[section]["description"]}
@@ -95,9 +102,7 @@ for section in content_framework.keys():  #  **TESTING** for one section (1)
                 ### 7. **Nationalities**: {RESTAURANT_INFO.nationalities}
                 ### 8. **Cuisine of the Restaurant**: {RESTAURANT_INFO.cuisine}
                 ### 9. **Restaurant Context**: {RESTAURANT_INFO.restaurant_context}
-                ### 10. **Example Quiz Questions**: {example_questions}
-                """
-                ### 11. **Enhanced Menus**: {enhanced_menu}"""
+                ### 10. **Menu**: {RESTAURANT_INFO.dinner_menu}"""
 
                 print("\t***")
                 print(f"\tGenerating quiz {quiz} in section {section}...")
@@ -142,7 +147,7 @@ for section in content_framework.keys():  #  **TESTING** for one section (1)
                     print("\tReviewing generated content for quality and hallucination...")
                     print("\t***")
 
-                    if(review(new_content, enhanced_menu, RESTAURANT_INFO.nationalities)):
+                    if(review(new_content, RESTAURANT_INFO.dinner_menu, RESTAURANT_INFO.nationalities)):
                         break
                     else:
                         print("\n\t***")
@@ -153,7 +158,7 @@ for section in content_framework.keys():  #  **TESTING** for one section (1)
                 generated_content[section]["quizzes"].append(new_content)  # add new content to appropriate section in content data structure
             print(f"\n\t<< Section {section} successfully generated >>\n")
 
-file_path = os.path.join('outputs', 'generated_content.json')
+file_path = os.path.join('outputs', 'generated_content_FSP_QA.json')
 
 if valid:  # create storage file if content is valid
     try:

@@ -1,6 +1,6 @@
 content_framework = {
-  "Menu Knowledge Mastery": {
-    "title": "Menu Knowledge Mastery",
+  "Dish Appeal": {
+    "title": "Dish Appeal",
     "description": "Using the menu items and their listed ingredients below, craft enriched descriptions for each dish. Incorporate vivid adjectives to describe the ingredients and, where appropriate, include a brief and engaging backstory about where the ingredients come from or their culinary significance. The goal is to make each dish sound enticing and special, highlighting unique aspects that will appeal to customers.",
     "quizzes": {
       "Dish Descriptions": {
@@ -8,7 +8,7 @@ content_framework = {
         "description": "Learn how to describe dishes in a way that excites guests. This quiz focuses on using vivid, sensory-rich language to transform a simple dish into a must-try menu item. You’ll practice describing taste, texture, ingredients, and preparation in a way that makes dishes irresistible.",
         "example_questions": [
           {
-            "example": "You’re recommending the “Seared Tuna with Citrus Glaze.” What key ingredients would you highlight to the guest, and what’s unique about the preparation method?"
+            "example": "When describing [Insert Menu Item], which description would make it sound the most enticing?"
           },
           {
             "example": "You're crafting a menu description for the [Insert Menu Item]. Which option best uses vivid imagery to entice diners?"

@@ -16,8 +16,7 @@ class prompts:
 		### 7. **Nationalities**: The top  nationalities of the restaurant's clientele.
 		### 8. **Cuisine of the Restaurant**: The main cuisine featured at the restaurant.
 		### 9. **Restaurant Context**: A summary of the history, aesthetic, and mission statemnent of the restaurant
-		### 10. **Example Quiz Question(s)**: Examples of the sort of question you should be generating.
-		### 11. **Enhanced Menus**: Enhanced menus which detail the pricing, ingredients, pairing suggestions, cultural narratives, and menu category for each menu item. 
+		### 10. **Enhanced Menus**: Enhanced menus which detail the pricing, ingredients, pairing suggestions, cultural narratives, and menu category for each menu item. 
 		</inputs>
 
 		<output_requirements>
@@ -26,6 +25,7 @@ class prompts:
 		Ensure questions are engaging, diverse, framed in real-world scenarios, and not repetitive to maintain quiz freshness and intrigue. 
 		### 2. **Structure of the Quiz**:
 		Each quiz should contain 10 questions with multiple-choice answers (A to D), with one correct answer. In answer_explanation, explain why the chosen answer is correct.
+		GENERATED ANSWERS MUST ALL BE THE SAME LENGTH OR IT IS WRONG.
 		Follow the response_format json schema completely, with zero deviations.
 		</output_requirements>
 		"""
