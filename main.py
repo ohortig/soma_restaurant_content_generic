@@ -35,7 +35,7 @@ from inputs.frameworks.schemas.questions_schema import questions_schema
 from inputs.frameworks.schemas.choices_schema import choices_schema
 from inputs.frameworks.schemas.quiz_schema import quiz_schema
 
-from review import review
+from review import review_quiz, review_choices
 
 client = OpenAI()
 
@@ -116,13 +116,13 @@ for section in content_framework.keys():  #  **TESTING** for one section (1)
 					valid = False
 					break
 
-				generated_content = json.loads(completion.choices[0].message.content)
-				generated_questions = generated_content["Quiz"]
+				generated_questions_raw = json.loads(completion.choices[0].message.content)
+				generated_questions = generated_questions_raw["Quiz"]
 
 				print(f"\t<< Quiz {quiz} generated >>")
 				print("\tReviewing generated content for quality and hallucination...")
 				print("\t***")
-				if(review(generated_questions, enhanced_menu, RESTAURANT_INFO.nationalities)):
+				if(review_quiz(generated_questions, enhanced_menu, RESTAURANT_INFO.nationalities)):
 					break
 				else:
 					print("\n\t***")
@@ -131,46 +131,47 @@ for section in content_framework.keys():  #  **TESTING** for one section (1)
 
 			print(f"\n\t<< Quiz questions for {quiz} in section {section} successfully generated >>\n")
 
-			generated_content[section]["quizzes"][quiz]["questions"] = generated_questions  # add new content to appropriate section and quiz in content data structure
+			print("*********\n", generated_content)
+			generated_content[section]["quizzes"][content_framework[section]["quizzes"][quiz]["title"]]["questions"] = generated_questions  # add new content to appropriate section and quiz in content data structure
 
 			for generated_question in generated_questions.keys():
 				while True:  # create & validate answer choices for generated questions
-					try:
-						completion = client.chat.completions.create(
-							model="gpt-4o-mini",  # base GPT-4o mini model
-							messages=[
-								{
-								"role": "system", 
-								"content": prompts.system_message_example_Q_A
-								},
-								{
-								"role": "user",
-								"content": prompts.user_message_answers(generated_question["question"], RESTAURANT_INFO.name, RESTAURANT_INFO.location,
-									   RESTAURANT_INFO.nationalities, RESTAURANT_INFO.cuisine, RESTAURANT_INFO.restaurant_context,
-									   example_questions_answers, enhanced_menu)
-								}
-							],
-							response_format={
-								"type": "json_schema",
-								"json_schema": choices_schema
+					#try:
+					completion = client.chat.completions.create(
+						model="gpt-4o-mini",  # base GPT-4o mini model
+						messages=[
+							{
+							"role": "system", 
+							"content": prompts.system_message_example_Q_A
+							},
+							{
+							"role": "user",
+							"content": prompts.user_message_answers(generated_content[section]["quizzes"][content_framework[section]["quizzes"][quiz]["title"]]["questions"][generated_question]["question"],
+									RESTAURANT_INFO.name, RESTAURANT_INFO.location, RESTAURANT_INFO.nationalities, RESTAURANT_INFO.cuisine,
+									RESTAURANT_INFO.restaurant_context, example_questions_answers, enhanced_menu)
 							}
-						)
-					except Exception as e:  # handle errors like finish_reason, refusal, content_filter, etc.  ## in case Chat Completion API is unable to follow response_format schema
-						if completion.choices[0].message.refusal is not None:
-							print(f"** Error ** Answer Choice API refused to respond. Reason: {completion.choices[0].message.refusal}")
-							
-						else:
-							print(f"** Error ** {e}")
-						valid = False
-						break
+						],
+						response_format={
+							"type": "json_schema",
+							"json_schema": choices_schema
+						}
+					)
+					#except Exception as e:  # handle errors like finish_reason, refusal, content_filter, etc.  ## in case Chat Completion API is unable to follow response_format schema
+					#	if completion.choices[0].message.refusal is not None:
+					#		print(f"** Error ** Answer Choice API refused to respond. Reason: {completion.choices[0].message.refusal}")
+					#		
+					#	else:
+					#		print(f"** Error ** {e}")
+					#	valid = False
+					#	break
+					
+					generated_choices_raw = json.loads(completion.choices[0].message.content)
+					generated_choices = generated_choices_raw["choices"]
 
-					generated_content = json.loads(completion.choices[0].message.content)
-					generated_choices = generated_content["choices"]
-
-					print(f"\t<< Answer Choices for Quiz {quiz} generated >>")
+					print(f"\t<< Answer Choices for {generated_question} in Quiz {quiz} generated >>")
 					print("\tReviewing generated content for quality and hallucination...")
 					print("\t***")
-					if(review(generated_choices, enhanced_menu, RESTAURANT_INFO.nationalities)):
+					if(review_choices(generated_choices, enhanced_menu, RESTAURANT_INFO.nationalities)):
 						break
 					else:
 						print("\n\t***")
@@ -178,11 +179,11 @@ for section in content_framework.keys():  #  **TESTING** for one section (1)
 						print("\t***\n")
 
 				# add answer choices to correct quiz question
-				generated_content[section]["quizzes"][quiz]["questions"][generated_question]["answers"] = generated_choices
+				generated_content[section]["quizzes"][content_framework[section]["quizzes"][quiz]["title"]]["questions"][generated_question]["answers"] = generated_choices
 
-				print(f"\n\t<< Answer choices for {quiz} in section {section} successfully generated and loaded>>\n")
+				print(f"\n\t<< Answer choices for {generated_question} of {quiz} in section {section} successfully generated and loaded >>\n")
 			
-			print(f"\n\t<< Quiz questions & answers for {quiz} in section {section} successfully generated >>\n")
+			print(f"\n\t<< Complete quiz questions & answers for {quiz} in section {section} successfully generated >>\n")
 
 		print(f"\n\t<< Section {section} successfully generated >>\n")
 
