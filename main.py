@@ -73,17 +73,16 @@ for section in content_framework.keys():  #  **TESTING** for one section (1)
 			# example questions only
 			example_questions = "<Examples>\n"
 			for preloaded_question in preloaded_questions:
-				example_questions += "**Question:**" + preloaded_question["example"] + "\n"
-			example_questions += "\n</Examples>"
+				example_questions += "**Question:** " + preloaded_question["example"] + "\n"
+			example_questions += "</Examples>"
 
 			# example questions + answers
 			example_questions_answers = "<Examples>\n"
 			for preloaded_question in preloaded_questions:
-				example_questions_answers += "**Question:**" + preloaded_question["example"] + "\n"
-				for preloaded_answer in preloaded_question:
-					example_questions_answers += "\t" + preloaded_answer
-			example_questions_answers += "\n</Examples>"
-
+				example_questions_answers += "**Question:** " + preloaded_question["example"] + "\n"
+				for preloaded_answer, preloaded_answer_value in preloaded_question["answers"].items():
+					example_questions_answers += "\t" + preloaded_answer + ": " + preloaded_answer_value + "\n"
+			example_questions_answers += "</Examples>"
 
 			while True:  # create & validate questions only
 				try:
@@ -136,34 +135,34 @@ for section in content_framework.keys():  #  **TESTING** for one section (1)
 
 			for generated_question in generated_questions.keys():
 				while True:  # create & validate answer choices for generated questions
-					#try:
-					completion = client.chat.completions.create(
-						model="gpt-4o-mini",  # base GPT-4o mini model
-						messages=[
-							{
-							"role": "system", 
-							"content": prompts.system_message_example_Q_A
-							},
-							{
-							"role": "user",
-							"content": prompts.user_message_answers(generated_content[section]["quizzes"][content_framework[section]["quizzes"][quiz]["title"]]["questions"][generated_question]["question"],
-									RESTAURANT_INFO.name, RESTAURANT_INFO.location, RESTAURANT_INFO.nationalities, RESTAURANT_INFO.cuisine,
-									RESTAURANT_INFO.restaurant_context, example_questions_answers, enhanced_menu)
+					try:
+						completion = client.chat.completions.create(
+							model="gpt-4o-mini",  # base GPT-4o mini model
+							messages=[
+								{
+								"role": "system", 
+								"content": prompts.system_message_example_Q_A
+								},
+								{
+								"role": "user",
+								"content": prompts.user_message_answers(generated_content[section]["quizzes"][content_framework[section]["quizzes"][quiz]["title"]]["questions"][generated_question]["question"],
+										RESTAURANT_INFO.name, RESTAURANT_INFO.location, RESTAURANT_INFO.nationalities, RESTAURANT_INFO.cuisine,
+										RESTAURANT_INFO.restaurant_context, example_questions_answers, enhanced_menu)
+								}
+							],
+							response_format={
+								"type": "json_schema",
+								"json_schema": choices_schema
 							}
-						],
-						response_format={
-							"type": "json_schema",
-							"json_schema": choices_schema
-						}
-					)
-					#except Exception as e:  # handle errors like finish_reason, refusal, content_filter, etc.  ## in case Chat Completion API is unable to follow response_format schema
-					#	if completion.choices[0].message.refusal is not None:
-					#		print(f"** Error ** Answer Choice API refused to respond. Reason: {completion.choices[0].message.refusal}")
-					#		
-					#	else:
-					#		print(f"** Error ** {e}")
-					#	valid = False
-					#	break
+						)
+					except Exception as e:  # handle errors like finish_reason, refusal, content_filter, etc.  ## in case Chat Completion API is unable to follow response_format schema
+						if completion.choices[0].message.refusal is not None:
+							print(f"** Error ** Answer Choice API refused to respond. Reason: {completion.choices[0].message.refusal}")
+							
+						else:
+							print(f"** Error ** {e}")
+						valid = False
+						break
 					
 					generated_choices_raw = json.loads(completion.choices[0].message.content)
 					generated_choices = generated_choices_raw["choices"]
