@@ -30,7 +30,6 @@ Using the provided tools, you will output function arguments to be used for eith
 ** The restaurant's top guest nationalities are <nationalities> {nationalities} </nationalities>
 </context>
 """
-     print(content)
      question_keys = content.keys()
      for question_key in question_keys:  # iterate over every question in the generated quiz
           question_data = content[question_key]["question"]
@@ -91,7 +90,6 @@ Using the provided tools, you will output function arguments to be used for eith
 ** The restaurant's top guest nationalities are <nationalities> {nationalities} </nationalities>
 </context>
 """
-     print(content)
      choice_keys = content.keys()
      for choice_key in choice_keys:  # iterate over every question in the generated quiz
           choice_data = content[choice_key]
