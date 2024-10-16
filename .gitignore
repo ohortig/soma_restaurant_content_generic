@@ -1,6 +1,8 @@
 __pycache__/
 outputs/enhanced_menus/consolidated_menu.json
 outputs/generated_content.json
-.env
+inputs/restaurant_info.py
 /data
-output.txt
+.env
+*.pdf
+.DS_Store
