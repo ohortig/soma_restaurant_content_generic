@@ -7,13 +7,7 @@ from jsonschema import validate
 from jsonschema.exceptions import ValidationError
 
 # load restaurant information inputs
-from inputs.restaurant_info.name import name
-from inputs.restaurant_info.location import location
-from inputs.restaurant_info.cuisine import cuisine
-from inputs.restaurant_info.nationalities import nationalities
-
-# load given menu inputs
-from inputs.menus.given_menu import given_menu
+from inputs.restaurant_info import RESTAURANT_INFO
 
 # load schemas
 from enhance.schemas.given_menu_schema import given_menu_schema
@@ -46,16 +40,16 @@ Generate an enhanced version of every single menu item in the given menu with th
 """
 
 user_message_content = f"""
-<name> {name} </name>
-<location> {location} </location>
-<cuisine> {cuisine} </cuisine>
-<nationalities> {nationalities} </nationalities>
-<menu> {given_menu} </menu>
+<name> {RESTAURANT_INFO.name} </name>
+<location> {RESTAURANT_INFO.location} </location>
+<cuisine> {RESTAURANT_INFO.cuisine} </cuisine>
+<nationalities> {RESTAURANT_INFO.nationalities} </nationalities>
+<menu> {RESTAURANT_INFO.dinner_menu} </menu>
 """
 
 def enhance():
      try:
-          validate(instance=given_menu, schema=given_menu_schema)
+          validate(instance=RESTAURANT_INFO.dinner_menu, schema=given_menu_schema)
           print("JSON Schema validated. Input JSON data fits requirements.")
           while True:
                print("Running enhancements...\n")
@@ -122,9 +116,9 @@ def enhance():
      if valid:
           print("\nGenerated enhancements validated. Consolidating enhanced menu...")
           for item in intermediate_step_data['menu_items']:
-               item['category'] = next((given_item['category'] for given_item in given_menu if given_item['name'] == item['name']), None)
-               item['ingredients'] = next((given_item['ingredients'] for given_item in given_menu if given_item['name'] == item['name']), None)
-               item['price'] = next((given_item['price'] for given_item in given_menu if given_item['name'] == item['name']), None)
+               item['category'] = next((given_item['category'] for given_item in RESTAURANT_INFO.dinner_menu if given_item['name'] == item['name']), None)
+               item['ingredients'] = next((given_item['ingredients'] for given_item in RESTAURANT_INFO.dinner_menu if given_item['name'] == item['name']), None)
+               item['price'] = next((given_item['price'] for given_item in RESTAURANT_INFO.dinner_menu if given_item['name'] == item['name']), None)
           file_path = os.path.join('outputs', 'enhanced_menus', 'consolidated_menu.json')
           try:
                try:
