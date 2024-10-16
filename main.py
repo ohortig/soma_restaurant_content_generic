@@ -133,6 +133,7 @@ for section in content_framework.keys():  #  **TESTING** for one section (1)
 			generated_content[section]["quizzes"][content_framework[section]["quizzes"][quiz]["title"]]["questions"] = generated_questions  # add new content to appropriate section and quiz in content data structure
 
 			for generated_question in generated_questions.keys():
+				consecutive_invalid_generations = 0  # tracker variable
 				while True:  # create & validate answer choices for generated questions
 					try:
 						completion = client.chat.completions.create(
@@ -170,9 +171,15 @@ for section in content_framework.keys():  #  **TESTING** for one section (1)
 					print("\tReviewing generated content for quality and hallucination...")
 					print("\t***")
 					if(review_choices(generated_choices, enhanced_menu, RESTAURANT_INFO.nationalities)):
+						consecutive_invalid_generations = 0
 						break
 					else:
 						print("\n\t***")
+						consecutive_invalid_generations += 1
+						print(f"\t** There have been {consecutive_invalid_generations}/3 consecutive invalid generations")
+						if consecutive_invalid_generations == 3:
+							print("\t** Pass ** question has exceeded the maximum consecutive invalid generations. Moving on...")
+							break
 						print(f"\t** Error ** Regenerating quiz...")
 						print("\t***\n")
 
