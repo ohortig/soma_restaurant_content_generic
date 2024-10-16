@@ -66,7 +66,8 @@ Use the following inputs to generate the answer choices and the explanation for 
 
 <output_requirements>
 ### 1. **Generate Answer Choices**:
-Develop a diverse set of interesting, thoughtful answer choices to the given question and input data. 
+Develop a diverse set of interesting, thoughtful answer choices to the given question and input data.
+The answer choices should be in the range of 100 characters to 150 characters in length, otherwise they are considered wrong.
 The correct answer choice should NOT be obvious. Instead, the answer choices should all be of similar length and make the user really think to figure out which is truly the correct answer.
 Designate the correct answer choice and give a brief explanation as to why.
 ### 2. **Structure of the Quiz**:
