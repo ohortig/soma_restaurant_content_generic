@@ -117,6 +117,11 @@ for section in content_framework.keys():  #  **TESTING** for one section (1)
 							"json_schema": questions_schema
 						}
 					)
+					api_response = completion.choices[0].message.content
+
+					#if isinstance(api_response, str):
+					#	api_response = api_response.replace("\ ".replace(" ", ""), "")
+
 				except Exception as e:  # handle errors like finish_reason, refusal, content_filter, etc.  ## in case Chat Completion API is unable to follow response_format schema
 					if completion.choices[0].message.refusal is not None:
 						print(f"** Error ** Question API refused to respond. Reason: {completion.choices[0].message.refusal}")
@@ -125,9 +130,10 @@ for section in content_framework.keys():  #  **TESTING** for one section (1)
 						print(f"** Error ** {e}")
 					valid = False
 					break
-
-				generated_questions_raw = json.loads(completion.choices[0].message.content)
-				generated_questions = generated_questions_raw["Quiz"]
+				generated_questions_raw = json.loads(api_response)
+				print(generated_questions_raw)
+				generated_questions = generated_questions_raw["quiz"]
+				print(generated_questions)
 
 				print(f"\t<< Quiz {quiz} generated >>")
 				print("\tReviewing generated content for quality and hallucination...")
@@ -141,8 +147,13 @@ for section in content_framework.keys():  #  **TESTING** for one section (1)
 
 			print(f"\n\t<< Quiz questions for {quiz} in section {section} successfully generated >>\n")
 			quiz_data = content_framework[section]["quizzes"][quiz]
+			print('GENERATED _QUESTIONS')
+			print(type(generated_questions))
+			#generated_questions_dict = json.loads(generated_questions)
+
 			generated_content[section]["quizzes"][quiz_data["title"]]["questions"] = generated_questions  # add new content to appropriate section and quiz in content data structure
-	
+			print("The type of generated questions", type(generated_questions))
+
    		### SECOND API CALL TO GENERATE ANSWERS
 			for generated_question in generated_questions.keys():
 				consecutive_invalid_generations = 0  # tracker variable

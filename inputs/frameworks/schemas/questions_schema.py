@@ -3,7 +3,7 @@ questions_schema = {
     "schema": {
         "type": "object",
         "properties": {
-            "Quiz": {
+            "quiz": {
                 "type": "object",
                 "properties": {
                     "question1": {
@@ -91,7 +91,7 @@ questions_schema = {
                 "additionalProperties": False
             }
         },
-        "required": ["Quiz"],
+        "required": ["quiz"],
         "additionalProperties": False
     },
     "strict": True
