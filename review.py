@@ -25,7 +25,7 @@ def review_quiz(content, menu, nationalities):
 
      # formatting questions for review
      content = "\n".join([k + ": " + v["question"] for k, v in content.items()])
-     
+     print(content)
      completion = client.chat.completions.create(
           model="gpt-4o-mini", 
           messages=[
@@ -103,6 +103,7 @@ def review_choices(content, menu, nationalities):
      for function_call in completion.choices[0].message.tool_calls:
           arguments = json.loads(function_call.function.arguments)
           function_name = function_call.function.name
+          print(function_name)
           if function_name == "dish_exists":
                print(f'\tValidating {arguments["item_name"]} exists...in answers')
                if not item_exists(arguments["item_name"]):
