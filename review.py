@@ -47,15 +47,15 @@ def review_quiz(content, menu, nationalities):
      for function_call in completion.choices[0].message.tool_calls:
           arguments = json.loads(function_call.function.arguments)
           function_name = function_call.function.name
-
+          print("function_call.function.arguments", function_call.function.arguments)
           if function_name == "dish_exists":
-               print(f'\tValidating {arguments["item_name"]} exists...')
+               print(f'\tValidating {arguments["item_name"]} exists...in questions')
 
                if not item_exists(arguments["item_name"]):
-                    print(f"\t\t Mentioned menu item {arguments['item_name']} does not exist.")
+                    print(f"\t\t Mentioned menu item {arguments['item_name']} does not exist in questions")
                     return False  # regenerate the quiz
 
-               print(f'\t\tMentioned item {arguments["item_name"]} confirmed to exist.')
+               print(f'\t\tMentioned item {arguments["item_name"]} confirmed to exist in questions.')
 
           if function_name == "nationality_exists":
                print(f'\tValidating {arguments["nationality"]} is in nationalities list...')
@@ -104,11 +104,11 @@ def review_choices(content, menu, nationalities):
           arguments = json.loads(function_call.function.arguments)
           function_name = function_call.function.name
           if function_name == "dish_exists":
-               print(f'\tValidating {arguments["item_name"]} exists...')
+               print(f'\tValidating {arguments["item_name"]} exists...in answers')
                if not item_exists(arguments["item_name"]):
-                    print(f"\t\t Mentioned menu item {arguments['item_name']} does not exist.")
+                    print(f"\t\t Mentioned menu item {arguments['item_name']} does not exist in answers")
                     return False  # regenerate the quiz
-               print(f"\t\tMentioned item {arguments['item_name']} confirmed to exist.")
+               print(f"\t\tMentioned item {arguments['item_name']} confirmed to exist in answers")
           #if function_name == "nationality_exists":
           #     print(f'\tValidating {arguments["nationality"]} is in nationalities list...')
           #     if not nationality_exists(arguments["nationality"]):
