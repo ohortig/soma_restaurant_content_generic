@@ -1,7 +1,10 @@
 __pycache__/
 outputs/enhanced_menus/consolidated_menu.json
 outputs/generated_content.json
+outputs/
+inputs/restaurant_info.py
 /data
 .env
-inputs/.DS_Store
-outputs/generated_content_Portixol Restaurant.json
+*.pdf
+.DS_Store
+outputs/generated_content_FSP_QA.json

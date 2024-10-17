@@ -1,0 +1,107 @@
+{
+    "section": "Dish Appeal",
+    "examples": "<Examples>\n----------------\n**Question:** When describing a seasonal special, \"[Insert Seasonal Dish Name],\" which description would make it sound the most enticing?\n\n**Answers:**\n- A: \"The [Insert Seasonal Dish Name] is made with fresh, seasonal ingredients and tastes great.\"\n- B: \"[Insert Seasonal Dish Name] brings together the best of the season with [Insert Fresh Ingredient] and [Insert Seasonal Ingredient], capturing the vibrant flavors of this time of year and delivering a dish that’s fresh, colorful, and full of zest.\"\n- C: \"It’s a good seasonal option with fresh ingredients and light flavors.\"\n- D: \"The [Insert Seasonal Dish Name] is fresh and flavorful, making it a good choice.\"\n\n**Correct Answer:** B\n\n----------------\n**Question:**: How would you describe the \"[Insert Appetizer Name]\" to make it stand out as a light yet flavorful starter?\n\n**Answers:**\n- A: \"The [Insert Appetizer Name] is a light starter made with [Insert Main Ingredient], which makes it a great choice to begin your meal.\"\n- B: \"[Insert Appetizer Name] combines the crispness of [Insert Main Ingredient] with the zesty bite of [Insert Accompaniment], making it a refreshing yet satisfying start to your dining experience.\"\n- C: \"It’s a nice, light dish with a simple flavor, perfect as a starter.\"\n- D: \"The [Insert Appetizer Name] is a good way to begin your meal with fresh ingredients and light flavors.\"\n\n**Correct Answer:** B\n----------------\n**Question:**: A guest is interested in the \"[Insert Seafood Dish]\" and asks what makes it stand out. How would you describe it?\n\n**Answers:**\n- A: \"The [Insert Seafood Dish] is fresh and cooked well, with mild flavors that seafood lovers enjoy.\"\n- B: \"[Insert Seafood Dish] features tender, flaky [Insert Seafood], lightly seared to perfection, with a crisp exterior and complemented by a tangy [Insert Sauce] to enhance the fresh, briny flavors.\"\n- C: \"It’s a simple seafood dish, with a nice texture and light seasoning.\"\n- D: \"The [Insert Seafood Dish] is a good choice if you enjoy seafood with light flavors.\"\n\n**Correct Answer:** B\n**Tip:** Highlight the freshness of seafood and the balance between texture and flavor to enhance its appeal.\n----------------\n**Question:**: A guest wants a rich and comforting dish. How would you describe the \"[Insert Comfort Food Dish]\" to meet their expectations?\n\n**Answers:**\n- A: \"The [Insert Comfort Food Dish] is rich and filling, perfect if you’re in the mood for something hearty.\"\n- B: \"[Insert Comfort Food Dish] envelops [Insert Main Ingredient] in a luxurious [Insert Sauce], with layers of warmth and richness that offer the ultimate comfort food experience, leaving you deeply satisfied.\"\n- C: \"It’s a comforting dish with warm flavors and a creamy texture, perfect if you want something filling.\"\n- D: \"The [Insert Comfort Food Dish] is great for anyone who wants a hearty meal with creamy ingredients.\"\n\n**Correct Answer:** B\n**Tip:** Highlight indulgence and richness, using words like “luxurious” and “comfort” to make it sound more inviting.\n</Examples>",
+    "base_menu": [
+        {
+            "name": "Pan | Olivade 'casero' comida",
+            "appeal": "A simple yet irresistible homemade olive spread paired with freshly baked bread, perfect to start your meal.",
+            "category": "Starters",
+            "ingredients": [
+                "Bread",
+                "Homemade olive spread"
+            ],
+            "price": 2.5
+        },
+        {
+            "name": "Caviar Oscietra",
+            "appeal": "Indulge in the luxurious and silky texture of sustainably sourced Oscietra caviar, an unforgettable experience for the palate.",
+            "category": "Starters",
+            "ingredients": [
+                "Oscietra caviar"
+            ],
+            "price": 155.0
+        },
+        {
+            "name": "Ostras Amelie NÂº2",
+            "appeal": "Savor the briny, fresh taste of Amelie nÂº2 oysters, a perfect seafood delicacy that will transport you to the ocean.",
+            "category": "Starters",
+            "ingredients": [
+                "Oysters"
+            ],
+            "price": 5.5
+        },
+        {
+            "name": "Sashimi PORTIXOL",
+            "appeal": "Delicate slices of fresh fish that melt in your mouth, served with a touch of Portixol elegance.",
+            "category": "Starters",
+            "ingredients": [
+                "Fresh fish (assorted sashimi)"
+            ],
+            "price": 27.0
+        },
+        {
+            "name": "JamÃ³n IbÃ©rico de bellota",
+            "appeal": "Rich, nutty flavors of acorn-fed Iberian ham, thinly sliced to perfection, a true Spanish delicacy.",
+            "category": "Starters",
+            "ingredients": [
+                "Iberian cured ham"
+            ],
+            "price": 27.0
+        },
+        {
+            "name": "Lubina braseada",
+            "appeal": "Succulent grilled sea bass, accompanied by tender marinated vegetables and a fragrant Tom Yum broth that invigorates the senses.",
+            "category": "Main Courses",
+            "ingredients": [
+                "Sea bass",
+                "Mini marinated vegetables",
+                "Tom Yum broth"
+            ],
+            "price": 36.0
+        },
+        {
+            "name": "AtÃºn rojo",
+            "appeal": "Perfectly seared red tuna with a burst of flavor from edamame and a hint of spicy wasabi mayonnaise.",
+            "category": "Main Courses",
+            "ingredients": [
+                "Red tuna",
+                "Edamame",
+                "Wasabi mayonnaise"
+            ],
+            "price": 36.0
+        },
+        {
+            "name": "Coulant de chocolate",
+            "appeal": "A decadent chocolate dessert with a molten center, served with hazelnut and Tonka bean ice cream for a perfect balance of richness and creaminess.",
+            "category": "Dessert",
+            "ingredients": [
+                "Chocolate",
+                "Hazelnut",
+                "Tonka bean ice cream"
+            ],
+            "price": 10.0
+        },
+        {
+            "name": "Tarta de queso mallorquÃ­n",
+            "appeal": "Creamy Mallorcan cheesecake, perfectly complemented by the nutty depth of toasted butter ice cream.",
+            "category": "Dessert",
+            "ingredients": [
+                "Mallorcan cheesecake",
+                "Toasted butter ice cream"
+            ],
+            "price": 11.0
+        }
+    ],
+    "menu_enhacement": null,
+    "inputs": [
+        {
+            "role": "system",
+            "content": "\n<instructions>\nYou are a helpful assistant which develops comprehensive, scenario-based quiz modules designed to effectively train restaurant staff by enhancing their proficiency in dish appeal.\nThe quizzes should be engaging, contextually relevant, and varied to ensure high levels of interest without redundancy.\n</instructions>\n\n<expected inputs>\nUse the following inputs to generate the quiz:\n### 1. **Section_Title**: The title of the section the quiz is part of.\n### 2. **Title of Quiz**: The name of the quiz that you are generating.\n### 3. **Description of Quiz**: A high level description of the quiz that you are generating.\n### 4. **Restaurant Name**: The name of the restaurant.\n### 5. **Restaurant Location**: The restaurant's location\n### 6. **Nationalities**: The top  nationalities of the restaurant's clientele.\n### 7. **Cuisine of the Restaurant**: The main cuisine featured at the restaurant.\n### 8. **Enhanced Menus**: Enhanced menus which detail the pricing, ingredients, pairing suggestions, cultural narratives, and menu category for each menu item. \n</expected inputs>\n\n<output_requirements>\n### 1. **Generate Questions**:\nDevelop a diverse set of scenario-based questions tailored to the input data. \nEnsure questions are engaging, diverse, framed in real-world scenarios, and not repetitive to maintain quiz freshness and intrigue. \n### 2. **Structure of the Quiz**:\nEach quiz should contain 10 questions with multiple-choice answers (A to D), with one correct answer.\n</output_requirements>\n\nUse the following examples format, writing style and coherence. Must use each of these styles at least once in your 10 questions.\nYOU MUST RESPECT THIS FORMAT AND ALL QUESTIONS MUST HAVE 4 SUGGESTED ANSWERS.\n<Examples>\n----------------\n**Question:** When describing a seasonal special, \"[Insert Seasonal Dish Name],\" which description would make it sound the most enticing?\n\n**Answers:**\n- A: \"The [Insert Seasonal Dish Name] is made with fresh, seasonal ingredients and tastes great.\"\n- B: \"[Insert Seasonal Dish Name] brings together the best of the season with [Insert Fresh Ingredient] and [Insert Seasonal Ingredient], capturing the vibrant flavors of this time of year and delivering a dish that’s fresh, colorful, and full of zest.\"\n- C: \"It’s a good seasonal option with fresh ingredients and light flavors.\"\n- D: \"The [Insert Seasonal Dish Name] is fresh and flavorful, making it a good choice.\"\n\n**Correct Answer:** B\n\n----------------\n**Question:**: How would you describe the \"[Insert Appetizer Name]\" to make it stand out as a light yet flavorful starter?\n\n**Answers:**\n- A: \"The [Insert Appetizer Name] is a light starter made with [Insert Main Ingredient], which makes it a great choice to begin your meal.\"\n- B: \"[Insert Appetizer Name] combines the crispness of [Insert Main Ingredient] with the zesty bite of [Insert Accompaniment], making it a refreshing yet satisfying start to your dining experience.\"\n- C: \"It’s a nice, light dish with a simple flavor, perfect as a starter.\"\n- D: \"The [Insert Appetizer Name] is a good way to begin your meal with fresh ingredients and light flavors.\"\n\n**Correct Answer:** B\n----------------\n**Question:**: A guest is interested in the \"[Insert Seafood Dish]\" and asks what makes it stand out. How would you describe it?\n\n**Answers:**\n- A: \"The [Insert Seafood Dish] is fresh and cooked well, with mild flavors that seafood lovers enjoy.\"\n- B: \"[Insert Seafood Dish] features tender, flaky [Insert Seafood], lightly seared to perfection, with a crisp exterior and complemented by a tangy [Insert Sauce] to enhance the fresh, briny flavors.\"\n- C: \"It’s a simple seafood dish, with a nice texture and light seasoning.\"\n- D: \"The [Insert Seafood Dish] is a good choice if you enjoy seafood with light flavors.\"\n\n**Correct Answer:** B\n**Tip:** Highlight the freshness of seafood and the balance between texture and flavor to enhance its appeal.\n----------------\n**Question:**: A guest wants a rich and comforting dish. How would you describe the \"[Insert Comfort Food Dish]\" to meet their expectations?\n\n**Answers:**\n- A: \"The [Insert Comfort Food Dish] is rich and filling, perfect if you’re in the mood for something hearty.\"\n- B: \"[Insert Comfort Food Dish] envelops [Insert Main Ingredient] in a luxurious [Insert Sauce], with layers of warmth and richness that offer the ultimate comfort food experience, leaving you deeply satisfied.\"\n- C: \"It’s a comforting dish with warm flavors and a creamy texture, perfect if you want something filling.\"\n- D: \"The [Insert Comfort Food Dish] is great for anyone who wants a hearty meal with creamy ingredients.\"\n\n**Correct Answer:** B\n**Tip:** Highlight indulgence and richness, using words like “luxurious” and “comfort” to make it sound more inviting.\n</Examples>\n"
+        },
+        {
+            "role": "user",
+            "content": "\n### 1. **Title of Section**: Dish Appeal\n### 2. **Title of Quiz**: Dish Descriptions\n### 3. **Description of Quiz**: how to describe dishes in a way that excites guests. This quiz focuses on using vivid, sensory-rich language to transform a simple dish into a must-try menu item.\nYou’ll practice describing taste, texture, ingredients, and preparation in a way that makes dishes irresistible\n### 4. **Restaurant Name**: Carbone\n### 5. **Restaurant Location**: {'neighborhood': 'Greenwich Village', 'city': 'New York City', 'state': 'New York', 'country': 'United States of America'}\n### 6. **Nationalities**: ['American', 'Americans', 'America', 'USA', 'United States', 'United States of America', 'Italian', 'Italians', 'Italy', 'French', 'Frenchmen', 'France']\n### 7. **Cuisine of the Restaurant**: Italian\n### 8. **menu**: [{'name': \"Pan | Olivade 'casero' comida\", 'appeal': 'A simple yet irresistible homemade olive spread paired with freshly baked bread, perfect to start your meal.', 'category': 'Starters', 'ingredients': ['Bread', 'Homemade olive spread'], 'price': 2.5}, {'name': 'Caviar Oscietra', 'appeal': 'Indulge in the luxurious and silky texture of sustainably sourced Oscietra caviar, an unforgettable experience for the palate.', 'category': 'Starters', 'ingredients': ['Oscietra caviar'], 'price': 155.0}, {'name': 'Ostras Amelie NÂº2', 'appeal': 'Savor the briny, fresh taste of Amelie nÂº2 oysters, a perfect seafood delicacy that will transport you to the ocean.', 'category': 'Starters', 'ingredients': ['Oysters'], 'price': 5.5}, {'name': 'Sashimi PORTIXOL', 'appeal': 'Delicate slices of fresh fish that melt in your mouth, served with a touch of Portixol elegance.', 'category': 'Starters', 'ingredients': ['Fresh fish (assorted sashimi)'], 'price': 27.0}, {'name': 'JamÃ³n IbÃ©rico de bellota', 'appeal': 'Rich, nutty flavors of acorn-fed Iberian ham, thinly sliced to perfection, a true Spanish delicacy.', 'category': 'Starters', 'ingredients': ['Iberian cured ham'], 'price': 27.0}, {'name': 'Lubina braseada', 'appeal': 'Succulent grilled sea bass, accompanied by tender marinated vegetables and a fragrant Tom Yum broth that invigorates the senses.', 'category': 'Main Courses', 'ingredients': ['Sea bass', 'Mini marinated vegetables', 'Tom Yum broth'], 'price': 36.0}, {'name': 'AtÃºn rojo', 'appeal': 'Perfectly seared red tuna with a burst of flavor from edamame and a hint of spicy wasabi mayonnaise.', 'category': 'Main Courses', 'ingredients': ['Red tuna', 'Edamame', 'Wasabi mayonnaise'], 'price': 36.0}, {'name': 'Coulant de chocolate', 'appeal': 'A decadent chocolate dessert with a molten center, served with hazelnut and Tonka bean ice cream for a perfect balance of richness and creaminess.', 'category': 'Dessert', 'ingredients': ['Chocolate', 'Hazelnut', 'Tonka bean ice cream'], 'price': 10.0}, {'name': 'Tarta de queso mallorquÃ\\xadn', 'appeal': 'Creamy Mallorcan cheesecake, perfectly complemented by the nutty depth of toasted butter ice cream.', 'category': 'Dessert', 'ingredients': ['Mallorcan cheesecake', 'Toasted butter ice cream'], 'price': 11.0}]\n    \t\t"
+        }
+    ],
+    "output": "**Title of Section**: Dish Appeal  \n**Title of Quiz**: Dish Descriptions  \n**Description of Quiz**: How to describe dishes in a way that excites guests. This quiz focuses on using vivid, sensory-rich language to transform a simple dish into a must-try menu item. You'll practice describing taste, texture, ingredients, and preparation in a way that makes dishes irresistible.  \n  \n### Quiz Questions\n\n**Question 1:** When presenting the \"Pan | Olivade 'casero' comida\" to guests, which description best highlights its appeal as a starter?  \n**Answers:**  \n- A: \"It's bread with an olive spread, good to begin your meal.\"  \n- B: \"Pan | Olivade 'casero' comida features a homemade olive spread paired with freshly baked bread, a simple yet irresistible start to your meal.\"  \n- C: \"This dish includes bread and olive spread, great before any meal.\"  \n- D: \"The olive spread is homemade and served with fresh bread, nice as a starter.\"  \n**Correct Answer:** B  \n\n**Question 2:** A customer inquires about the \"Caviar Oscietra.\" Which description would make it most appealing?  \n**Answers:**  \n- A: \"Caviar Oscietra is rich in taste but quite expensive.\"  \n- B: \"Experience the luxurious, silky Oscietra caviar, sustainably sourced for an unforgettable palate sensation.\"  \n- C: \"It's a high-priced caviar option that stands out.\"  \n- D: \"The Oscietra caviar is a good choice if you prefer refined flavors.\"  \n**Correct Answer:** B  \n\n**Question 3:** How would you describe the \"Ostras Amelie NÂº2\" to entice a seafood lover?  \n**Answers:**  \n- A: \"Oysters Amelie NÂº2 are fresh with a nice briny taste.\"  \n- B: \"Indulge in the briny, fresh delight of Amelie NÂº2 oysters, a seafood delicacy that whisks you away to the ocean.\"  \n- C: \"These oysters are briny and fresh, perfect if you like seafood.\"  \n- D: \"The Amelie NÂº2 oysters are fresh and straightforward.\"  \n**Correct Answer:** B  \n\n**Question 4:** To emphasize the elegance of \"Sashimi PORTIXOL,\" which description would you choose?  \n**Answers:**  \n- A: \"PORTIXOL sashimi is fresh and elegantly served.\"  \n- B: \"Experience the delicacy of PORTIXOL sashimi, where fresh fish slices melt in your mouth with a touch of elegance.\"  \n- C: \"It's a fresh sashimi, good for lovers of raw fish.\"  \n- D: \"The PORTIXOL sashimi is served fresh with elegance.\"  \n**Correct Answer:** B  \n\n**Question 5:** A guest asks what makes \"Jamón Ibérico de bellota\" special. How would you respond?  \n**Answers:**  \n- A: \"It's thinly sliced Iberian ham, rich and nutty in flavor.\"  \n- B: \"Savor the rich nuttiness of acorn-fed Iberian ham, sliced to perfection, a Spanish delicacy on your plate.\"  \n- C: \"Iberian ham that's acorn-fed, with a nutty taste.\"  \n- D: \"The ham is Iberian and acorn-fed, with rich flavors.\"  \n**Correct Answer:** B  \n\n**Question 6:** How would you describe the \"Lubina braseada\" to highlight its main characteristics?  \n**Answers:**  \n- A: \"Grilled sea bass with vegetables and Tom Yum broth.\"  \n- B: \"Experience the succulence of grilled sea bass paired with tender marinated vegetables and a fragrant Tom Yum broth.\"  \n- C: \"Grilled fish dish with vegetables and fragrant broth, rich in flavor.\"  \n- D: \"Sea bass with a blend of flavors, enhanced by broth.\"  \n**Correct Answer:** B  \n\n**Question 7:** What is the best way to describe the \"Atún rojo\" to intrigue a guest looking for a flavorful dish?  \n**Answers:**  \n- A: \"Seared red tuna with edamame and wasabi mayo.\"  \n- B: \"Discover the burst of flavors with perfectly seared red tuna, edamame, and a hint of spicy wasabi mayonnaise.\"  \n- C: \"A flavorful tuna dish with a spicy kick.\"  \n- D: \"Seared tuna for a flavorful experience.\"  \n**Correct Answer:** B  \n\n**Question 8:** A dessert lover is intrigued by the \"Coulant de chocolate.\" How would you sell it?  \n**Answers:**  \n- A: \"It's a chocolate dessert with a molten center, served with ice cream.\"  \n- B: \"Indulge in the decadent Couland de Chocolat, with a molten center, served alongside hazelnut and Tonka bean ice cream for perfect richness and creaminess.\"  \n- C: \"A rich, molten chocolate dessert with ice cream.\"  \n- D: \"Chocolate coulant with rich flavors, balanced by ice cream.\"  \n**Correct Answer:** B  \n\n**Question 9:** When talking about the \"Tarta de queso mallorquín,\" how could you appeal to a fan of unique cheesecakes?  \n**Answers:**  \n- A: \"A Mallorcan cheesecake with toasted butter ice cream.\"  \n- B: \"Indulge in the creamy delight of Mallorcan cheesecake, enhanced by the nutty depths of toasted butter ice cream.\"  \n- C: \"Creamy cheesecake with a nutty ice cream pairing.\"  \n- D: \"Perfectly creamy dessert with unique flavors.\"  \n**Correct Answer:** B  \n\n**Question 10:** How would you entice a guest to try \"Atún rojo\" if they are looking for a modern twist on traditional tuna dishes?  \n**Answers:**  \n- A: \"Modern seared tuna with innovative ingredients like edamame and wasabi mayonnaise.\"  \n- B: \"Enjoy Atún rojo, with perfectly seared red tuna, edamame, and a hint of spicy wasabi mayonnaise—offering a modern twist.\"  \n- C: \"A unique take on tuna with modern flavors.\"  \n- D: \"Try a modern twist with seared tuna and creative ingredients.\"  \n**Correct Answer:** B  "
+}

@@ -1,0 +1,306 @@
+{
+    "section": "Dish Appeal",
+    "examples": "<Examples>\n----------------\n**Question:** \nWhen describing a seasonal special, '[Insert Seasonal Dish Name],' which description would make it sound the most enticing?\n                    Answers:\n                    **A: The [Insert Seasonal Dish Name] is made with fresh, seasonal ingredients and tastes great.**\n                    **B: [Insert Seasonal Dish Name] brings together the best of the season with [Insert Fresh Ingredient] and [Insert Seasonal Ingredient], capturing the vibrant flavors of this time of year and delivering a dish that’s fresh, colorful, and full of zest.**\n                    **C: It’s a good seasonal option with fresh ingredients and light flavors.**\n                    **D: The [Insert Seasonal Dish Name] is fresh and flavorful, making it a good choice.**\n                    **Correct Answer: B**\n                    \n----------------\n**Question:**: \nYou're crafting a menu description for the **[Insert Seasonal Dish Name].** Which option best uses vivid imagery to entice diners?\n                    Answers:\n                    **A: A seafood paella with rice and saffron, it's tasty and filling.**\n                    **B: Our [Insert Seasonal Dish Name] features a fragrant blend of saffron-infused rice loaded with succulent shrimp, mussels, and clams, simmered to perfection in a rich broth.**\n                    **C: The [Insert Seasonal Dish Name] is a good choice if you like seafood and rice.**\n                    **D: It's a [Dish type] that's popular and has fresh ingredients.**\n                    **Correct Answer: B**\n                    \n----------------\n**Question:**: \nHow would you describe the [Insert Seasonal Dish Name] to make it stand out as a light yet flavorful starter?\n                    Answers:\n                    **A: The [Insert Seasonal Dish Name] is a light appetizer with avocado, ideal to start your meal.**\n                    **B: Our [Insert Seasonal Dish Name] pairs creamy avocado with a hint of chili on toasted baguette slices, offering a vibrant and flavorful beginning to your dining experience.**\n                    **C: It's a nice, simple dish with mild flavors, suitable as a starter.**\n                    **D: The [Insert Seasonal Dish Name] is fresh and flavorful, making it a good choice to begin your meal.**\n                    **Correct Answer: B**\n                    \n----------------\n**Question:**: \n\n                    A guest wants a rich and comforting dish. How would you describe the \"[Insert Comfort Food Dish]\" to meet their expectations?\n                    Answers:\n                    **A: The [Insert Comfort Food Dish] is rich and filling, perfect if you’re in the mood for something hearty.**\n                    **B: [Insert Comfort Food Dish] envelops [Insert Main Ingredient] in a luxurious [Insert Sauce], with layers of warmth and richness that offer the ultimate comfort food experience, leaving you deeply satisfied.**\n                    **C: It’s a comforting dish with warm flavors and a creamy texture, perfect if you want something filling.**\n                    **D: The [Insert Comfort Food Dish] is great for anyone who wants a hearty meal with creamy ingredients.**\n                    **Correct Answer: B**\n                    **Tip: Highlight indulgence and richness, using words like “luxurious” and “comfort” to make it sound more inviting.**\n                    \n</Examples>\n",
+    "base_menu": [
+        {
+            "category": "Starters",
+            "name": "Caviar Oscietra 50gr",
+            "ingredients": "Pure | Natural | Sustainable | Ethical",
+            "price": 155.0
+        },
+        {
+            "category": "Starters",
+            "name": "Amelie No2 Oysters",
+            "ingredients": "",
+            "price": 5.5
+        },
+        {
+            "category": "Starters",
+            "name": "Sashimi PORTIXOL",
+            "ingredients": "",
+            "price": 27.0
+        },
+        {
+            "category": "Starters",
+            "name": "Iberian cured ham",
+            "ingredients": "",
+            "price": 27.0
+        },
+        {
+            "category": "Starters",
+            "name": "Tiger prawns tempura",
+            "ingredients": "",
+            "price": 19.0
+        },
+        {
+            "category": "Starters",
+            "name": "White sea bass ceviche",
+            "ingredients": "King prawns, green papaya, mango",
+            "price": 25.0
+        },
+        {
+            "category": "Starters",
+            "name": "PORTIXOL Toast",
+            "ingredients": "Toast, shrimps, crab",
+            "price": 18.0
+        },
+        {
+            "category": "Starters",
+            "name": "Seasonal tomato tarter",
+            "ingredients": "Burrata foam, truffle",
+            "price": 18.0
+        },
+        {
+            "category": "Starters",
+            "name": "Gazpacho",
+            "ingredients": "",
+            "price": 12.0
+        },
+        {
+            "category": "Starters",
+            "name": "Grilled artichoke",
+            "ingredients": "",
+            "price": 18.0
+        },
+        {
+            "category": "Starters",
+            "name": "Fried edamame",
+            "ingredients": "Red wine salt",
+            "price": 8.5
+        },
+        {
+            "category": "Starters",
+            "name": "Fried sweet potato",
+            "ingredients": "Truffle mayonnaise",
+            "price": 8.5
+        },
+        {
+            "category": "Main Courses",
+            "name": "Grilled Sea Bass",
+            "ingredients": "marinated mini-vegetables, Tom Yum broth",
+            "price": 36.0
+        },
+        {
+            "category": "Main Courses",
+            "name": "Red tuna",
+            "ingredients": "Edamame, wasabi mayonaise",
+            "price": 36.0
+        },
+        {
+            "category": "Main Courses",
+            "name": "Cod Kokotxas 'pil-pil'",
+            "ingredients": "Belly pork, seasonal mushrooms",
+            "price": 29.0
+        },
+        {
+            "category": "Main Courses",
+            "name": "Grilled Squid",
+            "ingredients": "Black rice, saffron 'alioli'",
+            "price": 32.0
+        },
+        {
+            "category": "Main Courses",
+            "name": "Catch of the day",
+            "ingredients": "",
+            "price": "Market price"
+        },
+        {
+            "category": "Main Courses",
+            "name": "Panang curry",
+            "ingredients": "Red rice, vegetables, naan bread",
+            "price": 19.0
+        },
+        {
+            "category": "Main Courses",
+            "name": "Homemade ravioli",
+            "ingredients": "Ricotta, spinach, walnuts",
+            "price": 26.0
+        },
+        {
+            "category": "Main Courses",
+            "name": "Beef tenderloin steak",
+            "ingredients": "Potato mille-feuille, port reduction",
+            "price": 34.0
+        },
+        {
+            "category": "Main Courses",
+            "name": "Suckling Pig",
+            "ingredients": "Plum, tomato",
+            "price": 31.0
+        },
+        {
+            "category": "Main Courses",
+            "name": "'Angus' Sirloin Steak Tataki'",
+            "ingredients": "Tempura 'piquillo peppers'",
+            "price": 35.0
+        },
+        {
+            "category": "Side Orders",
+            "name": "Truffled wedge potatoes with rocket",
+            "ingredients": "",
+            "price": 6.5
+        },
+        {
+            "category": "Side Orders",
+            "name": "Ceasar salad or green",
+            "ingredients": "",
+            "price": 6.5
+        },
+        {
+            "category": "Side Orders",
+            "name": "Japanese mushrooms sautéed",
+            "ingredients": "",
+            "price": 6.5
+        },
+        {
+            "category": "Side Orders",
+            "name": "Sautéed seasonal vegetables",
+            "ingredients": "",
+            "price": 6.5
+        },
+        {
+            "category": "Side Orders",
+            "name": "Padrón peppers",
+            "ingredients": "",
+            "price": 6.5
+        },
+        {
+            "category": "Dessert",
+            "name": "Homemade chocolate truffle",
+            "ingredients": "",
+            "price": 3.5
+        },
+        {
+            "category": "Dessert",
+            "name": "Mallorcan cheesecake",
+            "ingredients": "Toasted butter ice cream",
+            "price": 11.0
+        },
+        {
+            "category": "Dessert",
+            "name": "Chocolate coulant",
+            "ingredients": "Hazelnut & tonka bean ice cream",
+            "price": 10.0
+        },
+        {
+            "category": "Dessert",
+            "name": "Tarte tatin (for 2)",
+            "ingredients": "",
+            "price": 15.0
+        },
+        {
+            "category": "Dessert",
+            "name": "French toast 'coca de patata'",
+            "ingredients": "Sheep's milk ice cream",
+            "price": 10.0
+        },
+        {
+            "category": "Dessert",
+            "name": "Passion Fruit Pavlova",
+            "ingredients": "",
+            "price": 9.0
+        },
+        {
+            "category": "Dessert",
+            "name": "Spanish and local cheese selection",
+            "ingredients": "",
+            "price": 19.0
+        },
+        {
+            "category": "Dessert",
+            "name": "Home made ice cream",
+            "ingredients": "Sorbet",
+            "price": 4.5
+        },
+        {
+            "category": "Sweet Wine by the Glass",
+            "name": "MORTITX",
+            "ingredients": "Dolc de gel. Moscatel, Riesling",
+            "price": 8.0
+        },
+        {
+            "category": "Sweet Wine by the Glass",
+            "name": "APASIANADO DE JOSE PARIENTE",
+            "ingredients": "Sauvignon Blanc E",
+            "price": 7.0
+        },
+        {
+            "category": "Sweet Wine by the Glass",
+            "name": "VALVERAN 20",
+            "ingredients": "Manzanas Sidra de Hielo Raxao y Durona de Tresali",
+            "price": 7.0
+        },
+        {
+            "category": "Sweet Wine by the Glass",
+            "name": "OREMUS ASZU 3",
+            "ingredients": "Puttonyos Furmint, Harslevelu, Mascat de Lunel",
+            "price": 18.0
+        },
+        {
+            "category": "Kids",
+            "name": "Hamburger",
+            "ingredients": "French fries",
+            "price": 15.0
+        },
+        {
+            "category": "Kids",
+            "name": "Grilled beef",
+            "ingredients": "French fries or salad",
+            "price": 15.0
+        },
+        {
+            "category": "Kids",
+            "name": "Home Made Meatballs",
+            "ingredients": "Mashed potatoes",
+            "price": 15.0
+        },
+        {
+            "category": "Kids",
+            "name": "Grilled Fish",
+            "ingredients": "Rice or potatoes",
+            "price": 15.0
+        },
+        {
+            "category": "Kids",
+            "name": "Chicken Breast",
+            "ingredients": "French fries or salad",
+            "price": 15.0
+        },
+        {
+            "category": "Kids",
+            "name": "Pasta Bolognesa or Tomato Sauce",
+            "ingredients": "",
+            "price": 15.0
+        },
+        {
+            "category": "Kids Dessert",
+            "name": "Ice Cream",
+            "ingredients": "",
+            "price": 4.5
+        },
+        {
+            "category": "Kids Dessert",
+            "name": "Fruit Salad",
+            "ingredients": "",
+            "price": 4.0
+        },
+        {
+            "category": "Kids Dessert",
+            "name": "Milkshake",
+            "ingredients": "",
+            "price": 5.0
+        }
+    ],
+    "menu_enhacement": null,
+    "inputs": [
+        {
+            "role": "system",
+            "content": "\n<instructions>\nYou are a helpful assistant which develops comprehensive, scenario-based quiz modules designed to effectively train restaurant staff by enhancing their proficiency in dish appeal.\nThe quizzes should be engaging, contextually relevant, and varied to ensure high levels of interest without redundancy.\n\nRULES YOU MUST FOLLOW OR OUTPUT IS WRONG:\n- Use the following examples format, writing style and coherence. Must use each of these styles at least once in your 10 questions.\n- Make sure the answers are equal in length.\n- YOU MUST RESPECT THIS FORMAT AND ALL QUESTIONS MUST HAVE 4 SUGGESTED ANSWERS.\n- OUTPUT A FLOAT SCORE FROM 0(very bad) TO 9(Great) AT THE END OF EACH QUESTION SEPERATLY IF THE QUALITY IS BEST.\n</instructions>\n\n<expected inputs>\nUse the following inputs to generate the quiz:\n### 1. **Section_Title**: The title of the section the quiz is part of.\n### 2. **Title of Quiz**: The name of the quiz that you are generating.\n### 3. **Description of Quiz**: A high level description of the quiz that you are generating.\n### 4. **Restaurant Name**: The name of the restaurant.\n### 5. **Restaurant Location**: The restaurant's location\n### 6. **Nationalities**: The top  nationalities of the restaurant's clientele.\n### 7. **Cuisine of the Restaurant**: The main cuisine featured at the restaurant.\n### 8. **Enhanced Menus**: Enhanced menus which detail the pricing, ingredients, pairing suggestions, cultural narratives, and menu category for each menu item. \n</expected inputs>\n\n<output_requirements>\n### 1. **Generate Questions**:\nDevelop a diverse set of scenario-based questions tailored to the input data. \nEnsure questions are engaging, diverse, framed in real-world scenarios, and not repetitive to maintain quiz freshness and intrigue. \n### 2. **Structure of the Quiz**:\nEach quiz should contain 10 questions with multiple-choice answers (A to D), with one correct answer.\n</output_requirements>\n\n\n\n<Examples>\n----------------\n**Question:** \nWhen describing a seasonal special, '[Insert Seasonal Dish Name],' which description would make it sound the most enticing?\n                    Answers:\n                    **A: The [Insert Seasonal Dish Name] is made with fresh, seasonal ingredients and tastes great.**\n                    **B: [Insert Seasonal Dish Name] brings together the best of the season with [Insert Fresh Ingredient] and [Insert Seasonal Ingredient], capturing the vibrant flavors of this time of year and delivering a dish that’s fresh, colorful, and full of zest.**\n                    **C: It’s a good seasonal option with fresh ingredients and light flavors.**\n                    **D: The [Insert Seasonal Dish Name] is fresh and flavorful, making it a good choice.**\n                    **Correct Answer: B**\n                    \n----------------\n**Question:**: \nYou're crafting a menu description for the **[Insert Seasonal Dish Name].** Which option best uses vivid imagery to entice diners?\n                    Answers:\n                    **A: A seafood paella with rice and saffron, it's tasty and filling.**\n                    **B: Our [Insert Seasonal Dish Name] features a fragrant blend of saffron-infused rice loaded with succulent shrimp, mussels, and clams, simmered to perfection in a rich broth.**\n                    **C: The [Insert Seasonal Dish Name] is a good choice if you like seafood and rice.**\n                    **D: It's a [Dish type] that's popular and has fresh ingredients.**\n                    **Correct Answer: B**\n                    \n----------------\n**Question:**: \nHow would you describe the [Insert Seasonal Dish Name] to make it stand out as a light yet flavorful starter?\n                    Answers:\n                    **A: The [Insert Seasonal Dish Name] is a light appetizer with avocado, ideal to start your meal.**\n                    **B: Our [Insert Seasonal Dish Name] pairs creamy avocado with a hint of chili on toasted baguette slices, offering a vibrant and flavorful beginning to your dining experience.**\n                    **C: It's a nice, simple dish with mild flavors, suitable as a starter.**\n                    **D: The [Insert Seasonal Dish Name] is fresh and flavorful, making it a good choice to begin your meal.**\n                    **Correct Answer: B**\n                    \n----------------\n**Question:**: \n\n                    A guest wants a rich and comforting dish. How would you describe the \"[Insert Comfort Food Dish]\" to meet their expectations?\n                    Answers:\n                    **A: The [Insert Comfort Food Dish] is rich and filling, perfect if you’re in the mood for something hearty.**\n                    **B: [Insert Comfort Food Dish] envelops [Insert Main Ingredient] in a luxurious [Insert Sauce], with layers of warmth and richness that offer the ultimate comfort food experience, leaving you deeply satisfied.**\n                    **C: It’s a comforting dish with warm flavors and a creamy texture, perfect if you want something filling.**\n                    **D: The [Insert Comfort Food Dish] is great for anyone who wants a hearty meal with creamy ingredients.**\n                    **Correct Answer: B**\n                    **Tip: Highlight indulgence and richness, using words like “luxurious” and “comfort” to make it sound more inviting.**\n                    \n</Examples>\n\n"
+        },
+        {
+            "role": "user",
+            "content": "\n### 1. **Title of Section**: dish appeal\n### 2. **Title of Quiz**: dish descriptions\n### 3. **Description of Quiz**: Learn how to describe dishes in a way that excites guests. This quiz focuses on using vivid, sensory-rich language to transform a simple dish into a must-try menu item. You’ll practice describing taste, texture, ingredients, and preparation in a way that makes dishes irresistible.\n### 4. **Restaurant Name**: Portixol Restaurant\n### 5. **Restaurant Location**: {'neighborhood': 'City Center', 'city': 'Palma de Mallorca', 'state': 'Mallorca', 'country': 'Spain'}\n### 6. **Nationalities**: ['Sweden', 'Swedish', 'Swede', 'Swedes', 'Germany', 'German', 'Germans', 'Britain', 'British', 'Briton', 'Britons', 'Brit', 'Brits']\n### 7. **Cuisine of the Restaurant**: Mediterranean\n### 8. **menu**: [{'category': 'Starters', 'name': 'Caviar Oscietra 50gr', 'ingredients': 'Pure | Natural | Sustainable | Ethical', 'price': 155.0}, {'category': 'Starters', 'name': 'Amelie No2 Oysters', 'ingredients': '', 'price': 5.5}, {'category': 'Starters', 'name': 'Sashimi PORTIXOL', 'ingredients': '', 'price': 27.0}, {'category': 'Starters', 'name': 'Iberian cured ham', 'ingredients': '', 'price': 27.0}, {'category': 'Starters', 'name': 'Tiger prawns tempura', 'ingredients': '', 'price': 19.0}, {'category': 'Starters', 'name': 'White sea bass ceviche', 'ingredients': 'King prawns, green papaya, mango', 'price': 25.0}, {'category': 'Starters', 'name': 'PORTIXOL Toast', 'ingredients': 'Toast, shrimps, crab', 'price': 18.0}, {'category': 'Starters', 'name': 'Seasonal tomato tarter', 'ingredients': 'Burrata foam, truffle', 'price': 18.0}, {'category': 'Starters', 'name': 'Gazpacho', 'ingredients': '', 'price': 12.0}, {'category': 'Starters', 'name': 'Grilled artichoke', 'ingredients': '', 'price': 18.0}, {'category': 'Starters', 'name': 'Fried edamame', 'ingredients': 'Red wine salt', 'price': 8.5}, {'category': 'Starters', 'name': 'Fried sweet potato', 'ingredients': 'Truffle mayonnaise', 'price': 8.5}, {'category': 'Main Courses', 'name': 'Grilled Sea Bass', 'ingredients': 'marinated mini-vegetables, Tom Yum broth', 'price': 36.0}, {'category': 'Main Courses', 'name': 'Red tuna', 'ingredients': 'Edamame, wasabi mayonaise', 'price': 36.0}, {'category': 'Main Courses', 'name': \"Cod Kokotxas 'pil-pil'\", 'ingredients': 'Belly pork, seasonal mushrooms', 'price': 29.0}, {'category': 'Main Courses', 'name': 'Grilled Squid', 'ingredients': \"Black rice, saffron 'alioli'\", 'price': 32.0}, {'category': 'Main Courses', 'name': 'Catch of the day', 'ingredients': '', 'price': 'Market price'}, {'category': 'Main Courses', 'name': 'Panang curry', 'ingredients': 'Red rice, vegetables, naan bread', 'price': 19.0}, {'category': 'Main Courses', 'name': 'Homemade ravioli', 'ingredients': 'Ricotta, spinach, walnuts', 'price': 26.0}, {'category': 'Main Courses', 'name': 'Beef tenderloin steak', 'ingredients': 'Potato mille-feuille, port reduction', 'price': 34.0}, {'category': 'Main Courses', 'name': 'Suckling Pig', 'ingredients': 'Plum, tomato', 'price': 31.0}, {'category': 'Main Courses', 'name': \"'Angus' Sirloin Steak Tataki'\", 'ingredients': \"Tempura 'piquillo peppers'\", 'price': 35.0}, {'category': 'Side Orders', 'name': 'Truffled wedge potatoes with rocket', 'ingredients': '', 'price': 6.5}, {'category': 'Side Orders', 'name': 'Ceasar salad or green', 'ingredients': '', 'price': 6.5}, {'category': 'Side Orders', 'name': 'Japanese mushrooms sautéed', 'ingredients': '', 'price': 6.5}, {'category': 'Side Orders', 'name': 'Sautéed seasonal vegetables', 'ingredients': '', 'price': 6.5}, {'category': 'Side Orders', 'name': 'Padrón peppers', 'ingredients': '', 'price': 6.5}, {'category': 'Dessert', 'name': 'Homemade chocolate truffle', 'ingredients': '', 'price': 3.5}, {'category': 'Dessert', 'name': 'Mallorcan cheesecake', 'ingredients': 'Toasted butter ice cream', 'price': 11.0}, {'category': 'Dessert', 'name': 'Chocolate coulant', 'ingredients': 'Hazelnut & tonka bean ice cream', 'price': 10.0}, {'category': 'Dessert', 'name': 'Tarte tatin (for 2)', 'ingredients': '', 'price': 15.0}, {'category': 'Dessert', 'name': \"French toast 'coca de patata'\", 'ingredients': \"Sheep's milk ice cream\", 'price': 10.0}, {'category': 'Dessert', 'name': 'Passion Fruit Pavlova', 'ingredients': '', 'price': 9.0}, {'category': 'Dessert', 'name': 'Spanish and local cheese selection', 'ingredients': '', 'price': 19.0}, {'category': 'Dessert', 'name': 'Home made ice cream', 'ingredients': 'Sorbet', 'price': 4.5}, {'category': 'Sweet Wine by the Glass', 'name': 'MORTITX', 'ingredients': 'Dolc de gel. Moscatel, Riesling', 'price': 8.0}, {'category': 'Sweet Wine by the Glass', 'name': 'APASIANADO DE JOSE PARIENTE', 'ingredients': 'Sauvignon Blanc E', 'price': 7.0}, {'category': 'Sweet Wine by the Glass', 'name': 'VALVERAN 20', 'ingredients': 'Manzanas Sidra de Hielo Raxao y Durona de Tresali', 'price': 7.0}, {'category': 'Sweet Wine by the Glass', 'name': 'OREMUS ASZU 3', 'ingredients': 'Puttonyos Furmint, Harslevelu, Mascat de Lunel', 'price': 18.0}, {'category': 'Kids', 'name': 'Hamburger', 'ingredients': 'French fries', 'price': 15.0}, {'category': 'Kids', 'name': 'Grilled beef', 'ingredients': 'French fries or salad', 'price': 15.0}, {'category': 'Kids', 'name': 'Home Made Meatballs', 'ingredients': 'Mashed potatoes', 'price': 15.0}, {'category': 'Kids', 'name': 'Grilled Fish', 'ingredients': 'Rice or potatoes', 'price': 15.0}, {'category': 'Kids', 'name': 'Chicken Breast', 'ingredients': 'French fries or salad', 'price': 15.0}, {'category': 'Kids', 'name': 'Pasta Bolognesa or Tomato Sauce', 'ingredients': '', 'price': 15.0}, {'category': 'Kids Dessert', 'name': 'Ice Cream', 'ingredients': '', 'price': 4.5}, {'category': 'Kids Dessert', 'name': 'Fruit Salad', 'ingredients': '', 'price': 4.0}, {'category': 'Kids Dessert', 'name': 'Milkshake', 'ingredients': '', 'price': 5.0}]\n    \t\t"
+        }
+    ],
+    "output": "### Quiz: Dish Descriptions at Portixol Restaurant\n\n1. **Question:** \n   How would you vividly describe the 'Grilled Sea Bass' to emphasize its exquisite taste and presentation for Mediterranean enthusiasts?\n                    **Answers:**\n                    **A: The Grilled Sea Bass is just served with a plate of vegetables.**\n                    **B: This Grilled Sea Bass is accompanied by marinated mini-vegetables and bathed in a fragrant Tom Yum broth, creating a harmonious blend of flavors and an eye-catching presentation.**\n                    **C: A perfect example of sea bass served with vegetables in a simple manner.**\n                    **D: This dish is a typical grilled fish on a bed of vegetables.**\n                    **Correct Answer: B** | **Score: 8.7**\n\n2. **Question:** \n   If a guest is considering the 'Homemade ravioli', what description would make it sound the most enticing?\n                    **Answers:**\n                    **A: Homemade ravioli with ricotta, it's okay for a pasta dish.**\n                    **B: Our tender Homemade ravioli envelops rich ricotta and spinach, accented by crunchy walnuts for a divine combination of creamy, nutty flavors.**\n                    **C: It's a good ravioli dish with typical ingredients like ricotta.**\n                    **D: The ravioli are handmade with a ricotta filling and taste good.**\n                    **Correct Answer: B** | **Score: 8.4**\n\n3. **Question:** \n   What description adds a lush, decadent touch to the 'Mallorcan cheesecake'?\n                    **Answers:**\n                    **A: Mallorcan cheesecake served with toasted butter ice cream, it's tasty.**\n                    **B: Indulge in our Mallorcan cheesecake, a luscious delight complemented by silky toasted butter ice cream, promising an unforgettable sweet escapade.**\n                    **C: A typical cheesecake dessert with ice cream on the side.**\n                    **D: It’s just a cheesecake with some ice cream.**\n                    **Correct Answer: B** | **Score: 8.6**\n\n4. **Question:** \n   How would you highlight the Mediterranean heritage of the 'Iberian cured ham'?\n                    **Answers:**\n                    **A: This is Iberian cured ham, a staple of Mediterranean cuisine.**\n                    **B: Experience a slice of Mediterranean tradition with our delicate Iberian cured ham, a timeless classic brimming with rich, nutty flavors that transport you to the sun-soaked shores of Spain.**\n                    **C: This is a typical dish with cured ham.**\n                    **D: Iberian cured ham served traditionally.**\n                    **Correct Answer: B** | **Score: 8.9**\n\n5. **Question:** \n   Describe the 'Chocolate coulant' as an indulgent dessert experience.\n                    **Answers:**\n                    **A: The chocolate coulant is a delicious dessert, good for chocolate lovers.**\n                    **B: Dive into the molten allure of our Chocolate coulant, with a luscious center paired perfectly with hazelnut & tonka bean ice cream, a true symphony for the senses.**\n                    **C: It’s a nice chocolate dessert with ice cream.**\n                    **D: Chocolate coulant served with a side of ice cream.**\n                    **Correct Answer: B** | **Score: 8.8**\n\n6. **Question:** \n   How can the 'Amelie No2 Oysters' be described to captivate seafood aficionados?\n                    **Answers:**\n                    **A: Amelie No2 Oysters are available for a fresh seafood choice.**\n                    **B: Savor the pristine freshness of Amelie No2 Oysters, each brimming with the ocean’s bounty, offering a pure, unadulterated taste of the sea that thrills the palate.**\n                    **C: These oysters are fine for anyone seeking seafood.**\n                    **D: Oysters served as usual, perfect for seafood fans.**\n                    **Correct Answer: B** | **Score: 8.5**\n\n7. **Question:** \n   Highlight the appeal of the 'Fried sweet potato' appetizer.\n                    **Answers:**\n                    **A: Fried sweet potato is offered with truffle mayonnaise, quite tasty.**\n                    **B: Delight in our Fried sweet potato, crisply golden on the outside and soft within, elegantly paired with luxurious truffle mayonnaise, creating an exquisite appetizer to start your meal.**\n                    **C: It’s a decent fried potato starter with mayonnaise.**\n                    **D: Sweet potato fried and served with mayo.**\n                    **Correct Answer: B** | **Score: 8.3**\n\n8. **Question:** \n   What is an engaging way to describe the 'Panang curry' to someone exploring exotic flavors?\n                    **Answers:**\n                    **A: Panang curry is a usual choice with rice and naan bread.**\n                    **B: Embark on a culinary journey with our Panang curry, where creamy, spiced flavors meet the earthiness of red rice and warm naan bread, creating a captivating tapestry of exotic tastes.**\n                    **C: It's curry with vegetables and a side of bread.**\n                    **D: Standard curry served with rice and naan.**\n                    **Correct Answer: B** | **Score: 8.8**\n\n9. **Question:** \n   Describe 'Red tuna' for guests seeking a refined seafood experience.\n                    **Answers:**\n                    **A: Red tuna is a popular seafood option with edamame and wasabi mayonnaise.**\n                    **B: Treat yourself to the elegance of Red tuna, perfectly seared and complemented by vibrant edamame and piquant wasabi mayonnaise, embodying a dish of sophisticated taste and presentation.**\n                    **C: A typical tuna dish served nicely.**\n                    **D: Standard preparation of red tuna.**\n                    **Correct Answer: B** | **Score: 8.7**\n\n10. **Question:** \n    Highlight the luxurious aspect of the 'Caviar Oscietra 50gr'.\n                    **Answers:**\n                    **A: Caviar Oscietra 50gr, great if you like caviar.**\n                    **B: Indulge in the pinnacle of luxury with our Caviar Oscietra 50gr, celebrated for its pure, natural essence, offering an ethically sourced culinary gem that entices with its exquisite flavor and texture.**\n                    **C: High-end caviar for those who enjoy it.**\n                    **D: It's just a typical caviar dish.**\n                    **Correct Answer: B** | **Score: 8.9**"
+}

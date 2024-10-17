@@ -1,4 +1,5 @@
 content_framework = {
+  # Section 1: customizable
   "Menu Knowledge Mastery": {
     "title": "Menu Knowledge Mastery",
     "description": "Using the menu items and their listed ingredients below, craft enriched descriptions for each dish. Incorporate vivid adjectives to describe the ingredients and, where appropriate, include a brief and engaging backstory about where the ingredients come from or their culinary significance. The goal is to make each dish sound enticing and special, highlighting unique aspects that will appeal to customers.",
