@@ -119,9 +119,6 @@ for section in content_framework.keys():  #  **TESTING** for one section (1)
 					)
 					api_response = completion.choices[0].message.content
 
-					#if isinstance(api_response, str):
-					#	api_response = api_response.replace("\ ".replace(" ", ""), "")
-
 				except Exception as e:  # handle errors like finish_reason, refusal, content_filter, etc.  ## in case Chat Completion API is unable to follow response_format schema
 					if completion.choices[0].message.refusal is not None:
 						print(f"** Error ** Question API refused to respond. Reason: {completion.choices[0].message.refusal}")
@@ -131,9 +128,7 @@ for section in content_framework.keys():  #  **TESTING** for one section (1)
 					valid = False
 					break
 				generated_questions_raw = json.loads(api_response)
-				print(generated_questions_raw)
 				generated_questions = generated_questions_raw["quiz"]
-				print(generated_questions)
 
 				print(f"\t<< Quiz {quiz} generated >>")
 				print("\tReviewing generated content for quality and hallucination...")

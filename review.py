@@ -23,15 +23,8 @@ def review_quiz(content, menu, nationalities):
      ** The restaurant's top guest nationalities are <nationalities> {nationalities} </nationalities>
      </context>"""
 
-     #question_keys = content.keys()
-     #for question_key in question_keys:  # iterate over every question in the generated quiz
-          #question_data = content[question_key]["question"]
-          #  check that it does not have hallucination and is high-quality & scenario-based using API function calling
-          ## check for hallucination
-     # organizing content
-     #content = {k: v["question"] for k, v in content.items()}
+     # formatting questions for review
      content = [k + ": " + v["question"] +"\n" for k, v in content.items()][0]
-     print(content)
      
      completion = client.chat.completions.create(
           model="gpt-4o-mini", 
@@ -84,12 +77,9 @@ def review_choices(content, menu, nationalities):
 ** The restaurant's top guest nationalities are <nationalities> {nationalities} </nationalities>
 </context>
 """
-     #choice_keys = content.keys()
-     #for choice_key in choice_keys:  # iterate over every question in the generated quiz
-     print("choice_data", content)
+     # formatting questions for review
      choice_data = [k +": "+ v +"\n" for k, v in content.items()][0]
 
-     #choice_data = content[choice_key]
      #  check that it does not have hallucination and is high-quality & scenario-based using API function calling
      ## check for hallucination
      completion = client.chat.completions.create(
