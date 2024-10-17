@@ -209,7 +209,7 @@ for section in content_framework.keys():  #  **TESTING** for one section (1)
 							print("\t** Pass ** question has exceeded the maximum consecutive invalid generations. Moving on...")
 							break
 
-						print("\t** Error ** Regenerating quiz...")
+						print("\t** Error ** Regenerating answer choices...")
 						print("\t***\n")
 
 				# add answer choices to correct quiz question
