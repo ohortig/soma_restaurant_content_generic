@@ -65,8 +65,8 @@ for section in content_framework.keys():  #  **TESTING** for one section (1)
 			print("\t***")
 			print(f"\tGenerating quiz {quiz} in section {section}...")
 			print("\t***")
-
-			generated_content[section]["quizzes"][content_framework[section]["quizzes"][quiz]["title"]] = {"description": content_framework[section]["quizzes"][quiz]["description"], "questions": {}}  # add quiz to section
+			specific_quiz = content_framework[section]["quizzes"][quiz]
+			generated_content[section]["quizzes"][specific_quiz["title"]] = {"description": specific_quiz["description"], "questions": {}}  # add quiz to section
 
 			# Adding questions, if exist, for format
 			preloaded_questions = content_framework[section]["quizzes"][quiz]["example_questions"]
@@ -97,9 +97,17 @@ for section in content_framework.keys():  #  **TESTING** for one section (1)
 							{
 							"role": "user",
 							"content": prompts.user_message_question(
-								content_framework[section]["title"], content_framework[section]["description"], content_framework[section]["quizzes"][quiz]["title"],
-								content_framework[section]["quizzes"][quiz]["description"], RESTAURANT_INFO.name, RESTAURANT_INFO.location, RESTAURANT_INFO.nationalities,
-								RESTAURANT_INFO.cuisine, RESTAURANT_INFO.restaurant_context, example_questions, enhanced_menu)
+								content_framework[section]["title"],
+        						content_framework[section]["description"],
+        						content_framework[section]["quizzes"][quiz]["title"],
+								content_framework[section]["quizzes"][quiz]["description"],
+        						RESTAURANT_INFO.name,
+              					RESTAURANT_INFO.location,
+                   				RESTAURANT_INFO.nationalities,
+								RESTAURANT_INFO.cuisine,
+        						RESTAURANT_INFO.restaurant_context,
+              					example_questions,
+                   				enhanced_menu)
 							}
 						],
 						response_format={
@@ -146,7 +154,8 @@ for section in content_framework.keys():  #  **TESTING** for one section (1)
 								},
 								{
 								"role": "user",
-								"content": prompts.user_message_answers(generated_content[section]["quizzes"][content_framework[section]["quizzes"][quiz]["title"]]["questions"][generated_question]["question"],
+								"content": prompts.user_message_answers(
+            							generated_content[section]["quizzes"][content_framework[section]["quizzes"][quiz]["title"]]["questions"][generated_question]["question"],
 										RESTAURANT_INFO.name, RESTAURANT_INFO.location, RESTAURANT_INFO.nationalities, RESTAURANT_INFO.cuisine,
 										RESTAURANT_INFO.restaurant_context, example_questions_answers, enhanced_menu)
 								}
