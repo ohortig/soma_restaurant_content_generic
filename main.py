@@ -227,7 +227,7 @@ for section in content_framework.keys():  #  **TESTING** for one section (1)
 		print(f"\n\t<< Section {section} successfully generated >>\n")
 
 # Save generated output
-file_path = os.path.join('outputs', 'generated_content.json')
+file_path = os.path.join('outputs', f'generated_content_{RESTAURANT_INFO.name}.json')
 
 if valid:  # create storage file if content is valid
 	try:
