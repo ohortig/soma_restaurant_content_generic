@@ -3,3 +3,5 @@ outputs/enhanced_menus/consolidated_menu.json
 outputs/generated_content.json
 /data
 .env
+inputs/.DS_Store
+outputs/generated_content_Portixol Restaurant.json
