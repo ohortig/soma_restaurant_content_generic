@@ -7,3 +7,4 @@ inputs/restaurant_info.py
 .env
 *.pdf
 .DS_Store
+outputs/generated_content_FSP_QA.json

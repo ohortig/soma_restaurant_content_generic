@@ -27,7 +27,7 @@ def review_quiz(content, menu, nationalities):
      content = "\n".join([k + ": " + v["question"] for k, v in content.items()])
      print(content)
      completion = client.chat.completions.create(
-          model="gpt-4o-mini", 
+          model="gpt-4o",  # base GPT-4o model
           messages=[
                {
                "role": "system", 
@@ -41,8 +41,9 @@ def review_quiz(content, menu, nationalities):
           tools=validate_call_tools,
           tool_choice="required",
      )
-
-     print(f"\t{content} >")
+     print(">>>")
+     print(f"{content}")
+     print(">>>")
 
      for function_call in completion.choices[0].message.tool_calls:
           arguments = json.loads(function_call.function.arguments)
@@ -79,11 +80,15 @@ def review_choices(content, menu, nationalities):
 """
      # formatting questions for review
      choice_data = "\n".join([k +": "+ v for k, v in content.items()])
-     print(choice_data)
+
+     print(">>>")
+     print(choice_data)   # display generated answer choices
+     print(">>>")
+
      #  check that it does not have hallucination and is high-quality & scenario-based using API function calling
      ## check for hallucination
      completion = client.chat.completions.create(
-          model="gpt-4o-mini", 
+          model="gpt-4o",  # base gpt-4o-mini model
           messages=[
                {
                "role": "system", 
@@ -97,8 +102,6 @@ def review_choices(content, menu, nationalities):
           tools=validate_call_tools,
           tool_choice="required",
      )
-
-     #print(f"\t{choice_key} >")
 
      for function_call in completion.choices[0].message.tool_calls:
           arguments = json.loads(function_call.function.arguments)

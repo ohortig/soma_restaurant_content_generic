@@ -157,7 +157,7 @@ for section in content_framework.keys():  #  **TESTING** for one section (1)
 					print(f"iteration {i}")
 					try:
 						completion = client.chat.completions.create(
-							model="gpt-4o",  # base GPT-4o mini model
+							model="gpt-4o",  # base GPT-4o model
 							messages=[
 								{
 								"role": "system", 
