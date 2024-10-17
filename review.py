@@ -24,7 +24,7 @@ def review_quiz(content, menu, nationalities):
      </context>"""
 
      # formatting questions for review
-     content = [k + ": " + v["question"] +"\n" for k, v in content.items()][0]
+     content = "\n".join([k + ": " + v["question"] for k, v in content.items()])
      
      completion = client.chat.completions.create(
           model="gpt-4o-mini", 
@@ -78,8 +78,8 @@ def review_choices(content, menu, nationalities):
 </context>
 """
      # formatting questions for review
-     choice_data = [k +": "+ v +"\n" for k, v in content.items()][0]
-
+     choice_data = "\n".join([k +": "+ v for k, v in content.items()])
+     print(choice_data)
      #  check that it does not have hallucination and is high-quality & scenario-based using API function calling
      ## check for hallucination
      completion = client.chat.completions.create(
