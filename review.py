@@ -30,7 +30,7 @@ def review_quiz(content, menu, nationalities):
           #  check that it does not have hallucination and is high-quality & scenario-based using API function calling
           ## check for hallucination
           completion = client.chat.completions.create(
-               model="gpt-4o-mini", 
+               model="gpt-4o", 
                messages=[
                     {
                     "role": "system", 

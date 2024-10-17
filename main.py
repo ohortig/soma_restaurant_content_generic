@@ -56,7 +56,8 @@ testing_quiz = "Dish Descriptions"
 for section in content_framework.keys():  #  **TESTING** for one section (1)
 	if section == testing_section:
 		print(f"Generating section {section}:")
-		generated_content[section] = {"title": content_framework[section]["title"], "quizzes": {}}  # add section to content
+		generated_content[section] = {"title": content_framework[section]["title"],
+                                	  "quizzes": {}}  # add section to content
 
 		quizzes = content_framework[section]["quizzes"]
 		for quiz in quizzes.keys():  #  **TESTING** for one quiz
@@ -85,6 +86,7 @@ for section in content_framework.keys():  #  **TESTING** for one section (1)
 					example_questions_answers += "\t" + preloaded_answer + ": " + preloaded_answer_value + "\n"
 			example_questions_answers += "</Examples>"
 
+		### First API CALL TO GENERATE ANSWERS
 			while True:  # create & validate questions only
 				try:
 					completion = client.chat.completions.create(
@@ -138,15 +140,18 @@ for section in content_framework.keys():  #  **TESTING** for one section (1)
 					print("\t***\n")
 
 			print(f"\n\t<< Quiz questions for {quiz} in section {section} successfully generated >>\n")
-
-			generated_content[section]["quizzes"][content_framework[section]["quizzes"][quiz]["title"]]["questions"] = generated_questions  # add new content to appropriate section and quiz in content data structure
-
+			quiz_data = content_framework[section]["quizzes"][quiz]
+			generated_content[section]["quizzes"][quiz_data["title"]]["questions"] = generated_questions  # add new content to appropriate section and quiz in content data structure
+	
+   		### SECOND API CALL TO GENERATE ANSWERS
 			for generated_question in generated_questions.keys():
 				consecutive_invalid_generations = 0  # tracker variable
-				while True:  # create & validate answer choices for generated questions
+				#while True:  # create & validate answer choices for generated questions
+				for i in range(0, 3, 1):
+					print(f"iteration {i}")
 					try:
 						completion = client.chat.completions.create(
-							model="gpt-4o-mini",  # base GPT-4o mini model
+							model="gpt-4o",  # base GPT-4o mini model
 							messages=[
 								{
 								"role": "system", 
@@ -155,9 +160,14 @@ for section in content_framework.keys():  #  **TESTING** for one section (1)
 								{
 								"role": "user",
 								"content": prompts.user_message_answers(
-            							generated_content[section]["quizzes"][content_framework[section]["quizzes"][quiz]["title"]]["questions"][generated_question]["question"],
-										RESTAURANT_INFO.name, RESTAURANT_INFO.location, RESTAURANT_INFO.nationalities, RESTAURANT_INFO.cuisine,
-										RESTAURANT_INFO.restaurant_context, example_questions_answers, enhanced_menu)
+            							generated_content[section]["quizzes"][quiz_data["title"]]["questions"][generated_question]["question"],
+										RESTAURANT_INFO.name,
+          								RESTAURANT_INFO.location,
+                  						RESTAURANT_INFO.nationalities,
+                        				RESTAURANT_INFO.cuisine,
+										RESTAURANT_INFO.restaurant_context,
+          								example_questions_answers,
+                  						enhanced_menu)
 								}
 							],
 							response_format={
@@ -180,6 +190,7 @@ for section in content_framework.keys():  #  **TESTING** for one section (1)
 					print(f"\t<< Answer Choices for {generated_question} in Quiz {quiz} generated >>")
 					print("\tReviewing generated content for quality and hallucination...")
 					print("\t***")
+
 					if(review_choices(generated_choices, enhanced_menu, RESTAURANT_INFO.nationalities)):
 						consecutive_invalid_generations = 0
 						break
@@ -187,14 +198,16 @@ for section in content_framework.keys():  #  **TESTING** for one section (1)
 						print("\n\t***")
 						consecutive_invalid_generations += 1
 						print(f"\t** There have been {consecutive_invalid_generations}/3 consecutive invalid generations")
+
 						if consecutive_invalid_generations == 3:
 							print("\t** Pass ** question has exceeded the maximum consecutive invalid generations. Moving on...")
 							break
+
 						print("\t** Error ** Regenerating quiz...")
 						print("\t***\n")
 
 				# add answer choices to correct quiz question
-				generated_content[section]["quizzes"][content_framework[section]["quizzes"][quiz]["title"]]["questions"][generated_question]["answers"] = generated_choices
+				generated_content[section]["quizzes"][quiz_data["title"]]["questions"][generated_question]["answers"] = generated_choices
 
 				print(f"\n\t<< Answer choices for {generated_question} of {quiz} in section {section} successfully generated and loaded >>\n")
 			
@@ -202,6 +215,7 @@ for section in content_framework.keys():  #  **TESTING** for one section (1)
 
 		print(f"\n\t<< Section {section} successfully generated >>\n")
 
+# Save generated output
 file_path = os.path.join('outputs', 'generated_content.json')
 
 if valid:  # create storage file if content is valid
