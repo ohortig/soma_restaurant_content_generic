@@ -143,7 +143,7 @@ for section in content_framework.keys():  #  **TESTING** for one section (1)
 			print(f"\n\t<< Quiz questions for {quiz} in section {section} successfully generated >>\n")
 			quiz_data = content_framework[section]["quizzes"][quiz]
 			print('GENERATED _QUESTIONS')
-			print(type(generated_questions))
+			print(">>>>",generated_questions)
 			#generated_questions_dict = json.loads(generated_questions)
 
 			generated_content[section]["quizzes"][quiz_data["title"]]["questions"] = generated_questions  # add new content to appropriate section and quiz in content data structure

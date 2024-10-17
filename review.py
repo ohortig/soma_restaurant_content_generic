@@ -116,8 +116,8 @@ def review_choices(content, menu, nationalities):
           if function_name == "nationality_exists":
                print(f'\tValidating {arguments["nationality"]} is in nationalities list...')
                if not nationality_exists(arguments["nationality"]):
-                    print(f"\t\tMentioned nationality {arguments["nationality"]} is not mentioned in guest nationalities.")
+                    print(f"\t\tMentioned nationality {arguments['nationality']} is not mentioned in guest nationalities.")
                     return False  # regenerate the quiz
-               print(f"\t\t{arguments["nationality"]} confirmed in nationalities list.")
+               print(f"\t\t{arguments['nationality']} confirmed in nationalities list.")
      print("\t***")
      return True
