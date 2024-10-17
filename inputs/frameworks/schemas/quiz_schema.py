@@ -15,15 +15,9 @@ quiz_schema = {
                             "C": {"type": "string"},
                             "D": {"type": "string"},
                             "correct_answer": {"type": "string"},
-<<<<<<<< HEAD:inputs/frameworks/quiz_schema.py
-                            "answer_explanation": {"type": "string"}
-                        },
-                        "required": ["question", "A", "B", "C", "D", "correct_answer", "answer_explanation"],
-========
                             "explanation": {"type": "string"}
                         },
                         "required": ["question", "A", "B", "C", "D", "correct_answer", "explanation"],
->>>>>>>> twostep_dev:inputs/frameworks/schemas/quiz_schema.py
                         "additionalProperties": False
                     },
                     "question2": {
@@ -35,15 +29,9 @@ quiz_schema = {
                             "C": {"type": "string"},
                             "D": {"type": "string"},
                             "correct_answer": {"type": "string"},
-<<<<<<<< HEAD:inputs/frameworks/quiz_schema.py
-                            "answer_explanation": {"type": "string"}
-                        },
-                        "required": ["question", "A", "B", "C", "D", "correct_answer", "answer_explanation"],
-========
                             "explanation": {"type": "string"}
                         },
                         "required": ["question", "A", "B", "C", "D", "correct_answer", "explanation"],
->>>>>>>> twostep_dev:inputs/frameworks/schemas/quiz_schema.py
                         "additionalProperties": False
                     },
                     "question3": {
@@ -55,15 +43,9 @@ quiz_schema = {
                             "C": {"type": "string"},
                             "D": {"type": "string"},
                             "correct_answer": {"type": "string"},
-<<<<<<<< HEAD:inputs/frameworks/quiz_schema.py
-                            "answer_explanation": {"type": "string"}
-                        },
-                        "required": ["question", "A", "B", "C", "D", "correct_answer", "answer_explanation"],
-========
                             "explanation": {"type": "string"}
                         },
                         "required": ["question", "A", "B", "C", "D", "correct_answer", "explanation"],
->>>>>>>> twostep_dev:inputs/frameworks/schemas/quiz_schema.py
                         "additionalProperties": False
                     },
                     "question4": {
@@ -75,15 +57,9 @@ quiz_schema = {
                             "C": {"type": "string"},
                             "D": {"type": "string"},
                             "correct_answer": {"type": "string"},
-<<<<<<<< HEAD:inputs/frameworks/quiz_schema.py
-                            "answer_explanation": {"type": "string"}
-                        },
-                        "required": ["question", "A", "B", "C", "D", "correct_answer", "answer_explanation"],
-========
                             "explanation": {"type": "string"}
                         },
                         "required": ["question", "A", "B", "C", "D", "correct_answer", "explanation"],
->>>>>>>> twostep_dev:inputs/frameworks/schemas/quiz_schema.py
                         "additionalProperties": False
                     },
                     "question5": {
@@ -95,15 +71,9 @@ quiz_schema = {
                             "C": {"type": "string"},
                             "D": {"type": "string"},
                             "correct_answer": {"type": "string"},
-<<<<<<<< HEAD:inputs/frameworks/quiz_schema.py
-                            "answer_explanation": {"type": "string"}
-                        },
-                        "required": ["question", "A", "B", "C", "D", "correct_answer", "answer_explanation"],
-========
                             "explanation": {"type": "string"}
                         },
                         "required": ["question", "A", "B", "C", "D", "correct_answer", "explanation"],
->>>>>>>> twostep_dev:inputs/frameworks/schemas/quiz_schema.py
                         "additionalProperties": False
                     },
                     "question6": {
@@ -115,15 +85,9 @@ quiz_schema = {
                             "C": {"type": "string"},
                             "D": {"type": "string"},
                             "correct_answer": {"type": "string"},
-<<<<<<<< HEAD:inputs/frameworks/quiz_schema.py
-                            "answer_explanation": {"type": "string"}
-                        },
-                        "required": ["question", "A", "B", "C", "D", "correct_answer", "answer_explanation"],
-========
                             "explanation": {"type": "string"}
                         },
                         "required": ["question", "A", "B", "C", "D", "correct_answer", "explanation"],
->>>>>>>> twostep_dev:inputs/frameworks/schemas/quiz_schema.py
                         "additionalProperties": False
                     },
                     "question7": {
@@ -135,15 +99,9 @@ quiz_schema = {
                             "C": {"type": "string"},
                             "D": {"type": "string"},
                             "correct_answer": {"type": "string"},
-<<<<<<<< HEAD:inputs/frameworks/quiz_schema.py
-                            "answer_explanation": {"type": "string"}
-                        },
-                        "required": ["question", "A", "B", "C", "D", "correct_answer", "answer_explanation"],
-========
                             "explanation": {"type": "string"}
                         },
                         "required": ["question", "A", "B", "C", "D", "correct_answer", "explanation"],
->>>>>>>> twostep_dev:inputs/frameworks/schemas/quiz_schema.py
                         "additionalProperties": False
                     },
                     "question8": {
@@ -155,15 +113,9 @@ quiz_schema = {
                             "C": {"type": "string"},
                             "D": {"type": "string"},
                             "correct_answer": {"type": "string"},
-<<<<<<<< HEAD:inputs/frameworks/quiz_schema.py
-                            "answer_explanation": {"type": "string"}
-                        },
-                        "required": ["question", "A", "B", "C", "D", "correct_answer", "answer_explanation"],
-========
                             "explanation": {"type": "string"}
                         },
                         "required": ["question", "A", "B", "C", "D", "correct_answer", "explanation"],
->>>>>>>> twostep_dev:inputs/frameworks/schemas/quiz_schema.py
                         "additionalProperties": False
                     },
                     "question9": {
@@ -175,15 +127,9 @@ quiz_schema = {
                             "C": {"type": "string"},
                             "D": {"type": "string"},
                             "correct_answer": {"type": "string"},
-<<<<<<<< HEAD:inputs/frameworks/quiz_schema.py
-                            "answer_explanation": {"type": "string"}
-                        },
-                        "required": ["question", "A", "B", "C", "D", "correct_answer", "answer_explanation"],
-========
                             "explanation": {"type": "string"}
                         },
                         "required": ["question", "A", "B", "C", "D", "correct_answer", "explanation"],
->>>>>>>> twostep_dev:inputs/frameworks/schemas/quiz_schema.py
                         "additionalProperties": False
                     },
                     "question10": {
@@ -195,15 +141,9 @@ quiz_schema = {
                             "C": {"type": "string"},
                             "D": {"type": "string"},
                             "correct_answer": {"type": "string"},
-<<<<<<<< HEAD:inputs/frameworks/quiz_schema.py
-                            "answer_explanation": {"type": "string"}
-                        },
-                        "required": ["question", "A", "B", "C", "D", "correct_answer", "answer_explanation"],
-========
                             "explanation": {"type": "string"}
                         },
                         "required": ["question", "A", "B", "C", "D", "correct_answer", "explanation"],
->>>>>>>> twostep_dev:inputs/frameworks/schemas/quiz_schema.py
                         "additionalProperties": False
                     }
                 },

@@ -8,7 +8,9 @@ from utils import nationality_exists
 
 # load schema
 from inputs.frameworks.validate_tools import validate_call_tools
+from dotenv import load_dotenv
 
+load_dotenv()
 client = OpenAI()
 
 def review_quiz(content, menu, nationalities):
@@ -36,11 +38,7 @@ Using the provided tools, you will output function arguments to be used for eith
           #  check that it does not have hallucination and is high-quality & scenario-based using API function calling
           ## check for hallucination
           completion = client.chat.completions.create(
-<<<<<<< HEAD
-               model="gpt-4o-mini",  # to-do: fined-tuned model for dish_exists, nationality_exists function calls
-=======
                model="gpt-4o-mini", 
->>>>>>> twostep_dev
                messages=[
                     {
                     "role": "system", 
@@ -123,9 +121,9 @@ Using the provided tools, you will output function arguments to be used for eith
                if function_name == "dish_exists":
                     print(f'\tValidating {arguments["item_name"]} exists...')
                     if not item_exists(arguments["item_name"]):
-                         print(f"\t\t Mentioned menu item {arguments["item_name"]} does not exist.")
+                         print(f"\t\t Mentioned menu item {arguments['item_name']} does not exist.")
                          return False  # regenerate the quiz
-                    print(f'\t\tMentioned item {arguments["item_name"]} confirmed to exist.')
+                    print(f"\t\tMentioned item {arguments['item_name']} confirmed to exist.")
                #if function_name == "nationality_exists":
                #     print(f'\tValidating {arguments["nationality"]} is in nationalities list...')
                #     if not nationality_exists(arguments["nationality"]):
