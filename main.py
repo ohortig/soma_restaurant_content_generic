@@ -50,8 +50,8 @@ valid = True
 
 # for section in range(len(content_framework)):  # for every section (1-5)
 # changed section calling with names ("to specify it better")
-testing_section = "Menu Knowledge Mastery"
-testing_quiz = "Dish Descriptions"
+testing_section = "Storytelling and Upselling Techniques"
+testing_quiz = "Dish Narrative"
 
 for section in content_framework.keys():  #  **TESTING** for one section (1)
 	if section == testing_section:
@@ -88,6 +88,7 @@ for section in content_framework.keys():  #  **TESTING** for one section (1)
 
 		### First API CALL TO GENERATE ANSWERS
 			while True:  # create & validate questions only
+				completion = None  # Initialize completion to None
 				try:
 					completion = client.chat.completions.create(
 						model="gpt-4o-2024-08-06",  # base GPT-4o model
@@ -120,13 +121,13 @@ for section in content_framework.keys():  #  **TESTING** for one section (1)
 					api_response = completion.choices[0].message.content
 
 				except Exception as e:  # handle errors like finish_reason, refusal, content_filter, etc.  ## in case Chat Completion API is unable to follow response_format schema
-					if completion.choices[0].message.refusal is not None:
+					if completion is not None and completion.choices[0].message.refusal is not None:
 						print(f"** Error ** Question API refused to respond. Reason: {completion.choices[0].message.refusal}")
-						
 					else:
-						print(f"** Error ** {e}")
+						print(f"** Error ** Exception occurred: {e}")
 					valid = False
 					break
+
 				generated_questions_raw = json.loads(api_response)
 				generated_questions = generated_questions_raw["quiz"]
 
@@ -143,7 +144,7 @@ for section in content_framework.keys():  #  **TESTING** for one section (1)
 			print(f"\n\t<< Quiz questions for {quiz} in section {section} successfully generated >>\n")
 			quiz_data = content_framework[section]["quizzes"][quiz]
 			print('GENERATED _QUESTIONS')
-			print(">>>>",generated_questions)
+			print(">>>>", generated_questions)
 			#generated_questions_dict = json.loads(generated_questions)
 
 			generated_content[section]["quizzes"][quiz_data["title"]]["questions"] = generated_questions  # add new content to appropriate section and quiz in content data structure
