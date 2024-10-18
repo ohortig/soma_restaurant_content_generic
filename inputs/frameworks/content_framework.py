@@ -1,4 +1,5 @@
 content_framework = {
+  # SECTION 1
   "Menu Knowledge Mastery": {
     "title": "Menu Knowledge Mastery",
     "description": "Using the menu items and their listed ingredients below, craft enriched descriptions for each dish. Incorporate vivid adjectives to describe the ingredients and, where appropriate, include a brief and engaging backstory about where the ingredients come from or their culinary significance. The goal is to make each dish sound enticing and special, highlighting unique aspects that will appeal to customers.",
@@ -394,7 +395,7 @@ content_framework = {
       }
     }
   },
-  # Section 3: 
+  # SECTION 3: 
   "Storytelling and Upselling Techniques": {
     "title": "Storytelling and Upselling Techniques",
     "description": """Teach servers and waitstaff how to subtly and effectively increase sales by offering enhancements to the guest's dining experience. It’s not about pushing more expensive items but about suggesting complementary or premium products that align with what the guest has already ordered or hinted at. The key to upselling is confidence and timing. Waitstaff should offer suggestions that feel natural and add value to the guest’s experience, making it about enhancing their meal rather than simply boosting the check size.
